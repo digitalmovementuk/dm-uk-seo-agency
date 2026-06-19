@@ -1,6 +1,7 @@
 :root {
-  --ink: #1A0E2E;
-  --ink-2: #302045;
+  --ink: #0b1f3a;
+  --pink: #f13c64;
+  --ink-2: #25303f;
   --muted: #625774;
   --line: #E9E0EF;
   --paper: #FBF8FE;
@@ -8,7 +9,7 @@
   --white: #FFFFFF;
   --orange: #F59425;
   --pink: #F13C64;
-  --purple: #4A1E70;
+  --purple: #0b1f3a;
   --cyan: #20BFC2;
   --green: #14795C;
   --shadow: 0 22px 60px rgba(26, 14, 46, 0.14);
