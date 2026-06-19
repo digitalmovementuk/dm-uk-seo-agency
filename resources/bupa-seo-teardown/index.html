@@ -418,8 +418,13 @@ footer.foot{background:var(--ink);color:#9a8cb8;padding:26px 0 40px;font-size:12
       </ul>
     </div>
     <form class="form-card" id="leadForm" novalidate
-          data-endpoint=""
-          action="" method="POST">
+          action="https://formsubmit.co/alex@digitalmovement.uk" method="POST">
+      <input type="hidden" name="_subject" value="New SEO lead — Bupa teardown download">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://digitalmovementuk.github.io/bupa-seo-teardown/?unlocked=1">
+      <input type="hidden" name="source" value="Bupa SEO teardown — DM UK SEO Agency page">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <h3>Get the full Bupa SEO teardown</h3>
       <p class="sub">Instant access. No spam — we'll only follow up about your SEO.</p>
       <div class="field" id="f-name">
@@ -752,10 +757,14 @@ form.addEventListener('submit',function(ev){
   if(!ok) return;
   const lead={name,email,phone,ts:new Date().toISOString(),source:'bupa-seo-teardown'};
   try{localStorage.setItem('bupa_wp_lead',JSON.stringify(lead));}catch(e){}
-  // POST to CRM endpoint if Digital Movement has wired one (set data-endpoint on the form)
-  const ep=form.dataset.endpoint;
-  if(ep){fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)}).catch(()=>{});}
-  unlock();
+  // email the lead straight to alex@digitalmovement.uk via FormSubmit (static-site form -> email)
+  var done=false; function go(){ if(!done){ done=true; unlock(); } }
+  setTimeout(go,2500); // never trap the visitor behind a slow network
+  fetch('https://formsubmit.co/ajax/alex@digitalmovement.uk',{
+    method:'POST',
+    headers:{'Accept':'application/json'},
+    body:new FormData(form)
+  }).catch(function(){}).finally(go);
 });
 
 /* keep it open on return visits */
