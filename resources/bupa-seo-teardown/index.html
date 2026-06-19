@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bupa SEO Teardown — How One Brand Earns 2.4M Organic Visits a Month | Digital Movement UK</title>
+<meta name="description" content="A data-driven teardown of bupa.co.uk using live Semrush UK data: where they rank, why they rank, and how 21,000 indexed pages earn 2.4M organic visits a month — and the parts an SME can copy. A Digital Movement UK white paper.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='100' x2='100' y2='0'%3E%3Cstop offset='0' stop-color='%23F59425'/%3E%3Cstop offset='0.55' stop-color='%23F13C64'/%3E%3Cstop offset='1' stop-color='%234A1E70'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%231A0E2E'/%3E%3Ccircle cx='50' cy='50' r='26' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A0E2E;--ink-2:#2A1A40;--ink-3:#3A2755;--muted:#5E5476;--muted-2:#6E6488;--line:#E9E0EF;--paper:#FBF8FE;--cream:#FFF7EC;
+  --orange:#F59425;--pink:#F13C64;--purple:#5A2A86;--cyan:#0F9C9E;--green:#0E7A5C;
+  --rose-deep:#B0123C;--amber-deep:#9A5408;--teal-deep:#0B6F71;
+  --orange-tint:rgba(245,148,37,.12);--green-tint:rgba(14,122,92,.10);--pink-tint:rgba(241,60,100,.10);--purple-tint:rgba(90,42,134,.09);
+  --soft:0 10px 28px rgba(26,14,46,.09);--soft-2:0 18px 50px rgba(26,14,46,.16);--radius:12px;--max:1080px;
+  --grad:linear-gradient(95deg,#F59425 0%,#F13C64 55%,#9A3DD6 100%);
+  --grad-btn:linear-gradient(95deg,#D81B60 0%,#A21CAF 52%,#6D28D9 100%);
+  --grad-bright:linear-gradient(95deg,#FFB04D 0%,#FF6F98 52%,#CE93FF 100%);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+h1,h2,h3,h4{margin:0;font-family:"Inter Tight",sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.12}
+p{margin:0 0 14px}
+a{color:var(--purple)}
+.mono{font-family:"JetBrains Mono",monospace}
+.num{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums;font-weight:700}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- top bar ---------- */
+header.bar{position:sticky;top:0;z-index:60;background:rgba(26,14,46,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.bar-in{display:flex;align-items:center;gap:14px;padding:12px 0;color:#fff}
+.bar-in img.logo{height:24px;width:auto;display:block}
+.bar-tag{font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#b6a9cf;padding-left:14px;margin-left:2px;border-left:1px solid rgba(255,255,255,.16)}
+.bar-cta{margin-left:auto;font-family:"Inter Tight";font-weight:700;font-size:13.5px;color:var(--ink);background:#fff;padding:9px 16px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.bar-cta:hover{background:var(--cream)}
+@media(max-width:560px){.bar-tag{display:none}}
+
+/* ---------- hero cover ---------- */
+.cover{background:radial-gradient(120% 130% at 82% 0%,#3A1E5E 0%,#231037 45%,#160a26 100%);color:#fff;position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;width:520px;height:520px;right:-130px;top:-150px;background:var(--grad);filter:blur(120px);opacity:.42;border-radius:50%}
+.cover::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-200px;background:linear-gradient(120deg,#20BFC2,#5A2A86);filter:blur(130px);opacity:.30;border-radius:50%}
+.cover-in{position:relative;z-index:2;padding:clamp(46px,8vw,92px) 0 clamp(38px,5vw,60px)}
+.cover-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(34px,5vw,72px);align-items:center}
+.cover-left{max-width:36rem}
+/* hero data visual */
+.cover-visual{position:relative}
+.dataviz{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.045) 100%);border:1px solid rgba(255,255,255,.22);border-radius:22px;padding:26px 24px 22px;box-shadow:0 30px 70px rgba(8,3,18,.55);backdrop-filter:blur(12px)}
+.dataviz::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--grad-bright)}
+.dv-head{display:flex;align-items:center;gap:9px;font-size:12.5px;color:#d6cbe8}
+.dv-head .dot{width:8px;height:8px;border-radius:50%;background:#34D399;box-shadow:0 0 0 4px rgba(52,211,153,.18)}
+.dv-head b{color:#fff;font-family:"Inter Tight";font-weight:800}
+.dv-head .src{margin-left:auto;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#a99dc2}
+.dv-big{display:flex;align-items:baseline;gap:10px;margin-top:14px}
+.dv-big .n{font-family:"Inter Tight";font-weight:800;font-size:38px;line-height:1;background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dv-big .u{color:#cfc4e4;font-size:13px}
+.dv-chart{margin-top:8px}
+.dv-chart svg{width:100%;height:74px;display:block}
+.dv-axis{display:flex;justify-content:space-between;font-family:"JetBrains Mono";font-size:9.5px;color:#9a8cb8;margin-top:4px}
+.dv-rows{margin-top:18px;display:grid;gap:9px}
+.dv-rk{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:11px 13px}
+.dv-rk .pp{flex:0 0 auto;min-width:34px;text-align:center;font-family:"Inter Tight";font-weight:800;font-size:12.5px;color:#fff;padding:4px 7px;border-radius:7px}
+.dv-rk .pp.g{background:#127C5E}.dv-rk .pp.a{background:#9A5408}
+.dv-rk .kw{color:#fff;font-weight:600;font-size:13.5px}
+.dv-rk .vv{margin-left:auto;font-family:"JetBrains Mono";font-size:11px;color:#cfc4e4}
+.dv-foot{margin-top:13px;font-size:11px;color:#a99dc2;line-height:1.45}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#e9def7;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);padding:7px 13px;border-radius:999px}
+.eyebrow b{background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover h1{margin-top:22px;font-size:clamp(31px,5.4vw,58px);letter-spacing:-.035em;max-width:17ch}
+.cover h1 b{background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cover .lede{margin-top:18px;max-width:60ch;color:#d6cbe8;font-size:clamp(15.5px,1.7vw,18.5px)}
+.cover .lede b{color:#fff;font-weight:700}
+.kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:clamp(36px,5vw,52px);padding-top:clamp(28px,4vw,40px);border-top:1px solid rgba(255,255,255,.11)}
+.kpi{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:18px 16px;text-align:center}
+.kpi .v{font-family:"Inter Tight";font-weight:800;font-size:clamp(22px,3vw,30px);line-height:1;background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi .l{margin-top:8px;color:#cfc4e4;font-size:11.5px;line-height:1.35}
+.cover-cta{margin-top:34px;display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:"Inter Tight";font-weight:700;font-size:15px;text-decoration:none;padding:14px 24px;border-radius:999px;cursor:pointer;border:none;transition:.18s}
+.btn-pri{background:var(--grad-btn);color:#fff;box-shadow:0 12px 30px rgba(241,60,100,.34)}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(241,60,100,.42)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.coverfoot{margin-top:24px;display:flex;gap:6px 0;flex-wrap:wrap;align-items:center;color:#b3a6cd;font-size:12.5px}
+.coverfoot span{display:inline-flex;align-items:center}
+.coverfoot span:not(:first-child)::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:#7d7196;margin:0 14px}
+.coverfoot b{color:#e9def7;font-weight:700}
+
+/* ---------- contents ---------- */
+.toc{background:var(--ink);color:#e7ddf5;border-bottom:1px solid rgba(255,255,255,.08)}
+.toc-in{padding:22px 0}
+.toc h2{font-size:12px;font-family:"JetBrains Mono";letter-spacing:.14em;text-transform:uppercase;color:#9a8cb8;font-weight:700;margin-bottom:14px}
+.toc ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:9px 26px;counter-reset:t}
+.toc li{counter-increment:t;font-size:13.5px;color:#cdc1e3;padding-left:30px;position:relative;line-height:1.4}
+.toc li::before{content:counter(t,decimal-leading-zero);position:absolute;left:0;top:1px;font-family:"JetBrains Mono";font-size:11px;font-weight:700;color:var(--orange)}
+.toc a{color:inherit;text-decoration:none}.toc a:hover{color:#fff}
+
+/* ---------- body sections ---------- */
+main{padding:0 0 40px}
+section{padding:clamp(42px,6vw,72px) 0;border-bottom:1px solid var(--line)}
+.tag-sec{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--rose-deep);font-weight:700}
+.h-sec{font-size:clamp(23px,3.4vw,38px);letter-spacing:-.03em;margin-top:10px;max-width:24ch}
+.lead{margin-top:14px;max-width:68ch;color:var(--muted);font-size:clamp(15.5px,1.5vw,17px)}
+.lead b{color:var(--ink)}
+.body-rich{margin-top:22px;max-width:70ch}
+.body-rich p{font-size:16px;color:var(--ink-2)}
+.body-rich strong{color:var(--ink)}
+.body-rich h3{font-size:19px;margin:26px 0 8px;letter-spacing:-.02em}
+.pull{font-family:"Inter Tight";font-weight:800;font-size:clamp(19px,2.4vw,26px);letter-spacing:-.02em;line-height:1.25;color:var(--ink);border-left:4px solid;border-image:var(--grad) 1;padding:4px 0 4px 20px;margin:28px 0;max-width:30ch}
+
+/* kpi cards light */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--soft)}
+.card .cv{font-family:"Inter Tight";font-weight:800;font-size:clamp(22px,3vw,30px);color:var(--ink)}
+.card .cv.up{color:var(--green)}.card .cv.down{color:var(--pink)}
+.card .cl{margin-top:5px;color:var(--muted);font-size:12.5px;line-height:1.4}
+.card.dark{background:var(--ink);border-color:var(--ink);color:#fff}
+.card.dark .cv{background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card.dark .cl{color:#cfc4e4}
+
+/* table */
+.tbl{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;overflow-x:auto;box-shadow:var(--soft);margin-top:24px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:620px}
+thead th{text-align:left;padding:13px 14px;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--line);background:var(--paper);white-space:nowrap}
+thead th.r,tbody td.r{text-align:right}
+tbody td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle;color:var(--ink-2)}
+tbody tr:last-child td{border-bottom:none}tbody tr:hover{background:var(--paper)}
+.kw{font-weight:600;color:var(--ink)}
+.url{font-family:"JetBrains Mono";font-size:11.5px;color:var(--muted)}
+.pos{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;font-family:"Inter Tight";font-weight:800;font-size:13px;background:var(--green-tint);color:var(--green)}
+.pos.mid{background:var(--orange-tint);color:#8A4A07}
+.it{display:inline-block;font-family:"JetBrains Mono";font-size:9.5px;font-weight:700;padding:3px 7px;border-radius:6px;letter-spacing:.03em}
+.it.brand{background:var(--purple-tint);color:var(--purple)}
+.it.info{background:rgba(15,156,158,.14);color:var(--teal-deep)}
+.it.trans{background:var(--pink-tint);color:#c01f48}
+.bar-cell{display:flex;align-items:center;gap:9px}
+.bar-fill{height:8px;border-radius:5px;background:var(--grad);flex:0 0 auto}
+.tnote{margin-top:10px;font-size:12px;color:var(--muted-2);font-family:"JetBrains Mono"}
+
+/* five forces */
+.forces{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:26px}
+.force{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--soft);position:relative}
+.force .fn{font-family:"JetBrains Mono";font-size:12px;font-weight:700;color:var(--amber-deep)}
+.force h3{font-size:18.5px;margin:8px 0 8px;letter-spacing:-.02em}
+.force p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
+.force p b{color:var(--ink)}
+.force .ev{margin-top:12px;font-size:12.5px;font-family:"JetBrains Mono";color:var(--ink-2);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:8px 11px;line-height:1.5}
+.force .ev b{color:var(--purple)}
+
+/* evidence callout (dark) */
+.proof{background:var(--ink);color:#e7ddf5;border-radius:16px;padding:clamp(22px,3vw,32px);margin-top:28px;box-shadow:var(--soft-2)}
+.proof .pt{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.proof h3{color:#fff;font-size:clamp(19px,2.3vw,24px);margin-top:8px;max-width:30ch}
+.proof .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.proof .pi .v{font-family:"Inter Tight";font-weight:800;font-size:clamp(20px,2.6vw,27px);background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.proof .pi .l{margin-top:5px;color:#cfc4e4;font-size:12px;line-height:1.4}
+.proof .src{margin-top:18px;font-size:12px;color:#a99dc2;font-family:"JetBrains Mono"}
+
+/* copy / can't copy */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.col{border-radius:14px;padding:24px;border:1px solid var(--line)}
+.col.can{background:var(--green-tint);border-color:rgba(14,122,92,.25)}
+.col.cant{background:var(--orange-tint);border-color:rgba(245,148,37,.28)}
+.col h3{font-size:18px;display:flex;align-items:center;gap:10px}
+.col.can h3{color:var(--green)}.col.cant h3{color:#a85e09}
+.col ul{margin:14px 0 0;padding-left:0;list-style:none}
+.col li{position:relative;padding-left:26px;margin:11px 0;font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.col li b{color:var(--ink)}
+.col.can li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:800}
+.col.cant li::before{content:"✕";position:absolute;left:0;top:0;color:#b4660a;font-weight:800}
+
+/* playbook steps */
+.steps{display:grid;gap:12px;margin-top:26px;counter-reset:s}
+.step{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px 20px 64px;position:relative;box-shadow:var(--soft)}
+.step::before{content:counter(s,decimal-leading-zero);position:absolute;left:18px;top:20px;width:32px;height:32px;display:grid;place-items:center;border-radius:999px;background:var(--ink);color:#fff;font:700 .74rem/1 "JetBrains Mono",monospace}
+.step h3{font-size:17px;letter-spacing:-.02em}
+.step p{margin:6px 0 0;font-size:14.5px;color:var(--muted);line-height:1.55}
+.step .svc{display:inline-block;margin-top:9px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--purple);background:var(--purple-tint);padding:4px 9px;border-radius:6px}
+
+/* ---------- gate ---------- */
+.gate{background:linear-gradient(180deg,#FFF7EC 0%,#FBF8FE 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gate-in{padding:clamp(38px,5vw,60px) 0;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,52px);align-items:center}
+.gate-copy .tag-sec{color:var(--amber-deep)}
+.gate-copy h2{font-size:clamp(24px,3.2vw,34px);letter-spacing:-.03em;margin-top:10px;max-width:18ch}
+.gate-copy p{margin-top:14px;color:var(--muted);font-size:16px;max-width:46ch}
+.gate-copy ul{margin:18px 0 0;padding:0;list-style:none}
+.gate-copy li{position:relative;padding-left:28px;margin:10px 0;font-size:14.5px;color:var(--ink-2)}
+.gate-copy li::before{content:"→";position:absolute;left:0;color:var(--pink);font-weight:800}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(22px,3vw,30px);box-shadow:var(--soft-2)}
+.form-card h3{font-size:19px;letter-spacing:-.02em}
+.form-card .sub{margin-top:6px;color:var(--muted);font-size:13.5px}
+.field{margin-top:14px}
+.field label{display:block;font-size:12.5px;font-weight:700;color:var(--ink-2);margin-bottom:6px}
+.field input,.field textarea{width:100%;font-family:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;transition:.15s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--purple);box-shadow:0 0 0 3px var(--purple-tint)}
+.field .err{display:none;color:#c01f48;font-size:12px;margin-top:5px;font-weight:600}
+.field.invalid input{border-color:var(--pink)}
+.field.invalid .err{display:block}
+.form-card .btn-pri{width:100%;justify-content:center;margin-top:20px}
+.privacy{margin-top:13px;font-size:11.5px;color:var(--muted-2);line-height:1.5;text-align:center}
+.privacy a{color:var(--muted)}
+.gate.done{display:none}
+
+/* lock overlay */
+.locked{position:relative}
+.locked .veil{position:absolute;inset:0;z-index:5;background:linear-gradient(180deg,rgba(251,248,254,0) 0%,rgba(251,248,254,.7) 16%,var(--paper) 42%);backdrop-filter:blur(5px);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:90px;text-align:center}
+.locked .veil .lk{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--soft-2);padding:26px 30px;max-width:430px}
+.locked .veil .lk .ico{width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;margin:0 auto 14px}
+.locked .veil .lk h3{font-size:20px;letter-spacing:-.02em}
+.locked .veil .lk p{margin-top:8px;color:var(--muted);font-size:14px}
+.locked .veil .lk .btn{margin-top:16px}
+.locked .lockzone{filter:blur(7px);pointer-events:none;user-select:none;max-height:560px;overflow:hidden}
+.unlocked .veil{display:none}
+.unlocked .lockzone{filter:none;pointer-events:auto;user-select:auto;max-height:none;overflow:visible}
+.reveal-bar{display:none;position:sticky;top:49px;z-index:55;background:var(--green);color:#fff;text-align:center;padding:9px 14px;font-size:13px;font-weight:600}
+.reveal-bar a{color:#fff;text-decoration:underline;font-weight:700}
+.unlocked-flag .reveal-bar{display:block}
+
+/* ---------- founder ---------- */
+.founder{background:radial-gradient(120% 130% at 15% 0%,#34195400 0%,#1d0f31 60%,#160a26 100%);background-color:var(--ink);color:#fff}
+.founder-in{padding:clamp(44px,6vw,76px) 0;display:grid;grid-template-columns:240px 1fr;gap:clamp(26px,4vw,48px);align-items:center}
+.founder img{width:240px;height:240px;object-fit:cover;object-position:center;border-radius:50%;border:3px solid rgba(255,255,255,.12);box-shadow:var(--soft-2)}
+.founder .tag-sec{color:var(--orange)}
+.founder h2{font-size:clamp(24px,3.2vw,34px);letter-spacing:-.03em;margin-top:10px;color:#fff;max-width:20ch}
+.founder p{margin-top:14px;color:#d2c7e6;font-size:16px;max-width:56ch}
+.founder .who{margin-top:18px;font-family:"Inter Tight";font-weight:800;font-size:18px;color:#fff}
+.founder .role{color:#b6a9cf;font-size:13.5px;font-family:"JetBrains Mono";letter-spacing:.02em;margin-top:2px}
+.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.contact-row a{display:inline-flex;align-items:center;gap:9px;font-family:"Inter Tight";font-weight:700;font-size:14.5px;text-decoration:none;padding:12px 18px;border-radius:999px}
+.c-pri{background:var(--grad-btn);color:#fff;box-shadow:0 12px 28px rgba(241,60,100,.32)}
+.c-pri:hover{transform:translateY(-2px)}
+.c-sec{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.c-sec:hover{background:rgba(255,255,255,.14)}
+
+/* footer */
+footer.foot{background:var(--ink);color:#9a8cb8;padding:26px 0 40px;font-size:12.5px;border-top:1px solid rgba(255,255,255,.08)}
+.foot-in{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.foot-in img{height:20px;opacity:.9}
+.foot-in .src{max-width:62ch;line-height:1.6;color:#8478a0}
+.foot-in .src b{color:#cdc1e3}
+
+/* reveal anim */
+.r{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none;transition:none}}
+
+/* ---------- responsive ---------- */
+@media(max-width:880px){
+  .cover-grid{grid-template-columns:1fr;gap:28px}
+  .cover-visual{max-width:460px}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .cards,.proof .grid{grid-template-columns:repeat(2,1fr)}
+  .forces,.split{grid-template-columns:1fr}
+  .toc ol{grid-template-columns:1fr 1fr}
+  .gate-in{grid-template-columns:1fr}
+  .founder-in{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .founder img{width:190px;height:190px}
+  .contact-row{justify-content:center}
+}
+@media(max-width:560px){
+  body{font-size:15.5px}
+  .cover h1,.cover .lede,.h-sec,.lead,.gate-copy h2,.gate-copy p,.founder h2,.founder p{text-align:center;margin-left:auto;margin-right:auto}
+  .cover-left{max-width:100%}
+  .cover .eyebrow{margin:0 auto;display:inline-flex;max-width:100%;white-space:normal;text-align:center}
+  .cover-cta{justify-content:center}
+  .coverfoot{justify-content:center}
+  .toc ol{grid-template-columns:1fr}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .pull{margin-left:auto;margin-right:auto;text-align:left}
+  .gate-copy ul,.col,.step{text-align:left}
+}
+
+/* print -> clean PDF */
+@media print{
+  header.bar,.cover-cta,.bar-cta,.reveal-bar,.gate{display:none!important}
+  .locked .veil{display:none!important}
+  .locked .lockzone{filter:none!important;max-height:none!important;overflow:visible!important}
+  body{background:#fff}
+  section{break-inside:avoid;border-color:#ddd}
+  .proof,.founder,.cover,.toc{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="bar"><div class="wrap bar-in">
+  <img class="logo" src="assets/dm-logo-negative.svg" alt="Digital Movement UK">
+  <span class="bar-tag">SEO Teardown · White Paper</span>
+  <a class="bar-cta" href="#get">Get the full report</a>
+</div></header>
+
+<div class="reveal-bar wrap-full">You've unlocked the full teardown. <a href="#" onclick="window.print();return false;">Save it as a PDF →</a></div>
+
+<!-- COVER HERO -->
+<section class="cover" style="border:none">
+  <div class="wrap cover-in">
+   <div class="cover-grid">
+    <div class="cover-left">
+    <span class="eyebrow"><b>SEO Competitor Teardown</b> · Live Semrush data</span>
+    <h1>How Bupa earns <b>2.4 million organic visits a month</b> — and the SEO model behind it.</h1>
+    <p class="lede">We pulled live Semrush data on <b>bupa.co.uk</b> and audited the pages themselves — where they rank, why they rank, and how <b>21,000 indexed pages</b> earn that traffic. Split cleanly into what you can copy, and what you can't.</p>
+    <div class="cover-cta">
+      <a class="btn btn-pri" href="#get">Read the full teardown →</a>
+      <a class="btn btn-ghost" href="#summary">Skip to the summary</a>
+    </div>
+    </div>
+
+    <aside class="cover-visual">
+      <div class="dataviz">
+        <div class="dv-head"><span class="dot" aria-hidden="true"></span><b>bupa.co.uk</b> · UK organic search<span class="src">Semrush · Jun 2026</span></div>
+        <div class="dv-big"><span class="n">2.4M</span><span class="u">organic visits / month · Authority Score 71/100</span></div>
+        <div class="dv-chart" aria-hidden="true">
+          <svg viewBox="0 0 320 76" preserveAspectRatio="none" role="img">
+            <defs>
+              <linearGradient id="dvfill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#FF6F98" stop-opacity="0.55"/>
+                <stop offset="1" stop-color="#FF6F98" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="dvline" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#FFB04D"/><stop offset="0.55" stop-color="#FF6F98"/><stop offset="1" stop-color="#CE93FF"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,58 C40,52 60,40 90,38 C120,36 140,44 170,40 C200,36 220,26 250,24 C280,22 300,20 320,16 L320,76 L0,76 Z" fill="url(#dvfill)"/>
+            <path d="M0,58 C40,52 60,40 90,38 C120,36 140,44 170,40 C200,36 220,26 250,24 C280,22 300,20 320,16" fill="none" stroke="url(#dvline)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="dv-axis"><span>Jul 2025</span><span>Jun 2026</span></div>
+        <div class="dv-rows">
+          <div class="dv-rk"><span class="pp g">#1</span><span class="kw">back pain</span><span class="vv">ranks for 3,200 terms</span></div>
+          <div class="dv-rk"><span class="pp g">#2</span><span class="kw">bmi calculator</span><span class="vv">673K searches / mo</span></div>
+          <div class="dv-rk"><span class="pp a">#3</span><span class="kw">electrolytes</span><span class="vv">135K searches / mo</span></div>
+        </div>
+        <div class="dv-foot">Real positions from this report — Bupa's health guides ranking against the NHS for the UK's biggest non-branded health questions.</div>
+      </div>
+    </aside>
+   </div>
+
+    <div class="kpi-strip">
+      <div class="kpi"><div class="v" data-count="2.4" data-suffix="M">2.4M</div><div class="l">Organic visits / month (UK)</div></div>
+      <div class="kpi"><div class="v" data-count="71" data-suffix="/100">71/100</div><div class="l">Semrush Authority Score</div></div>
+      <div class="kpi"><div class="v" data-count="414" data-suffix="K">414K</div><div class="l">Keywords ranking in Google</div></div>
+      <div class="kpi"><div class="v" data-count="21110" data-suffix="" data-comma="1">21,110</div><div class="l">Pages ranking in UK Google</div></div>
+      <div class="kpi"><div class="v" data-count="81" data-suffix="/100">81/100</div><div class="l">AI Search visibility score</div></div>
+    </div>
+
+    <div class="coverfoot">
+      <span>Source · <b>Semrush UK, 18 June 2026</b></span>
+      <span>Pages audited live for this report</span>
+      <span><b>11-min</b> read</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENTS -->
+<div class="toc"><div class="wrap toc-in">
+  <h2>What's inside this report</h2>
+  <ol>
+    <li><a href="#summary">The one-paragraph answer</a></li>
+    <li><a href="#numbers">Where bupa.co.uk ranks today</a></li>
+    <li><a href="#traffic">Where the traffic actually comes from</a></li>
+    <li><a href="#pages">The handful of pages doing the work</a></li>
+    <li><a href="#why">Five forces behind the rankings</a></li>
+    <li><a href="#indexed">The 21,000-page question, answered</a></li>
+    <li><a href="#ai">How Bupa also wins AI search</a></li>
+    <li><a href="#copy">What you can copy — and what you can't</a></li>
+    <li><a href="#playbook">The Digital Movement playbook</a></li>
+  </ol>
+</div></div>
+
+<main>
+
+<!-- 1. SUMMARY (visible teaser) -->
+<section id="summary">
+  <div class="wrap">
+    <span class="tag-sec">The one-paragraph answer</span>
+    <h2 class="h-sec">Bupa doesn't rank because of tricks. It ranks because it answers health questions better than anyone else, and has done for years.</h2>
+    <div class="body-rich">
+      <p>bupa.co.uk pulls <strong>2.4 million organic visits a month</strong> from UK Google on a <strong>Semrush Authority Score of 71</strong> — the band Semrush labels "industry leader". It ranks for <strong>414,000 keywords</strong> across <strong>21,110 pages</strong>. Most people assume that scale comes from cheap, mass-produced content. It doesn't.</p>
+      <p>Roughly half of that traffic is <strong>branded</strong> — people searching "bupa", "bupa login", "bupa dental" — which a household name earns for free. The other half is the interesting part: <strong>high-volume health questions</strong> like <em>bmi calculator</em> (673K searches/month), <em>vitamin d</em> (550K) and <em>electrolytes</em> (135K), where Bupa's guides sit in the top three against the NHS. Those pages aren't thin. The lower-back-pain guide alone is <strong>2,869 words</strong>, carries <strong>21 sections</strong>, is clinically reviewed with a dated review cycle, and ranks for <strong>3,200 keywords</strong> on its own.</p>
+      <p class="pull">The lesson isn't "publish more". It's "publish deep, structured, genuinely-reviewed content on topics your customers actually search — and let one strong page earn thousands of rankings."</p>
+      <p>The full teardown below shows the exact keywords, the exact pages, the five forces driving the rankings, how those 21,000 pages stay indexed when most large sites can't, and the parts of this model an ambitious SME can realistically copy. <strong>Enter your details to unlock it.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- GATE -->
+<section class="gate" id="get" style="border:none">
+  <div class="wrap gate-in">
+    <div class="gate-copy">
+      <span class="tag-sec">Unlock the full report</span>
+      <h2>The rest of the teardown — free, in exchange for an introduction.</h2>
+      <p>Tell us where to send it and you'll get the complete nine-section breakdown instantly, plus the playbook for applying the Bupa model to a business your size.</p>
+      <ul>
+        <li>The real top-keyword and top-page tables (live Semrush data)</li>
+        <li>The five forces behind the rankings — with the evidence</li>
+        <li>Why 21,000 pages stay indexed when most sites' don't</li>
+        <li>The 9-step Digital Movement playbook to apply it</li>
+      </ul>
+    </div>
+    <form class="form-card" id="leadForm" novalidate
+          data-endpoint=""
+          action="" method="POST">
+      <h3>Get the full Bupa SEO teardown</h3>
+      <p class="sub">Instant access. No spam — we'll only follow up about your SEO.</p>
+      <div class="field" id="f-name">
+        <label for="in-name">Full name</label>
+        <input id="in-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required>
+        <span class="err">Please enter your name.</span>
+      </div>
+      <div class="field" id="f-email">
+        <label for="in-email">Work email</label>
+        <input id="in-email" name="email" type="email" autocomplete="email" placeholder="jane@yourcompany.co.uk" required>
+        <span class="err">Please enter a valid email address.</span>
+      </div>
+      <div class="field" id="f-phone">
+        <label for="in-phone">Phone</label>
+        <input id="in-phone" name="phone" type="tel" autocomplete="tel" placeholder="07700 900000" required>
+        <span class="err">Please enter a phone number we can reach you on.</span>
+      </div>
+      <button class="btn btn-pri" type="submit">Unlock the full report →</button>
+      <p class="privacy">By submitting, you agree we may contact you about your SEO. We never sell your data. See our <a href="https://digitalmovement.uk/privacy/" target="_blank" rel="noopener">privacy policy</a>.</p>
+    </form>
+  </div>
+</section>
+
+<!-- LOCK ZONE START -->
+<div class="locked" id="lockArea">
+  <div class="veil"><div class="lk">
+    <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+    <h3>The rest is one step away</h3>
+    <p>Enter your name, email and phone above to unlock all nine sections and the playbook — and to save the whole thing as a PDF.</p>
+    <a class="btn btn-pri" href="#get">Enter details to unlock →</a>
+  </div></div>
+
+  <div class="lockzone">
+
+  <!-- 2. NUMBERS -->
+  <section id="numbers">
+    <div class="wrap">
+      <span class="tag-sec">Where bupa.co.uk ranks today</span>
+      <h2 class="h-sec">A top-3 ranking on its brand, its services and the UK's biggest health questions.</h2>
+      <p class="lead">These are the headline figures from Semrush for the UK market, dated 18 June 2026. The traffic is large, but the more important number is <b>quality of position</b>: Bupa isn't scraping page two for scraps — it owns the top of the results for the terms that matter to it.</p>
+      <div class="cards">
+        <div class="card dark"><div class="cv">2.4M</div><div class="cl">Organic visits / month from UK Google</div></div>
+        <div class="card"><div class="cv">71<span style="font-size:.5em;color:var(--muted)">/100</span></div><div class="cl">Authority Score — Semrush "industry leader" band</div></div>
+        <div class="card"><div class="cv">414.2K</div><div class="cl">Keywords ranking in Google UK</div></div>
+        <div class="card"><div class="cv">21,110</div><div class="cl">Individual pages ranking in UK Google</div></div>
+        <div class="card"><div class="cv">2.4M</div><div class="cl">Backlinks pointing at the domain</div></div>
+        <div class="card"><div class="cv">21.5K</div><div class="cl">Referring domains (links from distinct sites)</div></div>
+        <div class="card"><div class="cv up">90.7%</div><div class="cl">Of visibility from standard organic listings</div></div>
+        <div class="card"><div class="cv">9%</div><div class="cl">Share of voice across its keyword market</div></div>
+      </div>
+      <p class="tnote" style="margin-top:14px;color:var(--muted)">Read it like this: a score of 71/100 puts Bupa among the strongest domains in any market. 2.4M backlinks from 21.5K different websites is two decades of brand and PR compounding — it is the moat, and it is the part that money alone can't shortcut.</p>
+    </div>
+  </section>
+
+  <!-- 3. TRAFFIC -->
+  <section id="traffic">
+    <div class="wrap">
+      <span class="tag-sec">Where the traffic actually comes from</span>
+      <h2 class="h-sec">Half brand, half health questions — and the health half is the lesson.</h2>
+      <p class="lead">Sorted by the traffic each keyword sends, Bupa's top terms split into two groups. The <b>branded</b> ones (purple) come with being famous. The <b>informational</b> ones (teal) are won, not given — and they're enormous: a single non-branded health term can carry more monthly searches than the entire brand.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Keyword</th><th>Type</th><th class="r">Position</th><th class="r">Traffic / mo</th><th class="r">Search volume</th><th>Ranking page</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">bupa</td><td><span class="it brand">Brand</span></td><td class="r"><span class="pos">1</span></td><td class="r num">88,000</td><td class="r num">110,000</td><td class="url">/ (homepage)</td></tr>
+          <tr><td class="kw">bupa dental</td><td><span class="it brand">Brand</span></td><td class="r"><span class="pos">1</span></td><td class="r num">26,500</td><td class="r num">33,100</td><td class="url">/dental/dental-care</td></tr>
+          <tr><td class="kw">bupa login</td><td><span class="it brand">Brand</span></td><td class="r"><span class="pos">1</span></td><td class="r num">17,800</td><td class="r num">22,200</td><td class="url">/ (homepage)</td></tr>
+          <tr><td class="kw">bmi calculator</td><td><span class="it info">Health</span></td><td class="r"><span class="pos">2</span></td><td class="r num">17,500</td><td class="r num">673,000</td><td class="url">/health-information/bmi-calculator</td></tr>
+          <tr><td class="kw">vitamin d</td><td><span class="it info">Health</span></td><td class="r"><span class="pos mid">6</span></td><td class="r num">12,100</td><td class="r num">550,000</td><td class="url">/newsroom/ourviews/vitamin-d</td></tr>
+          <tr><td class="kw">bupa health insurance</td><td><span class="it trans">Buying</span></td><td class="r"><span class="pos">1</span></td><td class="r num">11,800</td><td class="r num">14,800</td><td class="url">/health/health-insurance</td></tr>
+          <tr><td class="kw">electrolytes</td><td><span class="it info">Health</span></td><td class="r"><span class="pos">3</span></td><td class="r num">5,900</td><td class="r num">135,000</td><td class="url">/newsroom/ourviews/what-are-electrolytes</td></tr>
+        </tbody>
+      </table></div>
+      <p class="tnote" style="margin-top:12px;color:var(--muted)">Source: Semrush Organic Positions, bupa.co.uk, UK, 18 June 2026. "Buying" = transactional intent.</p>
+
+      <div class="body-rich">
+        <p>Notice the mismatch on the health terms. Bupa ranks <strong>#2 for "bmi calculator"</strong> — a term searched <strong>673,000 times a month</strong> — yet it only takes 17,500 visits from it, because the top spot and the on-page calculator widgets cream off the rest. That gap is the prize Bupa keeps competing for, and it's why these pages get rebuilt and re-reviewed rather than left alone.</p>
+      </div>
+      <p class="pull">A famous brand gets you the branded half for free. The other half — the health questions worth millions of searches — is earned page by page. That half is the one any business can compete for.</p>
+    </div>
+  </section>
+
+  <!-- 4. PAGES -->
+  <section id="pages">
+    <div class="wrap">
+      <span class="tag-sec">The handful of pages doing the work</span>
+      <h2 class="h-sec">A few deep guides carry millions of visits — and one ranks for 10,300 keywords by itself.</h2>
+      <p class="lead">Sort Bupa's 21,110 pages by traffic and a clear shape appears: after the homepage, the biggest earners are all <b>single, comprehensive health guides</b>. The "keywords" column is the headline — one well-built page ranks for thousands of related searches, because it covers the whole topic, not one phrase.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Page</th><th class="r">Traffic / mo</th><th class="r">Keywords it ranks for</th><th class="r">Referring domains</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Homepage <span class="url">/</span></td><td class="r num">154,500</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:30px"></span><span class="num">3,200</span></div></td><td class="r num">2,200</td></tr>
+          <tr><td class="kw">BMI calculator <span class="url">/health-information/bmi-calculator</span></td><td class="r num">70,800</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:100px"></span><span class="num">10,300</span></div></td><td class="r num">161</td></tr>
+          <tr><td class="kw">Back pain guide <span class="url">/health-information/.../back-pain</span></td><td class="r num">52,800</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:30px"></span><span class="num">3,200</span></div></td><td class="r num">51</td></tr>
+          <tr><td class="kw">Health insurance <span class="url">/health/health-insurance</span></td><td class="r num">42,000</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:30px"></span><span class="num">3,100</span></div></td><td class="r num">229</td></tr>
+          <tr><td class="kw">Intermittent fasting <span class="url">/newsroom/ourviews/intermittent-fasting</span></td><td class="r num">31,100</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:13px"></span><span class="num">1,300</span></div></td><td class="r num">89</td></tr>
+          <tr><td class="kw">What are electrolytes <span class="url">/newsroom/ourviews/what-are-electrolytes</span></td><td class="r num">29,200</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:7px"></span><span class="num">708</span></div></td><td class="r num">52</td></tr>
+          <tr><td class="kw">Period blood colour <span class="url">/health/payg/period-blood-colour</span></td><td class="r num">22,600</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:16px"></span><span class="num">1,600</span></div></td><td class="r num">7</td></tr>
+          <tr><td class="kw">Warts &amp; verrucas <span class="url">/health-information/healthy-skin/warts-and-verrucas</span></td><td class="r num">22,600</td><td class="r"><div class="bar-cell"><span class="bar-fill" style="width:17px"></span><span class="num">1,700</span></div></td><td class="r num">33</td></tr>
+        </tbody>
+      </table></div>
+      <p class="tnote" style="margin-top:12px;color:var(--muted)">Source: Semrush Top Pages, bupa.co.uk, UK, 18 June 2026. Bar = relative number of ranking keywords per page.</p>
+      <p class="pull">The BMI-calculator page ranks for 10,300 different searches. That's not 10,300 pages — it's one page so complete that Google returns it for thousands of variations of the same question.</p>
+    </div>
+  </section>
+
+  <!-- 5. WHY -->
+  <section id="why">
+    <div class="wrap">
+      <span class="tag-sec">Five forces behind the rankings</span>
+      <h2 class="h-sec">Strip out the brand and five repeatable forces are doing the ranking.</h2>
+      <p class="lead">None of these are secrets or hacks. They're the fundamentals Google has rewarded for a decade — Bupa just does each one at full strength, on every page.</p>
+      <div class="forces">
+        <div class="force">
+          <div class="fn">FORCE 01</div>
+          <h3>Real expertise on topics where it matters most</h3>
+          <p>Health and money are what Google calls <b>"Your Money or Your Life"</b> topics — it holds them to the highest trust bar. Bupa is an actual healthcare provider with clinicians, so its content carries first-hand authority a generic blog can't fake.</p>
+          <div class="ev">Every guide ends with <b>"Where do we get our health information from?"</b> and a dated clinical review.</div>
+        </div>
+        <div class="force">
+          <div class="fn">FORCE 02</div>
+          <h3>Depth that covers the whole question, not one phrase</h3>
+          <p>Pages are long and complete on purpose. The back-pain guide runs <b>2,869 words across 21 sections</b> — causes, symptoms, diagnosis, self-help, treatment, prevention, FAQs. That completeness is why one page earns thousands of rankings.</p>
+          <div class="ev">21 H2 sections + 24 sub-sections on a single condition page. <b>One page, 3,200 keywords.</b></div>
+        </div>
+        <div class="force">
+          <div class="fn">FORCE 03</div>
+          <h3>A topic-cluster structure Google can read</h3>
+          <p>Content is filed in a clean hierarchy — <b>hub → category → condition</b> (health-information → muscles-bones-joints → back-pain). Each guide links to its siblings, so authority flows through the cluster and Google maps the whole subject.</p>
+          <div class="ev">Predictable URL paths + internal links between related guides = a machine-readable map of expertise.</div>
+        </div>
+        <div class="force">
+          <div class="fn">FORCE 04</div>
+          <h3>A link-and-brand moat two decades deep</h3>
+          <p>Authority isn't only on-page. Bupa has <b>2.4M backlinks from 21,500 different websites</b> — health bodies, press, partners — built over twenty years. That's the single hardest force to copy, and the clearest reason it outranks newer rivals.</p>
+          <div class="ev">21.5K referring domains. This is the moat — and the part an SME competes around, not against.</div>
+        </div>
+        <div class="force">
+          <div class="fn">FORCE 05</div>
+          <h3>Matching the format the searcher wants</h3>
+          <p>Bupa builds the <b>shape</b> of answer each query expects — a working calculator for "bmi calculator", a step-by-step guide for "back pain", a clear product page for "health insurance". Right format, right intent, every time.</p>
+          <div class="ev">Calculators, guides, FAQs and product pages — chosen to match what each search is really asking for.</div>
+        </div>
+        <div class="force" style="background:var(--ink);border-color:var(--ink)">
+          <div class="fn" style="color:var(--orange)">THE TAKEAWAY</div>
+          <h3 style="color:#fff">Four of the five are buildable</h3>
+          <p style="color:#cfc4e4">Expertise, depth, structure and intent-match are <b style="color:#fff">decisions, not budgets</b>. Only the link moat takes years. That's the honest line between what you copy and what you build toward.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. INDEXED -->
+  <section id="indexed">
+    <div class="wrap">
+      <span class="tag-sec">The 21,000-page question, answered</span>
+      <h2 class="h-sec">How do 21,000 pages all stay indexed? Because not one of them is thin — and none of them is AI filler.</h2>
+      <p class="lead">It's a fair question, and an important one: Google now <b>removes</b> most large sites' thin, mass-produced pages from its index. Bupa's stay in. We audited the pages to find out why, and the answer is the opposite of a shortcut.</p>
+      <div class="proof">
+        <div class="pt">Evidence — pulled live from the back-pain guide, this report</div>
+        <h3>One "ordinary" Bupa page, measured</h3>
+        <div class="grid">
+          <div class="pi"><div class="v">2,869</div><div class="l">words on the page</div></div>
+          <div class="pi"><div class="v">21 + 24</div><div class="l">H2 sections + H3 sub-sections</div></div>
+          <div class="pi"><div class="v">Oct 2024</div><div class="l">Last clinically reviewed (next: Oct 2027)</div></div>
+          <div class="pi"><div class="v">3,200</div><div class="l">Keywords this single page ranks for</div></div>
+        </div>
+        <div class="src">Title: "Lower back pain: Symptoms, causes and treatment | Bupa UK" · Includes an FAQ block, breadcrumb structured data, and links to related Bupa guides.</div>
+      </div>
+      <div class="body-rich">
+        <h3>Why these pages index when thin pages don't</h3>
+        <p><strong>They are genuinely substantial.</strong> A 2,800-word, 21-section guide is a complete reference, not a 300-word stub written to chase a keyword. Google's "Helpful Content" systems exist to filter out the latter — Bupa is firmly in the former.</p>
+        <p><strong>They carry real review signals.</strong> A named editorial standard, a clinical reviewer, a "last reviewed" date and a "next review" date tell Google the content is maintained by people who are accountable for it. Bupa states its information is "<em>reviewed by appropriate medical or clinical professionals</em>" and refreshed on a cycle.</p>
+        <p><strong>One page earns its place by serving thousands of searches.</strong> Because each guide is comprehensive, it ranks for 700–10,300 variations — so the page is obviously useful, and Google has every reason to keep it indexed.</p>
+        <p><strong>The structure makes them crawlable.</strong> Clean hub → category → page URLs, breadcrumbs, internal links and structured data let Google find, understand and file every page efficiently — so coverage scales without pages getting orphaned or duplicated.</p>
+        <p class="pull">So: not AI text at scale. It's editorial content at scale — deep, reviewed, structured, and maintained. The volume is a <em>result</em> of covering a subject completely, never the goal.</p>
+        <p>The mistake to avoid is reading "21,000 indexed pages" as "publish 21,000 pages". Do that with thin or spun content and Google removes them — we see exactly this pattern on programmatic sites every week, where 89–95% of mass-produced pages never get indexed at all. Bupa's number is the by-product of <strong>twenty years of doing fewer things, properly.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. AI -->
+  <section id="ai">
+    <div class="wrap">
+      <span class="tag-sec">How Bupa also wins AI search</span>
+      <h2 class="h-sec">The same content gets Bupa cited 6,900 times by ChatGPT, Gemini and Google's AI answers.</h2>
+      <p class="lead">The way people search is shifting from blue links to AI answers. The reassuring part: the content that ranks in Google is the same content the AI engines quote — so doing the fundamentals well pays off twice.</p>
+      <div class="cards">
+        <div class="card dark"><div class="cv">81<span style="font-size:.5em;color:#cfc4e4">/100</span></div><div class="cl">AI Search visibility score (82 in the UK)</div></div>
+        <div class="card"><div class="cv">12,100</div><div class="cl">Mentions across AI engines</div></div>
+        <div class="card"><div class="cv">6,800</div><div class="cl">Bupa pages cited as a source by AI</div></div>
+        <div class="card"><div class="cv">5,400</div><div class="cl">Mentions in Google's AI Overviews alone</div></div>
+      </div>
+      <div class="body-rich">
+        <p>Across ChatGPT, Google AI Overviews, Google's AI Mode and Gemini, Bupa is referenced <strong>12,100 times</strong>, with <strong>6,800 of its pages cited as sources</strong>. In its own niche, Bupa is one of the most-cited sources, sitting alongside the NHS.</p>
+        <p>Why the same pages win here too: AI answers prefer sources that are <strong>clearly structured, factually specific, and visibly authored by a credible expert</strong> — exactly the qualities that already make Bupa's guides rank. There is no separate "AI SEO" trick. There is good, structured, trustworthy content, and it earns citations as a side effect.</p>
+        <p class="pull">Win the fundamentals and you win twice: the ranking in Google, and the citation in the AI answer above it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. COPY -->
+  <section id="copy">
+    <div class="wrap">
+      <span class="tag-sec">What you can copy — and what you can't</span>
+      <h2 class="h-sec">An honest line between the moat and the method.</h2>
+      <p class="lead">It would be dishonest to hand you "do what Bupa does" and leave it there — you don't have a 100-year-old brand or two decades of links. But most of what drives these rankings is method, and method transfers to any size of business.</p>
+      <div class="split">
+        <div class="col cant">
+          <h3>What you can't simply copy</h3>
+          <ul>
+            <li><b>The brand.</b> 88,000 visits a month come from people typing "bupa". You earn that over years, not weeks.</li>
+            <li><b>The link moat.</b> 2.4M backlinks from 21,500 sites is twenty years of PR, partnerships and trust compounding.</li>
+            <li><b>The raw scale.</b> 21,000 maintained pages needs an in-house editorial and clinical team. You don't need it — and shouldn't fake it.</li>
+            <li><b>Competing head-on for "bmi calculator".</b> Against the NHS and Bupa, the giant generic terms are the wrong fight.</li>
+          </ul>
+        </div>
+        <div class="col can">
+          <h3>What you absolutely can copy</h3>
+          <ul>
+            <li><b>The topic-cluster structure.</b> Hub → category → page, internally linked. It works at 30 pages as well as 21,000.</li>
+            <li><b>Depth over volume.</b> Win on completeness. One genuinely thorough page beats ten thin ones — and earns more rankings.</li>
+            <li><b>Visible expertise.</b> Named authors, real credentials, review dates, sources. This is free, and it's decisive for trust.</li>
+            <li><b>Intent-matched formats.</b> Build the shape of answer each search wants — guide, calculator, comparison, product page.</li>
+            <li><b>Targeting the specific terms.</b> Go after the lower-competition, higher-intent questions Bupa wins quietly — that's where SMEs win.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pull">You don't beat Bupa at being Bupa. You take its method, point it at the specific, buyer-intent questions in your market, and win those.</p>
+    </div>
+  </section>
+
+  <!-- 9. PLAYBOOK -->
+  <section id="playbook" style="border-bottom:none">
+    <div class="wrap">
+      <span class="tag-sec">The Digital Movement playbook</span>
+      <h2 class="h-sec">The Bupa model, rebuilt for a business your size.</h2>
+      <p class="lead">This is how we turn the teardown above into rankings and qualified leads for clients who don't have Bupa's brand or budget. Nine steps, run as a programme — not a one-off project.</p>
+      <div class="steps">
+        <div class="step"><h3>Map your real money questions</h3><p>We pull the searches your buyers actually make near a decision — the specific, higher-intent terms, not the vanity giants — and size each one by demand and difficulty.</p><span class="svc">SEO · Keyword strategy</span></div>
+        <div class="step"><h3>Find the gaps the leaders leave open</h3><p>We audit who ranks now and where the strong sites are thin or absent — the questions Bupa and your direct rivals under-serve. Those gaps are your fastest wins.</p><span class="svc">SEO · Competitor analysis</span></div>
+        <div class="step"><h3>Design the topic clusters</h3><p>We architect a hub → category → page structure for your subjects, so authority compounds and Google can read your expertise — the same shape that lets one Bupa page rank for thousands of terms.</p><span class="svc">SEO · Information architecture</span></div>
+        <div class="step"><h3>Write deep, genuinely-reviewed pages</h3><p>Complete pages that answer the whole question, in your real voice, with named expertise and review dates. No thin content, no spun filler — the work Google keeps indexed.</p><span class="svc">SEO · Content production</span></div>
+        <div class="step"><h3>Match the format to the intent</h3><p>Guide, comparison, calculator, FAQ or product page — we build the shape of answer each search expects, the way Bupa builds a calculator for "bmi calculator".</p><span class="svc">SEO · On-page</span></div>
+        <div class="step"><h3>Build authority signals you actually have</h3><p>Real authors, credentials, structured data, and an earned-link plan suited to your size — digital PR and partnerships, not bought links — to grow the moat over time.</p><span class="svc">SEO · E-E-A-T &amp; links</span></div>
+        <div class="step"><h3>Make every page win in AI search too</h3><p>We structure content to be quoted by ChatGPT, Gemini and Google's AI Overviews — answer up top, extractable facts, clear authorship — so you're cited, not just ranked.</p><span class="svc">GEO · AI-Search optimisation</span></div>
+        <div class="step"><h3>Turn the traffic into booked leads</h3><p>Rankings only pay when they convert. We wire the journey from page to enquiry into your CRM, so every visit is captured, followed up and measured — never lost.</p><span class="svc">CRM · Lead capture</span></div>
+        <div class="step"><h3>Measure, iterate, and accelerate with paid</h3><p>We track rankings, traffic and leads monthly, double down on what moves, and use paid search to buy visibility on the highest-intent terms while the organic compounds.</p><span class="svc">Paid Ads · Acceleration</span></div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /.lockzone -->
+</div><!-- /.locked -->
+
+</main>
+
+<!-- FOUNDER -->
+<section class="founder" style="border:none" id="founder">
+  <div class="wrap founder-in">
+    <img src="assets/raoul-founder.jpg" alt="Raoul Müller, Co-Founder of Digital Movement UK">
+    <div>
+      <span class="tag-sec">Talk to the person who'll run it</span>
+      <h2>Want this model pointed at your market? I'll show you the gaps myself.</h2>
+      <p>I read this report's data the way I read every client's: where can you realistically rank, which questions are worth the work, and what's the shortest path from page to booked enquiry. If you'd like that read on your business, send me a line — it comes straight to me, not a queue.</p>
+      <div class="who">Raoul Müller</div>
+      <div class="role">Co-Founder · Digital Movement UK</div>
+      <div class="contact-row">
+        <a class="c-pri" href="mailto:alex@digitalmovement.uk?subject=Bupa%20teardown%20%E2%80%94%20can%20you%20do%20this%20for%20us%3F">✉ alex@digitalmovement.uk</a>
+        <a class="c-sec" href="tel:+442038157992">📞 +44 20 3815 7992</a>
+        <a class="c-sec" href="https://www.linkedin.com/in/raoulschaller" target="_blank" rel="noopener">in LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot"><div class="wrap foot-in">
+  <img src="assets/dm-logo-negative.svg" alt="Digital Movement UK">
+  <div class="src">
+    <b>Sources &amp; method.</b> All Bupa figures from Semrush (UK database, 18 June 2026): Domain Overview, Organic Positions and Top Pages reports for bupa.co.uk. Page-level measurements (word count, section count, review dates) taken directly from the live Bupa pages while writing this report. Editorial-standard quotes from Bupa's published "About our health information". No figures in this report are estimated or invented. © 2026 Digital Movement UK.
+  </div>
+</div></footer>
+
+<script>
+/* ---------- scroll reveal ---------- */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('section .wrap > *').forEach((el,i)=>{el.classList.add('r');el.style.transitionDelay=(Math.min(i,6)*40)+'ms';io.observe(el);});
+
+/* ---------- KPI counters ---------- */
+function animateCount(el){
+  const target=parseFloat(el.dataset.count); const suffix=el.dataset.suffix||''; const comma=el.dataset.comma;
+  const dur=1100, t0=performance.now();
+  function frame(t){
+    let p=Math.min((t-t0)/dur,1); p=1-Math.pow(1-p,3);
+    let val=target*p;
+    let out = comma ? Math.round(val).toLocaleString('en-GB') : (target%1===0? Math.round(val).toString() : val.toFixed(1));
+    el.textContent=out+suffix;
+    if(p<1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+const kio=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);kio.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.kpi .v[data-count]').forEach(el=>kio.observe(el));
+
+/* ---------- lead gate ---------- */
+const form=document.getElementById('leadForm');
+const lockArea=document.getElementById('lockArea');
+function setErr(id,bad){document.getElementById(id).classList.toggle('invalid',bad);return !bad;}
+function validEmail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+function validPhone(v){return (v.replace(/[^0-9]/g,'').length>=7);}
+
+function unlock(){
+  lockArea.classList.add('unlocked');
+  document.body.classList.add('unlocked-flag');
+  document.querySelector('.gate').classList.add('done');
+  try{localStorage.setItem('bupa_wp_unlocked','1');}catch(e){}
+  // re-run reveals for now-visible content
+  document.querySelectorAll('.lockzone section .wrap > *').forEach(el=>io.observe(el));
+  document.querySelectorAll('.lockzone .kpi .v[data-count]').forEach(el=>kio.observe(el));
+  setTimeout(()=>{document.getElementById('numbers').scrollIntoView({behavior:'smooth',block:'start'});},120);
+}
+
+form.addEventListener('submit',function(ev){
+  ev.preventDefault();
+  const name=form.name.value.trim(), email=form.email.value.trim(), phone=form.phone.value.trim();
+  let ok=true;
+  ok=setErr('f-name', name.length<2)&&ok;
+  ok=setErr('f-email', !validEmail(email))&&ok;
+  ok=setErr('f-phone', !validPhone(phone))&&ok;
+  if(!ok) return;
+  const lead={name,email,phone,ts:new Date().toISOString(),source:'bupa-seo-teardown'};
+  try{localStorage.setItem('bupa_wp_lead',JSON.stringify(lead));}catch(e){}
+  // POST to CRM endpoint if Digital Movement has wired one (set data-endpoint on the form)
+  const ep=form.dataset.endpoint;
+  if(ep){fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)}).catch(()=>{});}
+  unlock();
+});
+
+/* keep it open on return visits */
+try{ if(localStorage.getItem('bupa_wp_unlocked')==='1'){ lockArea.classList.add('unlocked'); document.body.classList.add('unlocked-flag'); document.querySelector('.gate').classList.add('done'); } }catch(e){}
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "images": [
+    {
+      "src": "assets/seo-agency-uk-hero-openai-image-2.png",
+      "page": "https://digitalmovement.uk/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "hero",
+      "prompt": "Hyper-realistic photography-like image for an SEO Agency UK page. A real UK small-business strategy meeting in a modern office: laptop on a wooden table, printed notes, analytics charts visible only as soft unreadable shapes, coffee cups, warm window light, deep ink-purple notebook, orange pen, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/seo-agency-uk-planning-openai-image-2.png",
+      "page": "https://digitalmovement.uk/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an SEO Agency UK page. Close-up of a consultant's hands arranging printed search-growth planning sheets on a desk with coloured sticky tabs, a laptop slightly out of focus, soft daylight, tasteful deep purple and orange office stationery, business-professional UK setting, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/seo-agency-uk-reporting-openai-image-2.png",
+      "page": "https://digitalmovement.uk/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an SEO Agency UK page. Over-the-shoulder scene of a business owner and consultant reviewing a monthly performance report on a laptop in a bright office, charts visible as blurred shapes only, notebook with handwritten marks too small to read, calm professional mood, deep purple and warm orange accents, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/seo-services-uk-hero-openai-image-2.png",
+      "page": "https://digitalmovement.uk/seo-services/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "hero",
+      "prompt": "Hyper-realistic photography-like image for an SEO Services UK page. A tidy agency operations desk photographed from above, showing a laptop, tablet, printed service checklist, colour-coded folders, sticky notes, and a calendar planner in a bright office, all text too small or blurred to read, deep purple, orange, cyan, and green accents, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/seo-services-uk-workstreams-openai-image-2.png",
+      "page": "https://digitalmovement.uk/seo-services/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an SEO Services UK page. Two marketing specialists in a modern meeting room sorting service workstreams on a glass wall with coloured sticky notes and printed charts, faces natural and unposed, city daylight through the window, deep purple and orange details, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/seo-services-uk-audit-openai-image-2.png",
+      "page": "https://digitalmovement.uk/seo-services/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an SEO Services UK page. Close-up of a technical website audit session: laptop with blurred coloured health indicators, notebook, tablet, cable, pen, and printed crawl notes on a clean desk, human hand pointing at the screen, realistic office lighting, deep purple and teal accents, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/ai-search-optimisation-hero-openai-image-2.png",
+      "page": "https://digitalmovement.uk/ai-search-optimisation/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "hero",
+      "prompt": "Hyper-realistic photography-like image for an AI Search Optimisation page. Modern office scene at dusk: strategist using a laptop while several printed source pages and citation notes sit on the desk, soft screen glow, subtle reflections, purple and cyan ambient light, natural hands and workstation details, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/ai-search-optimisation-citations-openai-image-2.png",
+      "page": "https://digitalmovement.uk/ai-search-optimisation/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an AI Search Optimisation page. Close-up of a real desk with a laptop, printed brand fact sheets, citation cards, and coloured thread connecting notes on a cork board in the background, shallow depth of field, cool blue and warm orange light, professional search strategy atmosphere, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    },
+    {
+      "src": "assets/ai-search-optimisation-review-openai-image-2.png",
+      "page": "https://digitalmovement.uk/ai-search-optimisation/",
+      "generator": "openai-image-2",
+      "style": "hyper-realistic-photography",
+      "role": "supporting",
+      "prompt": "Hyper-realistic photography-like image for an AI Search Optimisation page. Business team reviewing AI answer visibility in a quiet meeting room, laptop and tablet on a table with blurred charts, printed prompt-testing notes, soft purple and teal lighting, realistic skin tones and office details, no readable text, no logos, no watermarks, premium editorial commercial photography, 16:9 landscape."
+    }
+  ]
+}

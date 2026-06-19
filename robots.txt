@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index-v1-archived.html
+
+Sitemap: https://digitalmovement.uk/sitemap.xml

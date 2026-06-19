@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB"><head><meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;box-sizing:border-box}
+:root{--grad-bright:linear-gradient(95deg,#FFB04D 0%,#FF6F98 52%,#CE93FF 100%);--grad:linear-gradient(95deg,#F59425,#F13C64 55%,#9A3DD6)}
+html,body{width:1200px;height:630px;overflow:hidden}
+.card{width:1200px;height:630px;position:relative;overflow:hidden;
+  background:radial-gradient(120% 130% at 84% 0%,#3A1E5E 0%,#231037 45%,#160a26 100%);
+  color:#fff;font-family:"Plus Jakarta Sans",sans-serif;padding:64px 70px}
+.card::before{content:"";position:absolute;width:560px;height:560px;right:-150px;top:-170px;background:var(--grad);filter:blur(120px);opacity:.46;border-radius:50%}
+.card::after{content:"";position:absolute;width:440px;height:440px;left:-170px;bottom:-220px;background:linear-gradient(120deg,#20BFC2,#5A2A86);filter:blur(130px);opacity:.32;border-radius:50%}
+.in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:18px}
+.top img{height:34px}
+.badge{margin-left:auto;display:flex;align-items:center;gap:10px;font-family:"JetBrains Mono";font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);padding:11px 18px;border-radius:999px}
+.badge .d{width:9px;height:9px;border-radius:50%;background:var(--grad-bright)}
+.eyebrow{margin-top:46px;font-family:"JetBrains Mono";font-size:16px;letter-spacing:.16em;text-transform:uppercase;color:#c9bce6}
+h1{margin-top:18px;font-family:"Inter Tight";font-weight:800;letter-spacing:-.035em;font-size:74px;line-height:1.02;max-width:18ch}
+h1 b{background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+.sub{margin-top:20px;font-size:23px;color:#d6cbe8;max-width:40ch;line-height:1.4}
+.sub b{color:#fff}
+.kpis{margin-top:auto;display:flex;gap:14px;align-items:center}
+.kpi{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:14px;padding:14px 20px}
+.kpi .v{font-family:"Inter Tight";font-weight:800;font-size:30px;line-height:1;background:var(--grad-bright);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi .l{margin-top:5px;font-size:13px;color:#cfc4e4;letter-spacing:.01em}
+.by{margin-left:auto;text-align:right}
+.by .n{font-family:"Inter Tight";font-weight:800;font-size:20px}
+.by .r{font-family:"JetBrains Mono";font-size:13px;color:#b6a9cf;margin-top:3px;letter-spacing:.04em}
+</style></head>
+<body><div class="card"><div class="in">
+  <div class="top">
+    <img src="assets/dm-logo-negative.svg" alt="Digital Movement UK">
+    <div class="badge"><span class="d"></span>Case Study · White Paper</div>
+  </div>
+  <div class="eyebrow">SEO Competitor Teardown · Live Semrush UK Data</div>
+  <h1>How Bupa earns <b>2.4M organic visits</b> a month.</h1>
+  <div class="sub">The SEO model behind <b>21,000 ranking pages</b> — and exactly what your business can copy.</div>
+  <div class="kpis">
+    <div class="kpi"><div class="v">2.4M</div><div class="l">Visits / month</div></div>
+    <div class="kpi"><div class="v">414K</div><div class="l">Keywords ranked</div></div>
+    <div class="kpi"><div class="v">21,110</div><div class="l">Pages indexed</div></div>
+    <div class="kpi"><div class="v">71/100</div><div class="l">Authority Score</div></div>
+    <div class="by"><div class="n">Digital Movement UK</div><div class="r">SEO · AI Search · Leads</div></div>
+  </div>
+</div></div></body></html>

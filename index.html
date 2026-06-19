@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SEO Agency UK | More Enquiries from Google &amp; AI</title>
+  <meta name="description" content="An SEO agency for UK businesses that want more enquiries from Google and AI search. We do SEO, AI search, paid ads and CRM, measured by enquiries.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="author" content="Raoul (Alex) Müller, Co-Founder, Digital Movement UK">
+  <meta name="theme-color" content="#fb7900">
+  <link rel="canonical" href="https://digitalmovement.uk/">
+  <link rel="icon" href="assets/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/favicon-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Digital Movement UK">
+  <meta property="og:title" content="SEO Agency UK | More Enquiries from Google &amp; AI">
+  <meta property="og:description" content="An SEO agency for UK businesses that want more enquiries from Google and AI search.">
+  <meta property="og:url" content="https://digitalmovement.uk/">
+  <meta property="og:image" content="https://digitalmovement.uk/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image:alt" content="A UK marketing team working together">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEO Agency UK | More Enquiries from Google &amp; AI">
+  <meta name="twitter:image" content="https://digitalmovement.uk/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Digital Movement UK — SEO agency for more enquiries from Google and AI">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@600;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/v2-hero-a.jpg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+  :root{ --amber:#F5C542; --amber-ink:#1A0E2E; }
+  .btn-amber{ background:var(--amber); color:var(--amber-ink); box-shadow:0 12px 24px rgba(245,197,66,.30); }
+  .underline-accent{ position:relative; white-space:nowrap; }
+  .underline-accent::after{ content:""; position:absolute; left:0; right:0; bottom:.04em; height:.32em; background:var(--cyan); opacity:.45; border-radius:3px; z-index:-1; }
+  /* hero v2 */
+  .hero-v2{ padding:48px 0 26px; background:#FFF3E6; }
+  .hero-v2-grid{ display:grid; grid-template-columns:1fr 1.05fr; gap:44px; align-items:center; }
+  .mosaic{ display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:12px; }
+  .mosaic img{ width:100%; height:100%; object-fit:cover; border-radius:var(--radius); aspect-ratio:1/1; }
+  .mosaic .tile{ border-radius:var(--radius); }
+  .mosaic .tile.blue{ background:#BFE0FF; } .mosaic .tile.amber{ background:var(--amber); }
+  .hero-v2 h1{ font-size:clamp(2.3rem,4.4vw,3.7rem); }
+  .hero-v2 h1 b{ display:block; }
+  /* logo / tool strip */
+  .strip{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:18px 0; }
+  .strip .lab{ color:var(--muted); font:800 .72rem/1 "JetBrains Mono",monospace; text-transform:uppercase; }
+  .strip-row{ display:flex; flex-wrap:wrap; gap:12px; margin-top:12px; }
+  .strip-row .ph{ flex:1 1 120px; min-height:46px; border:1px dashed var(--line); border-radius:8px; display:grid; place-items:center; color:var(--muted); font:700 .8rem "JetBrains Mono",monospace; background:#fff; }
+  .humannote{ font-size:.78rem; color:var(--muted); margin-top:8px; font-style:normal; }
+  /* pain box */
+  .painbox{ display:grid; grid-template-columns:1fr 0.9fr; gap:0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--soft-shadow); }
+  .painbox .pains{ background:var(--cream); padding:30px; display:grid; gap:16px; align-content:center; }
+  .painbox .pains li{ list-style:none; display:flex; gap:11px; }
+  .painbox .pains li b{ color:var(--green); }
+  .painbox img{ width:100%; height:100%; object-fit:cover; min-height:260px; }
+  ul.clean{ padding:0; margin:0; }
+  /* accordion */
+  .acc details{ border-bottom:1px solid var(--line); padding:18px 0; }
+  .acc summary{ list-style:none; cursor:pointer; font:800 1.18rem/1.3 "Inter Tight",sans-serif; display:flex; justify-content:space-between; gap:12px; }
+  .acc summary::-webkit-details-marker{ display:none; }
+  .acc summary::after{ content:"+"; color:var(--cyan); font-weight:800; }
+  .acc details[open] summary::after{ content:"–"; }
+  .acc details p{ margin:10px 0 0; color:var(--ink-2); }
+  /* numbered process */
+  .steps-v2 .step-row{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:24px; border-top:1px solid var(--line); padding:22px 0; }
+  .steps-v2 .num{ font:800 2.1rem/1 "Inter Tight",sans-serif; letter-spacing:-.02em; }
+  .steps-v2 h3{ font-size:1.15rem; margin-bottom:6px; }
+  .steps-v2 .step-row p{ color:var(--muted); margin:0; }
+  /* 90-day tabs (accordion) */
+  .tabs90 .t{ border:1px solid var(--line); border-radius:var(--radius); margin-top:10px; background:#fff; box-shadow:var(--soft-shadow); }
+  .tabs90 summary{ list-style:none; cursor:pointer; padding:16px 20px; font:800 1.05rem/1 "Inter Tight",sans-serif; }
+  .tabs90 summary::-webkit-details-marker{ display:none; }
+  .tabs90 details[open] summary{ background:#EAF4FF; }
+  .tabs90 .body{ padding:4px 20px 20px; color:var(--ink-2); border-top:1px solid var(--line); }
+  /* dark results */
+  .dark-v2{ background:var(--ink); color:#fff; }
+  .dark-v2 .eyebrow{ color:var(--amber); } .dark-v2 .eyebrow::before{ background:var(--amber); box-shadow:none; }
+  .dark-v2 h2, .dark-v2 h3{ color:#fff; } .dark-v2 .lede{ color:rgba(255,255,255,.8); }
+  .metric-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:8px; }
+  .mcard{ border:1px dashed rgba(245,197,66,.6); border-radius:var(--radius); background:rgba(255,255,255,.04); padding:20px; }
+  .mcard .big{ font:800 2.2rem/1 "Inter Tight",sans-serif; color:var(--amber); }
+  .mcard .lab{ color:rgba(255,255,255,.75); font-size:.86rem; margin-top:6px; }
+  .mcard .hi{ display:block; font:800 .62rem/1.3 "JetBrains Mono",monospace; color:var(--amber); text-transform:uppercase; margin-top:10px; }
+  /* case carousel */
+  .casecards{ display:flex; gap:16px; overflow-x:auto; padding-bottom:8px; scrollbar-width:thin; }
+  .ccard{ flex:0 0 280px; border:1px solid rgba(255,255,255,.16); border-radius:var(--radius); padding:20px; background:rgba(255,255,255,.04); }
+  .ccard .brand{ font:800 1.05rem/1 "Inter Tight",sans-serif; color:#fff; }
+  .ccard .big{ font:800 2rem/1 "Inter Tight",sans-serif; color:var(--amber); margin:12px 0 6px; }
+  .ccard p{ color:rgba(255,255,255,.72); font-size:.88rem; }
+  /* team */
+  .team-v2{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  .tcard img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:var(--radius); }
+  .tcard .role{ color:var(--purple); font:800 .72rem/1 "JetBrains Mono",monospace; text-transform:uppercase; margin:10px 0 4px; }
+  /* reviews */
+  .reviews{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+  .rev{ border:1px solid var(--line); border-radius:var(--radius); padding:16px; background:#fff; box-shadow:var(--soft-shadow); }
+  .rev .stars{ color:var(--amber); font-size:.9rem; } .rev .who{ font-weight:800; font-size:.85rem; margin-top:8px; }
+  .rev .ph{ color:var(--muted); font-size:.84rem; }
+  /* pricing */
+  .tiers{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .tier{ border:1px solid var(--line); border-radius:var(--radius); padding:26px; background:#fff; box-shadow:var(--soft-shadow); display:flex; flex-direction:column; }
+  .tier.mid{ border:2px solid var(--ink); }
+  .tier h3{ font-size:1.25rem; } .tier .price{ font:800 1.7rem/1 "Inter Tight",sans-serif; margin:10px 0 2px; }
+  .tier .price .ph{ color:var(--muted); }
+  .tier .per{ color:var(--muted); font-size:.82rem; }
+  .tier ul{ list-style:none; padding:0; margin:16px 0 0; display:grid; gap:9px; }
+  .tier li{ display:flex; gap:9px; font-size:.92rem; } .tier li b{ color:var(--green); }
+  .tier .btn{ margin-top:18px; }
+  /* stat band */
+  .statband{ background:var(--cream); border-radius:var(--radius); padding:34px; text-align:center; }
+  .statband h2{ max-width:none; }
+  /* blog */
+  .blog-v2{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .bcard{ border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:#fff; box-shadow:var(--soft-shadow); }
+  .bcard .ph{ aspect-ratio:16/9; background:var(--cream); display:grid; place-items:center; color:var(--muted); font:700 .8rem "JetBrains Mono",monospace; }
+  .bcard .bd{ padding:16px; } .bcard .tag{ font:800 .64rem/1 "JetBrains Mono",monospace; color:#b4660a; background:var(--cream); padding:4px 8px; border-radius:6px; text-transform:uppercase; }
+  .bcard h3{ font-size:1.02rem; margin:10px 0 0; }
+  @media (max-width:900px){ .hero-v2-grid,.painbox,.metric-cards,.tiers,.blog-v2,.steps-v2 .step-row{ grid-template-columns:1fr; } .metric-cards{ grid-template-columns:1fr; } }
+
+  /* hero trust widgets */
+  .hero-stats{ display:flex; flex-wrap:wrap; gap:16px 22px; align-items:center; margin-top:20px; padding-top:18px; border-top:1px solid var(--line); }
+  .gwidget{ display:inline-flex; align-items:center; gap:9px; text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:8px 15px; background:#fff; box-shadow:var(--soft-shadow); transition:transform .15s ease; }
+  .gwidget:hover{ transform:translateY(-1px); }
+  .gwidget .gstars{ color:var(--amber); letter-spacing:1px; font-size:.95rem; }
+  .gwidget .gtxt{ font-size:.86rem; color:var(--ink); } .gwidget .gtxt b{ font-weight:800; }
+  .hstat{ display:flex; flex-direction:column; line-height:1.05; }
+  .hstat b{ font:800 1.2rem/1 "Inter Tight",sans-serif; color:var(--ink); }
+  .hstat span{ font-size:.74rem; color:var(--muted); margin-top:4px; }
+  /* awards / credibility strip */
+  .awards-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .award{ text-align:center; padding:6px 10px; border-right:1px solid var(--line); }
+  .award:last-child{ border-right:none; }
+  .award b{ display:block; font:800 .9rem/1.3 "Inter Tight",sans-serif; color:var(--ink); }
+  .award span{ display:block; font-size:.76rem; color:var(--muted); margin-top:4px; }
+  .award a{ color:var(--cyan); font-weight:700; text-decoration:none; }
+  /* google reviews block */
+  .rev-agg{ display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:16px 20px; box-shadow:var(--soft-shadow); }
+  .rev-agg .big{ font:800 2rem/1 "Inter Tight",sans-serif; } .rev-agg .stars{ color:var(--amber); font-size:1.1rem; }
+  .rev-agg .meta{ color:var(--muted); font-size:.9rem; } .rev-agg a{ color:var(--cyan); font-weight:800; text-decoration:none; }
+  .rev-cta{ text-align:center; margin-top:16px; }
+  .legal{ font-size:.78rem; color:rgba(255,255,255,.62); margin-top:12px; line-height:1.5; }
+  .footer-legal{ font-size:.78rem; color:rgba(255,255,255,.6); margin-top:14px; }
+  @media (max-width:760px){ .awards-row{ grid-template-columns:1fr 1fr; } .award:nth-child(2n){ border-right:none; } .hero-stats{ justify-content:center; } }
+
+  /* full-bleed hero (corner to corner on large desktop) */
+  .hero-full{ width:100%; max-width:none; margin:0; padding:0 clamp(18px,2.4vw,44px); }
+  .hero-v2{ padding:clamp(36px,4vh,56px) 0 clamp(28px,3vh,40px); }
+  .hero-v2-grid{ gap:clamp(28px,4vw,64px); }
+  @media (min-width:1400px){ .hero-v2-grid{ grid-template-columns:1fr 1.1fr; } .mosaic img{ aspect-ratio:4/3; } }
+
+  /* premium layouts for formerly text-only sections */
+  .ws-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:6px; }
+  .ws-card{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; padding:22px; box-shadow:var(--soft-shadow); }
+  .ws-card h3{ font-size:1.02rem; margin-bottom:8px; }
+  .ws-card h3::before{ content:""; display:inline-block; width:9px; height:9px; border-radius:50%; background:var(--amber); margin-right:9px; vertical-align:middle; }
+  .ws-card p{ font-size:.9rem; color:var(--ink-2); margin:0; }
+  .problem-list{ list-style:none; padding:26px; margin:16px 0 0; display:grid; grid-template-columns:1fr 1fr; gap:12px 26px; border:1px solid var(--line); border-radius:var(--radius); background:#fff; box-shadow:var(--soft-shadow); }
+  .problem-list li{ margin:0; padding-left:26px; position:relative; font-size:.92rem; }
+  .problem-list li::before{ content:"\2713"; position:absolute; left:0; color:var(--green); font-weight:800; }
+  .panel{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; box-shadow:var(--soft-shadow); padding:22px; margin-top:18px; }
+  .panel h4{ font:800 .72rem/1 "JetBrains Mono",monospace; text-transform:uppercase; color:var(--muted); margin-bottom:12px; }
+  .chiprow{ display:flex; flex-wrap:wrap; gap:8px; } .chip{ border:1px solid var(--line); border-radius:999px; padding:7px 13px; font-size:.85rem; background:var(--paper); }
+  .tl{ display:grid; gap:0; margin-top:6px; } .tl .row{ display:grid; grid-template-columns:96px 1fr; gap:14px; align-items:start; border-top:1px solid var(--line); padding:11px 0; } .tl .wk{ font:800 .72rem/1.3 "JetBrains Mono",monospace; color:var(--cyan); } .tl .tx{ font-size:.9rem; color:var(--ink-2); }
+  @media(max-width:900px){ .ws-grid{ grid-template-columns:1fr; } .problem-list{ grid-template-columns:1fr; } }
+
+  /* ===== DM BRAND v2 — real palette · NO gradients · editorial ===== */
+  :root{
+    --orange:#fb7900; --amber:#fb7900; --amber-ink:#221334;
+    --ink:#221334; --ink-2:#3a2a52; --navy:#0b1f3a;
+    --cyan:#0b1f3a; --purple:#0b1f3a; --cream:#FFF3E6;
+  }
+  /* editorial large UPPERCASE headers */
+  .section-head h2, .statband h2{ text-transform:uppercase; letter-spacing:-.012em; font-size:clamp(2rem,4.2vw,3.3rem); line-height:1.0; font-weight:800; max-width:none; }
+  .hero-v2 h1{ text-transform:uppercase; letter-spacing:-.022em; line-height:.96; font-size:clamp(2.4rem,5.2vw,4.2rem); font-weight:800; }
+  .section-head{ max-width:980px; } .section-head .lede{ font-size:1.06rem; }
+  .eyebrow{ color:#0b1f3a; }
+  /* width coherence — every section matches the hero (corner-to-corner, 16in) */
+  .wrap{ max-width:1680px; margin:0 auto; padding:0 clamp(18px,2.4vw,46px); }
+  .hero-full{ max-width:1680px; margin:0 auto; padding:0 clamp(18px,2.4vw,46px); }
+  .section-copy{ max-width:900px; }
+  /* kill any gradient text */
+  .gradient-text{ background:none!important; color:var(--orange)!important; -webkit-text-fill-color:var(--orange)!important; }
+  /* brand recolour of accents */
+  .underline-accent::after{ background:var(--orange); opacity:.30; }
+  .acc summary::after{ color:#b4660a; }
+  .btn-amber{ background:var(--orange); color:var(--amber-ink); box-shadow:0 12px 24px rgba(251,121,0,.26); }
+  .mosaic .tile.blue{ background:var(--navy); } .mosaic .tile.amber{ background:var(--orange); }
+  .dark-v2{ background:var(--ink); } .mcard{ border-color:rgba(251,121,0,.55); }
+  .mcard .big,.mcard .hi,.ccard .big{ color:var(--orange); }
+  .dark-v2 .eyebrow{ color:var(--orange); } .dark-v2 .eyebrow::before{ background:var(--orange); }
+  .gwidget .gstars,.rev-agg .stars,.rev .stars{ color:var(--orange); }
+  .tier.mid{ border-color:var(--orange); }
+  /* real DM logo */
+  .brand-logo{ height:30px; width:auto; display:block; }
+  /* hero: get found on Google/Gemini/ChatGPT/Claude — original app icons */
+  .findrow{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-top:20px; }
+  .findrow .lab{ font:800 .72rem/1.3 "JetBrains Mono",monospace; text-transform:uppercase; color:var(--muted); }
+  .applogos{ display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+  .applogos .app{ display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:.92rem; color:var(--ink); }
+  .applogos img{ height:26px; width:26px; object-fit:contain; }
+  /* company logo chips (search-everywhere panel) */
+  .logo-chips{ display:flex; flex-wrap:wrap; gap:10px; }
+  .logo-chip{ display:inline-flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:999px; padding:9px 16px; background:#fff; font-size:.88rem; font-weight:600; color:var(--ink); }
+  .logo-chip img{ height:19px; width:19px; object-fit:contain; }
+  /* tools strip with real logos */
+  .toollogos{ display:flex; flex-wrap:wrap; gap:14px; margin-top:14px; }
+  .toollogos .tool{ display:inline-flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:8px; padding:11px 16px; background:#fff; font-weight:700; font-size:.86rem; color:var(--ink); }
+  .toollogos img{ height:20px; width:20px; object-fit:contain; }
+  /* copy cards for sections 11/12/13 */
+  .copy-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; margin-top:8px; }
+  .copy-grid.two{ grid-template-columns:repeat(2,1fr); }
+  .copy-card{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; padding:26px; box-shadow:var(--soft-shadow); }
+  .copy-card h3{ font-size:1.12rem; margin-bottom:10px; }
+  .copy-card h3::before{ content:""; display:inline-block; width:10px; height:10px; border-radius:2px; background:var(--orange); margin-right:11px; vertical-align:middle; }
+  .copy-card p{ margin:0; color:var(--ink-2); font-size:.95rem; }
+  /* founder cards */
+  .founders{ display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .fcard{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; box-shadow:var(--soft-shadow); overflow:hidden; display:grid; grid-template-columns:150px 1fr; }
+  .fcard img{ width:150px; height:100%; min-height:200px; object-fit:cover; object-position:center 18%; background:var(--cream); }
+  .fcard .fb{ padding:24px; } .fcard .role{ color:var(--orange); font:800 .7rem/1.2 "JetBrains Mono",monospace; text-transform:uppercase; margin-bottom:7px; }
+  .fcard h3{ font-size:1.22rem; margin-bottom:9px; } .fcard p{ margin:0; color:var(--ink-2); font-size:.92rem; }
+  .report-note{ border:1px solid var(--line); border-radius:var(--radius); background:var(--cream); padding:22px; margin-top:18px; }
+  .report-note h3{ font-size:1.05rem; margin-bottom:8px; }
+  @media(max-width:760px){ .founders,.copy-grid.two{ grid-template-columns:1fr; } .fcard{ grid-template-columns:1fr; } .fcard img{ width:100%; height:240px; object-position:center 18%; } }
+  .footer-logo{ height:28px; width:auto; filter:brightness(0) invert(1); display:block; }
+  /* hero fills first viewport; only the hero is visible above the fold */
+  @media (min-width:901px){
+    .hero-v2{ min-height:calc(100vh - 70px); display:flex; align-items:center; }
+    .hero-v2 > .hero-full{ width:100%; }
+    .hero-v2-grid{ align-items:center; }
+  }
+  .hero-stats{ margin-top:22px; }
+
+  /* case-study comparison (dentist London) */
+  .vs-grid{ display:grid; grid-template-columns:1fr auto 1fr; gap:18px; align-items:stretch; margin-top:10px; }
+  .vs-card{ border:1px solid var(--line); border-radius:var(--radius); background:#fff; box-shadow:var(--soft-shadow); padding:26px; display:flex; flex-direction:column; }
+  .vs-card.win{ border-color:var(--orange); box-shadow:0 16px 34px rgba(251,121,0,.15); }
+  .vs-top h3{ font-size:1.4rem; margin:10px 0 2px; } .vs-sub{ color:var(--muted); font-size:.85rem; margin:0; }
+  .vs-badge{ display:inline-block; font:800 .68rem/1 "JetBrains Mono",monospace; text-transform:uppercase; letter-spacing:.04em; padding:7px 12px; border-radius:999px; }
+  .vs-badge.red{ background:#efeaf1; color:#6c6280; } .vs-badge.green{ background:#fff0e0; color:#b4660a; }
+  .serpviz{ border:1px solid var(--line); border-radius:10px; padding:14px; background:var(--paper); margin:16px 0; }
+  .serpviz .pg{ font:800 .6rem/1 "JetBrains Mono",monospace; color:var(--muted); text-transform:uppercase; margin-bottom:10px; display:flex; justify-content:space-between; }
+  .serpviz .res{ height:9px; border-radius:3px; background:#e3dcea; margin:8px 0; }
+  .serpviz .res.w90{ width:90%; } .serpviz .res.w70{ width:70%; } .serpviz .res.w60{ width:60%; }
+  .serpviz .res.me{ height:24px; display:flex; align-items:center; padding:0 11px; font:800 .66rem/1.1 "Inter Tight",sans-serif; border-radius:5px; }
+  .serpviz .res.me.buried{ background:#9a8fb0; color:#fff; } .serpviz .res.me.top{ background:var(--orange); color:#221334; }
+  .vs-metrics{ list-style:none; padding:0; margin:4px 0 16px; display:grid; gap:11px; }
+  .vs-metrics li{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:9px; }
+  .vs-metrics li b{ font:800 1.5rem/1 "Inter Tight",sans-serif; min-width:104px; }
+  .vs-card.win .vs-metrics li b{ color:var(--orange); } .vs-card.lose .vs-metrics li b{ color:#9a8fb0; }
+  .vs-metrics li span{ color:var(--ink-2); font-size:.88rem; }
+  .vs-take{ margin:auto 0 0; color:var(--ink-2); font-size:.9rem; }
+  .vs-mid{ display:flex; align-items:center; justify-content:center; }
+  .vs-mid span{ font:800 .95rem/1 "JetBrains Mono",monospace; color:var(--muted); border:1px solid var(--line); border-radius:999px; width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:#fff; box-shadow:var(--soft-shadow); }
+  .vs-takeaway{ margin-top:20px; border:1px solid var(--line); border-left:4px solid var(--orange); border-radius:var(--radius); background:var(--cream); padding:22px 26px; font-size:1.04rem; color:var(--ink); }
+  .vs-source{ font:700 .72rem/1.4 "JetBrains Mono",monospace; color:var(--muted); margin-top:12px; }
+  @media(max-width:860px){ .vs-grid{ grid-template-columns:1fr; } .vs-mid span{ transform:rotate(90deg); } }
+
+  /* real screenshots (browser frame) + semrush proof */
+  .shot{ border:1px solid var(--line); border-radius:10px; overflow:hidden; box-shadow:var(--soft-shadow); background:#fff; margin-bottom:18px; }
+  .shot .bar{ height:28px; background:#f1edf4; display:flex; align-items:center; gap:7px; padding:0 13px; border-bottom:1px solid var(--line); }
+  .shot .bar i{ width:9px; height:9px; border-radius:50%; background:#cfc6da; display:inline-block; }
+  .shot img{ width:100%; display:block; }
+  .semrush-proof{ margin-top:22px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; box-shadow:var(--soft-shadow); }
+  .semrush-proof .cap{ padding:14px 20px; background:var(--ink); color:#fff; font:800 .98rem/1.3 "Inter Tight",sans-serif; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+  .semrush-proof .cap span{ font:700 .68rem/1 "JetBrains Mono",monospace; color:var(--orange); text-transform:uppercase; letter-spacing:.03em; }
+  .semrush-proof img{ width:100%; display:block; }
+  /* roomier, more premium hero */
+  .hero-v2 h1{ line-height:1.0; margin-bottom:4px; }
+  .hero-v2 .lede{ margin-top:20px; line-height:1.6; max-width:44ch; }
+  .hero-v2 .findrow{ margin-top:28px; }
+  .hero-v2 .hero-actions{ margin-top:30px !important; }
+  .hero-v2 .hero-stats{ margin-top:32px; padding-top:24px; }
+  @media(min-width:1200px){ .hero-v2-grid{ gap:72px; } }
+
+  /* review wall — 20 real Google reviews, one viewport */
+  .review-wall{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:16px; }
+  .rbadge{ border:1px solid var(--line); border-radius:12px; background:#fff; box-shadow:var(--soft-shadow); padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .rbadge .rs{ color:var(--orange); font-size:.8rem; letter-spacing:1px; }
+  .rbadge p{ margin:0; font-size:.79rem; line-height:1.45; color:var(--ink-2); display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .rbadge .who{ display:flex; align-items:center; gap:8px; margin-top:auto; }
+  .rbadge .av{ width:26px; height:26px; border-radius:50%; background:var(--navy); color:#fff; font:800 .72rem/1 "Inter Tight",sans-serif; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .rbadge .nm{ font-weight:800; font-size:.76rem; } .rbadge .dt{ font-size:.67rem; color:var(--muted); }
+  @media(max-width:1100px){ .review-wall{ grid-template-columns:repeat(3,1fr); } }
+  @media(max-width:680px){ .review-wall{ grid-template-columns:1fr 1fr; } }
+  .semrush-compare{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:14px; }
+  .semrush-compare .semrush-proof{ margin-top:0; }
+  @media(max-width:860px){ .semrush-compare{ grid-template-columns:1fr; } }
+
+  /* round founder photos */
+  .fcard{ grid-template-columns:140px 1fr; align-items:center; padding:24px; gap:22px; overflow:visible; }
+  .fcard img{ width:140px !important; height:140px !important; min-height:0; border-radius:50%; object-fit:cover; object-position:center 22%; box-shadow:0 6px 18px rgba(34,19,52,.14); background:var(--cream); }
+  .fcard .fb{ padding:0; }
+  @media(max-width:760px){ .fcard{ grid-template-columns:1fr; justify-items:center; text-align:center; } .fcard img{ width:150px !important; height:150px !important; } }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://digitalmovement.uk/#organization","name":"Digital Movement","legalName":"Digital Movement Marketing Ltd","url":"https://digitalmovement.uk/","logo":"https://digitalmovement.uk/assets/dm-logo-real.png","email":"office@digitalmovement.uk","telephone":"+442038157992","foundingDate":"2018","foundingLocation":"Melbourne, Australia","identifier":{"@type":"PropertyValue","name":"Companies House","value":"17110525"},"address":{"@type":"PostalAddress","streetAddress":"128 City Road","addressLocality":"London","postalCode":"EC1V 2NX","addressCountry":"GB"},"areaServed":[{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"Australia"},{"@type":"Country","name":"New Zealand"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"102","bestRating":"5"},"award":["Best Digital Marketing Agency in Australia 2026 (Digital Reference)","Top 10 Digital Marketing Agencies in Australia (Cape Digital)"],"founder":[{"@id":"https://digitalmovement.uk/#raoul"},{"@id":"https://digitalmovement.uk/#martey"}],"review":[{"@type":"Review","author":{"@type":"Person","name":"Jessica Purcell"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Great quality service, proactive and positive, easy to deal with, and outcomes as promised. Highly recommend Stuart and the team, and grateful for their work so far."},{"@type":"Review","author":{"@type":"Person","name":"Matthew Kang"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Stuart, Dean and the crew have been excellent in creating a complete redesign of a new website for my business and managing Google advertising and SEO work with great results quite quickly. They have…"},{"@type":"Review","author":{"@type":"Person","name":"Beth Sorensen"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Digital Movement have been amazing to work with. Dean and the team built me a great website and set up SEO and Google Ads and I started getting real leads not long after. The team is easy to talk to,…"},{"@type":"Review","author":{"@type":"Person","name":"Fabienne M"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Punctual organise efficient is just a few of the best quality. I have been dealing with this company for years now and I couldn’t recommend a better social media marketing agency. Not only have they…"},{"@type":"Review","author":{"@type":"Person","name":"Ricky Sharpe"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Marty and the team have been absolutely awesome! They set up my website and are currently working on my Google Ads and SEO. They’re always quick to respond to any questions or concerns I have, and…"},{"@type":"Review","author":{"@type":"Person","name":"Damian Talbot"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"We’ve used Digital Movement to over 10 now and we highly recommend, We noticed a great uptick from the start."},{"@type":"Review","author":{"@type":"Person","name":"Malin Burnand"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"The team at Digital Movement has been absolutely fantastic in creating my shiny new website for Willow Branch Photography, and I couldn't be happier with the redesign and development! They kept me…"},{"@type":"Review","author":{"@type":"Person","name":"mel sweeney"},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Stuart is incredibly professional with attention to detail, clear communication and understanding of my goals. The creativity, copy and design technique of the ads are visually compelling and…"}]},{"@type":"Person","@id":"https://digitalmovement.uk/#raoul","name":"Raoul (Alex) Müller","jobTitle":"Co-Founder","worksFor":{"@id":"https://digitalmovement.uk/#organization"},"sameAs":["https://linkedin.com/in/raoulschaller"],"image":"https://digitalmovement.uk/assets/founder-raoul.jpg"},{"@type":"Person","@id":"https://digitalmovement.uk/#martey","name":"Martey Quaye","jobTitle":"Co-Founder","worksFor":{"@id":"https://digitalmovement.uk/#organization"},"image":"https://digitalmovement.uk/assets/founder-martey.jpg"},{"@type":"WebSite","@id":"https://digitalmovement.uk/#website","url":"https://digitalmovement.uk/","name":"Digital Movement UK","publisher":{"@id":"https://digitalmovement.uk/#organization"},"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://digitalmovement.uk/#webpage","url":"https://digitalmovement.uk/","name":"SEO Agency UK | More Enquiries from Google & AI","description":"Digital Movement UK is an SEO agency for UK businesses that want more enquiries from Google and AI search.","isPartOf":{"@id":"https://digitalmovement.uk/#website"},"about":{"@id":"https://digitalmovement.uk/#service"},"datePublished":"2026-06-15","dateModified":"2026-06-19","inLanguage":"en-GB"},{"@type":"Service","@id":"https://digitalmovement.uk/#service","name":"SEO agency for UK businesses","serviceType":"Search engine optimisation agency","description":"An SEO agency that combines SEO, AI search, paid ads and CRM to grow enquiries for UK businesses.","provider":{"@id":"https://digitalmovement.uk/#organization"},"areaServed":{"@type":"Country","name":"United Kingdom"}},{"@type":"BreadcrumbList","@id":"https://digitalmovement.uk/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://digitalmovement.uk/"}]},{"@type":"HowTo","@id":"https://digitalmovement.uk/#process","name":"How Digital Movement UK grows enquiries","step":[{"@type":"HowToStep","name":"Map demand","text":"Find where your buyers search, on Google and on AI tools."},{"@type":"HowToStep","name":"Earn presence","text":"Fix the technical base and build the pages that can rank."},{"@type":"HowToStep","name":"Make you clear","text":"Help Google and AI understand what you do and who you help."},{"@type":"HowToStep","name":"Build authority","text":"Earn trusted links and mentions so you compete in harder markets."},{"@type":"HowToStep","name":"Keep improving","text":"Track rankings, AI answers and enquiries, then choose the next move."}]},{"@type":"FAQPage","@id":"https://digitalmovement.uk/#faq","mainEntity":[{"@type":"Question","name":"What does an SEO agency do?","acceptedAnswer":{"@type":"Answer","text":"An SEO agency helps people find your business when they search, then helps turn those visitors into enquiries. The work covers keyword research, technical fixes so Google and AI can read your site, content, local SEO for the map pack, links for authority, and AI search so tools like ChatGPT and Google AI Overviews can recommend you. A good agency shows the plan, does the work each month, and reports the enquiries it brought."}},{"@type":"Question","name":"How much does an SEO agency cost in the UK?","acceptedAnswer":{"@type":"Answer","text":"It depends on how competitive your market is, how many pages need work, and how fast you want results. Small local campaigns cost less. National or ecommerce campaigns need more work, so they cost more. We scope the first phase around the work most likely to bring enquiries, keep it month to month, and show what each pound buys."}},{"@type":"Question","name":"How long does SEO take to bring enquiries?","acceptedAnswer":{"@type":"Answer","text":"You often see early movement within a few weeks after technical fixes and local work. Stronger enquiry growth usually builds over three to six months. The hardest national terms take longer. The monthly report shows what is improving and what comes next, so you can see progress early."}},{"@type":"Question","name":"Can you help us show up in AI search like ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"Yes. AI search uses the same base as Google ranking: pages it can read, clear answers, matching business details, schema, real reviews, and trusted mentions. We strengthen those so ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews can understand your business and name it when buyers ask."}},{"@type":"Question","name":"Do you only do SEO, or paid ads and CRM too?","acceptedAnswer":{"@type":"Answer","text":"SEO is our core. It works best with three other services. AI search gets you found inside AI tools. Paid ads bring enquiries quickly while SEO builds. CRM makes sure every enquiry is captured and followed up. You can start with SEO and add the rest when they help."}},{"@type":"Question","name":"Is SEO worth it for a small business?","acceptedAnswer":{"@type":"Answer","text":"SEO is worth it when buyers already search for what you sell and your site can turn visitors into enquiries. It is weaker when the offer is unproven or you need sales this week. We check the market first and suggest the smallest useful first step. We will say so if paid ads or local work would bring enquiries faster."}},{"@type":"Question","name":"How is local SEO different from regular SEO?","acceptedAnswer":{"@type":"Answer","text":"Standard SEO wins listings across the whole country or a sector. Local SEO wins buyers near you. Google shows a map pack of three businesses above the normal results, and local SEO helps you appear there. It leans on your Google Business Profile, matching name, address and phone, reviews, local listings and location pages. Many businesses need both."}},{"@type":"Question","name":"Do I need new content every month?","acceptedAnswer":{"@type":"Answer","text":"Often, yes, but only where it helps. New guides, service pages and comparison pages build depth on a topic, which Google and AI tools reward. We write the pages most likely to bring enquiries first. We would rather publish a few strong pages than many weak ones."}},{"@type":"Question","name":"What do you need from us to start?","acceptedAnswer":{"@type":"Answer","text":"Only a few things. Access to your site, your analytics and Google Search Console. Your Google Business Profile if you serve a local area. A short chat about your best customers and the services you most want to grow. We handle the rest and keep you informed."}}]}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="Digital Movement UK home"><img class="brand-logo" src="assets/dm-logo-real.png" alt="Digital Movement UK" height="30"></a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="/seo-services/">SEO</a><a href="/ai-search-optimisation/">AI Search</a><a href="/crm/">CRM</a><a href="/paid-ads/">Paid Ads</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions"><a class="btn btn-ghost" href="tel:+442038157992">Call</a><a class="btn btn-amber" href="#contact">Book review</a></div>
+  </div>
+</header>
+
+  <main id="main">
+
+<!-- HERO (mosaic + bold headline + amber CTA) -->
+<section class="hero-v2"><div class="hero-full hero-v2-grid">
+  <div class="mosaic reveal" aria-hidden="false">
+    <img src="assets/v2-hero-a.jpg" alt="A UK marketing team working together in an office" width="600" height="600" loading="eager">
+    <span class="tile blue"></span>
+    <span class="tile amber"></span>
+    <img src="assets/v2-hero-b.jpg" alt="A business owner planning growth at a desk" width="600" height="600" loading="lazy">
+  </div>
+  <div class="reveal">
+    <span class="eyebrow">SEO Agency UK</span>
+    <h1>SEO built for <span class="underline-accent">more enquiries.</span></h1>
+    <p class="lede">We help UK businesses get found on Google and in AI search. Then we turn those visitors into enquiries. You see the work we did and the enquiries it brought, every month.</p>
+    <div class="findrow"><span class="lab">Get found on</span><div class="applogos"><span class="app"><img src="assets/logos/google.svg" alt="Google logo">Google</span><span class="app"><img src="assets/logos/googlegemini.svg" alt="Google Gemini logo">Gemini</span><span class="app"><img src="assets/logos/openai.svg" alt="ChatGPT logo">ChatGPT</span><span class="app"><img src="assets/logos/claude.svg" alt="Claude logo">Claude</span></div></div>
+    <div class="hero-actions" style="margin-top:18px">
+      <a class="btn btn-amber" href="#contact">SEO from £495 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#what-we-do">See what we do</a>
+    </div>
+    <div class="hero-stats">
+      <a class="gwidget" href="https://www.google.com/search?q=Digital+Movement+Australia+reviews" target="_blank" rel="noopener"><span class="gstars">★★★★★</span><span class="gtxt"><b>5.0</b> · 102 Google reviews</span></a>
+      <div class="hstat"><b>300+</b><span>clients since 2018</span></div>
+      <div class="hstat"><b>92%</b><span>client retention</span></div>
+      
+    </div>
+  </div>
+</div></section>
+
+<!-- CREDIBILITY / AWARDS (real) -->
+<section class="strip"><div class="wrap">
+  <div class="awards-row">
+    <div class="award"><b>Best Digital Marketing Agency in Australia, 2026</b><span>Awarded by Digital Reference</span></div>
+    <div class="award"><b>Top 10 Digital Marketing Agencies in Australia</b><span><a href="https://capedigital.com.au/post/top-10-digital-marketing-agency-in-australia" target="_blank" rel="noopener">Ranked by Cape Digital</a></span></div>
+    <div class="award"><b>★ 5.0 from 102 Google reviews</b><span>Search "Digital Movement Australia"</span></div>
+    <div class="award"><b>Since 2018 · 300+ clients · 92% kept</b><span>Australia · New Zealand · UK</span></div>
+  </div>
+</div></section>
+
+<!-- WHO IS THIS FOR (pain box) -->
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">01 · Who this is for</span><h2>Businesses losing ground in search</h2><p class="lede">Search is changing fast. Many good businesses are slipping without knowing why. If any of these sound like you, we can help.</p></div>
+  <div class="painbox">
+    <ul class="clean pains">
+      <li><b>✓</b> <span>Your organic traffic has dropped or gone flat. You are under pressure to explain why, and to say what comes next.</span></li>
+      <li><b>✓</b> <span>You rank well on Google. But you are missing from AI Overviews, ChatGPT and other AI tools, where more buyers now start.</span></li>
+      <li><b>✓</b> <span>You have SEO work in progress. But you have no fast, reliable way to keep up as search changes.</span></li>
+    </ul>
+    <img src="assets/v2-process.jpg" alt="A team reviewing search performance together" loading="lazy" width="900" height="600">
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">02 · Why search matters</span><h2>Most buyers start with a search</h2></div>
+  <div class="section-copy">
+    <p>When people need what you sell, they search for it. They type it into Google. They ask an AI tool. They read reviews. Then they choose one of the few businesses that show up. If you are in that group, you get the enquiry. If you are not, you do not get a chance.</p>
+    <p>This is why search is the channel with the best long-term value. The visitors are people who already want what you sell. And the work keeps paying you back long after you publish it. A good page can bring enquiries for years. A paid ad stops the day you stop paying.</p>
+    <p>The catch is that search is now harder and wider than before. You have to show up on Google and in AI answers. You have to be fast, clear and trusted. That is the work we do, in the order most likely to bring you enquiries.</p>
+    <p>There is a second reason to act now. AI tools are still new for most businesses. Few have set their site up for them yet. That gap is an opening. The firms that prepare early get named first when a buyer asks an AI tool for a recommendation. We help you take that spot before your competitors do. The same work lifts your Google rankings too. So you gain on both fronts at once. None of it needs a separate, complex plan. It comes from doing the basics well: a clear site, clean facts, real reviews and useful content.</p>
+  </div>
+</div></section>
+
+<!-- WHAT WE DO (differentiator accordion) -->
+<section class="section alt" id="what-we-do"><div class="wrap reveal">
+  <div class="two-col">
+    <div>
+      <div class="section-head"><span class="eyebrow">03 · What we do</span><h2>Find the <span class="underline-accent">opportunities</span> other SEO agencies miss</h2></div>
+      <p>We help small and growing UK businesses get more enquiries from search. We are clear about the work. We report the results in words you can use. The first review is useful even if you never hire us. Many agencies talk about being the best or the leading choice. We would rather show you the plan, do the work, and let the enquiries speak.</p>
+      <a class="btn btn-dark" href="#contact" style="margin-top:14px">Talk to an SEO specialist <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="acc">
+      <details open><summary>A note from our founder</summary><p>Hi, I am Raoul. I founded Digital Movement UK to do SEO that brings real enquiries. No jargon. No hidden work. You always know what I am doing and why. I review your site myself and plan the work myself.</p></details>
+      <details><summary>You work with a senior person</summary><p>The person who reviews your site plans the work. There is no hand-off to a junior who quietly does it. You get direct access to the person responsible for your results. You can reach me between monthly reports, any time you need to.</p></details>
+      <details><summary>We get the basics right</summary><p>Most SEO fails on the basics. Pages Google cannot read. Thin content. Slow templates. Weak local signals. We fix these first, because they bring the quickest wins. Then we build on a clean base.</p></details>
+      <details><summary>We work to one number: your enquiries</summary><p>Rankings and traffic are a means to an end. We report how many real enquiries the work brought. Each one is tied to its source. So you can see which work pays for itself.</p></details>
+    </div>
+  </div>
+</div></section>
+
+<!-- SEARCH EVERYWHERE -->
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">04 · Google + AI</span><h2>Your customers search before they buy</h2></div>
+  <div class="section-copy">
+    <p>When people need what you sell, they search for it. They use Google. They ask ChatGPT or Gemini. They read reviews. Then they pick one of the few businesses that show up. We get your business into that short list, on both Google and AI tools.</p>
+    <p>For years, being found meant ranking on Google. That still matters. But Google now answers many questions at the top with an AI Overview. And more people ask an AI tool for a recommendation. These tools name a few businesses. If yours is not one of them, you are missing buyers at the moment they decide.</p>
+    <p>The good news is simple. AI search uses the same base as Google ranking: pages it can read, clear answers, matching business details, real reviews, and trusted mentions. We build that base once, so you show up in both places as buyers move to AI.</p>
+    <p>This also raises the value of trust. An AI tool only names a business it can verify. So real reviews, matching details and a clear site matter more now than ever. We build for both fronts from the start. The work you put into being found keeps working as more buyers move to AI tools.</p>
+    <div class="panel"><h4>Where buyers search now</h4><div class="logo-chips"><span class="logo-chip"><img src="assets/logos/google.svg" alt="Google">Google</span><span class="logo-chip"><img src="assets/logos/google.svg" alt="Google AI Overviews">Google AI Overviews</span><span class="logo-chip"><img src="assets/logos/openai.svg" alt="ChatGPT">ChatGPT</span><span class="logo-chip"><img src="assets/logos/googlegemini.svg" alt="Gemini">Gemini</span><span class="logo-chip"><img src="assets/logos/perplexity.svg" alt="Perplexity">Perplexity</span><span class="logo-chip"><img src="assets/logos/claude.svg" alt="Claude">Claude</span></div></div>
+  </div>
+  <aside class="definition-box"><span class="box-label">Definition</span><h3>GEO (AI search optimisation)</h3><p>GEO means getting your business named in the answers from AI tools. Think ChatGPT, Gemini, and Google AI Overviews. People ask these tools for a recommendation. GEO helps yours be the one they get.</p></aside>
+  <aside class="example-box"><span class="box-label">Example</span><h3>What does AI search visibility look like in practice?</h3><p>A buyer asks ChatGPT, "who is a good SEO agency in Leeds?" It names three firms. If your site has clear answers, real reviews, and matching details, you can be one of the three. If not, you are left out of that answer.</p></aside>
+</div></section>
+
+<!-- 5-STEP PROCESS -->
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">05 · How we work together</span><h2>Five steps, every month</h2><p class="lede">Every campaign runs on the same simple loop. It keeps the work clear and the next move obvious. Here is what we do, in order.</p></div>
+  <div class="steps-v2">
+    <div class="step-row"><div class="num">1. Map demand</div><div><h3>Find where buyers search</h3><p>We find the searches your buyers make, on Google and on AI tools. We group them by what the buyer wants. We weigh each group by how likely it is to bring an enquiry. High-value pages come first, so you see results sooner.</p></div></div>
+    <div class="step-row"><div class="num">2. Earn presence</div><div><h3>Fix the base and build the pages</h3><p>We fix the technical issues that block Google and AI. We clear indexing problems, slow pages and weak internal links. Then we build the pages that can rank for those searches.</p></div></div>
+    <div class="step-row"><div class="num">3. Make you clear</div><div><h3>Be easy to understand and cite</h3><p>We help Google and AI tools understand what you do and who you help. Clear answers, clean details and schema make you easy to quote. We keep your business facts the same on every page and listing.</p></div></div>
+    <div class="step-row"><div class="num">4. Build authority</div><div><h3>Earn trust from other sites</h3><p>We earn links and mentions from real publications and local sites. We earn them with useful content and outreach. This lets you compete in harder markets. AI tools also trust you more when real sites point to you.</p></div></div>
+    <div class="step-row"><div class="num">5. Keep improving</div><div><h3>Measure and adjust</h3><p>We track rankings, AI answers, traffic and enquiries. Each month we report what changed in clear words. We tie each enquiry to the page and search that brought it. Then we choose the next move with you.</p></div></div>
+  </div>
+</div></section>
+
+<!-- FIRST 90 DAYS (tabs) -->
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">06 · Your first 90 days</span><h2>Audit, fix, scale</h2></div>
+  <div class="tabs90">
+    <details class="t" open><summary>Days 1 to 30 — Audit and diagnose</summary><div class="body"><p>We review your technical health, your content, your links, your local signals, and your AI visibility. We find where you are losing ground and which wins come fastest. You get a clear plan before any work starts.</p></div></details>
+    <details class="t"><summary>Days 31 to 60 — Fix and build</summary><div class="body"><p>We clear the blockers first: indexing, speed, weak pages, missing schema, broken redirects. Then we build or improve the pages most likely to bring enquiries, and start the local work.</p></div></details>
+    <details class="t"><summary>Days 61 to 90 — Grow and report</summary><div class="body"><p>We earn authority, sharpen the content, and improve your AI visibility. The first enquiries usually come in. You get a report that ties the work to results, with the next steps set out.</p></div></details>
+  </div>
+</div></section>
+
+<!-- WHAT'S INCLUDED + boxes -->
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">07 · What's included</span><h2>Six parts of a full SEO service</h2><p class="lede">A full service has six parts. We rarely run all six at full speed at once. We start with the work most likely to bring enquiries, then add the rest.</p></div>
+  <div class="section-copy">
+    <p>A full SEO service has six parts. We rarely run all six at once. We start with the work most likely to bring enquiries, then add the rest.</p>
+    <div class="ws-grid"><div class="ws-card"><h3>Keyword research and strategy</h3><p>We map the searches your buyers make. We check search demand and run competitor analysis to find the keywords and gaps you can win. We group searches by what the buyer wants: a quick question, a comparison, a local provider, a price check. We weigh each group by how likely it is to bring an enquiry. Then we pick the high-value pages to build first. A small business does not need a huge content plan to see the first results. We start with the work most likely to bring enquiries.</p></div>
+    <div class="ws-card"><h3>Technical SEO</h3><p>We make sure Google and AI can read, render and trust your site. We fix indexing problems first. A page Google cannot reach cannot rank. We improve site speed and Core Web Vitals, mostly on mobile. We tidy up URLs, internal links, redirects and the sitemap. We add schema so machines understand each page. For bigger sites, we plan safe moves so a redesign does not lose your rankings. This work is quiet, and it often brings the quickest early wins.</p></div>
+    <div class="ws-card"><h3>On-page SEO and content</h3><p>We give each page a clear title, description and headings. We add internal links to the pages that matter. We write content for the buyer's decision. Each money page should stand on its own. It should say what the service is, when it is worth buying, what it costs in broad terms, and what to look for. Around each money page we build guides and comparison pages. That gives the site real depth on a topic. Depth is also what earns featured snippets and AI answers.</p></div>
+    <div class="ws-card"><h3>Local SEO</h3><p>If you serve an area, this is often the fastest route to enquiries. Google shows a map pack of three businesses above the normal results. Those three get most of the local clicks. We improve your Google Business Profile. We keep your name, address and phone the same everywhere. We earn and reply to reviews. We build local listings and write real location pages. For several locations, we set up a clean structure so each one ranks in its own area.</p></div>
+    <div class="ws-card"><h3>Link building and digital PR</h3><p>In competitive markets, links decide who wins. We earn links and mentions from real publications and local organisations. We do this with useful content, data and outreach. We aim for links a human editor would choose to give. Those keep their value as Google changes. We avoid cheap links from low-quality networks. Those put your site at risk.</p></div>
+    <div class="ws-card"><h3>AI search (GEO)</h3><p>More buyers now ask AI tools for a recommendation. We make your business easy for ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews to understand and name. This uses the same base as Google ranking: clear answers, clean details, schema, real reviews and trusted mentions. We keep your business facts the same everywhere, so an AI tool can trust what it finds, and name you to buyers who ask.</p></div></div>
+  </div>
+  <aside class="definition-box"><span class="box-label">Definition</span><h3>On-page vs off-page SEO</h3><dl class="definitions"><dt>On-page SEO</dt><dd>Changes on your own site: titles, headings, content, internal links, and speed.</dd><dt>Off-page SEO</dt><dd>Trust earned from other sites, mainly links and mentions from places people respect.</dd></dl></aside>
+  <aside class="example-box"><span class="box-label">Example</span><h3>What does link building look like in practice?</h3><p>A roofer is listed in the local paper's "best trades" round-up. The article links to their site. Google sees a trusted site vouch for them. That one link helps them rank for "roofer" in their town.</p></aside>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">08 · Reporting</span><h2>You see the results every month</h2></div>
+  <div class="section-copy">
+    <p>SEO is only worth doing if it brings customers. So we measure it that way. Each month you get a short report. It shows rankings for the terms that matter. It shows traffic to the pages that earn enquiries. It shows the enquiries the work brought. Each enquiry is tied to the page and search that created it.</p>
+    <p>We set up clean tracking in Google Analytics and Search Console. That keeps the numbers honest. We also track your presence in AI answers, next to your Google rankings. Buyers now use both, so we watch both.</p>
+    <p>We watch the early signals too. Rising impressions on commercial terms. Better rankings around a money page. More mentions in AI answers. These tell us a trend is coming, so we can act early. The report ends with a short, clear list of what we will do next. Every month closes with a clear decision and a short list to act on.</p>
+  </div>
+  <div class="table-wrap"><table class="comparison-table"><thead><tr><th>What we track</th><th>What it tells you</th></tr></thead><tbody>
+    <tr><td data-label="What we track">Rankings and AI answers</td><td data-label="What it tells you">Where you show up for the searches that bring buyers.</td></tr>
+    <tr><td data-label="What we track">Traffic and behaviour</td><td data-label="What it tells you">Which pages bring good visitors, and what they do next.</td></tr>
+    <tr><td data-label="What we track">Conversions and enquiries</td><td data-label="What it tells you">How many visitors become enquiries, tied to the source.</td></tr>
+    <tr><td data-label="What we track">Next steps</td><td data-label="What it tells you">The plan for the coming month, in clear words.</td></tr>
+  </tbody></table></div>
+</div></section>
+
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">09 · Quick wins</span><h2>The problems we fix first</h2></div>
+  <div class="section-copy">
+    <p>Most sites lose ground for a few clear reasons. We find these in the first audit. We fix them early. They are not glamorous. They are what hold a site back.</p>
+    <ul class="problem-list">
+      <li>Pages Google cannot index, because of a wrong setting or tag.</li>
+      <li>Thin service pages that give Google nothing strong to rank.</li>
+      <li>Slow pages that fail Core Web Vitals on mobile.</li>
+      <li>The same title and description on many pages, which confuses Google.</li>
+      <li>Broken redirects left over from old changes.</li>
+      <li>Pages that no internal link points to.</li>
+      <li>A weak or half-finished Google Business Profile.</li>
+      <li>Business details that do not match across the site, the profile and directories.</li>
+    </ul>
+    <p>Each one is small. Each one holds back results. Fixing them often brings the first lift. It also clears the way for the content and links to pay off.</p>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">10 · Cost and timeline</span><h2>What it costs, and when results show</h2></div>
+  <div class="section-copy">
+    <p>UK SEO pricing depends on a few honest things. How competitive your market is. How many pages need work. How much old technical debt the site carries. How fast you want to move. A small local campaign needs less work than a national or ecommerce one. So it costs less. A business that wants results quickly puts more into the early months.</p>
+    <p>We scope the first phase around the work most likely to bring enquiries. We show what each part of the budget buys. The work runs month to month, so you can stop any time. If paid ads or local work would bring enquiries faster while SEO builds, we say so.</p>
+    <p>On timing, you often see early movement in the first few weeks. That comes from technical fixes and local work. Stronger enquiry growth usually builds over three to six months. The hardest national terms take longer, because they need steady authority. We win the easier terms first. Then we go after the hard ones from a stronger base. The monthly report shows progress well before the headline rankings move.</p>
+    <div class="panel"><h4>A typical timeline</h4><div class="tl"><div class="row"><div class="wk">Weeks 1–4</div><div class="tx">Audit, technical fixes and local set-up. The first quick wins start to move.</div></div><div class="row"><div class="wk">Months 2–3</div><div class="tx">High-value pages built. Measurement in place. First steady enquiries.</div></div><div class="row"><div class="wk">Months 4–6+</div><div class="tx">Authority grows, harder terms climb, enquiries grow month on month.</div></div></div></div>
+  </div>
+  <aside class="example-box"><span class="box-label">Example</span><h3>What does a first 90 days look like in practice?</h3><p>A plumber comes to us with a slow site and no local listings. In month one we fix the speed and set up the Google Business Profile. By week three a few "emergency plumber" searches start to move. By month three the new service pages rank, and the first steady enquiries come in.</p></aside>
+</div></section>
+
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">11 · How we work with you</span><h2>Clear from the first call</h2></div>
+  <div class="copy-grid two"><div class="copy-card"><h3>Your free review</h3><p>The first step is a free review. We look at where you show up on Google and in AI answers. We check the health of your site. We look at the competitors who win your terms. We tell you the quickest useful moves. You keep that review whether or not you hire us.</p></div><div class="copy-card"><h3>The first ten days</h3><p>When we start, the first ten days are about set-up. We get access to your site, your analytics and your Google Business Profile. We record where you rank today. We agree the first plan with you. There are no surprises about what happens first.</p></div><div class="copy-card"><h3>A steady monthly routine</h3><p>After that, the work settles into a steady monthly routine. Each month has clear output: fixes, pages, links, local work and AI-visibility work. You get the report and the next steps. You can reach us between reports, any time you need us. As results build, we change the mix to whatever brings the next enquiry most cheaply.</p></div><div class="copy-card"><h3>One point of contact</h3><p>You are never passed around. One person owns your account from the first call. You get the same contact every month. When you need a quick answer, you email or call, and you hear back fast. We keep the work visible, so you always know what is in progress and what comes next. We also review the whole plan with you every quarter. We look at what worked, what did not, and where to push next.</p></div></div>
+</div></section>
+
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">12 · Fit</span><h2>Who this works best for</h2></div>
+  <div class="copy-grid"><div class="copy-card"><h3>Who it suits</h3><p>This works for UK businesses that want a steady flow of good enquiries. It suits owner-led firms, trades, clinics, consultancies, ecommerce brands and B2B teams. It suits firms that already know a good enquiry is worth more than cheap clicks. It also suits teams that worked with an agency before and were unsure what was happening. The monthly report fixes that.</p></div><div class="copy-card"><h3>Ready to win the work</h3><p>The strongest fits share one thing. They can turn a good enquiry into a sale. SEO shows your business to buyers when they search. The last job is to make those buyers comfortable enough to call. So our work includes the page copy, the proof, the forms and the clear next step. If your offer or pricing is not ready, we say so first. We would rather get that right than send traffic to a page that cannot convert it. SEO does not rescue a weak offer or slow follow-up. It works best when the rest of the business is ready to win the work.</p></div><div class="copy-card"><h3>Honest about timing</h3><p>It also helps to be honest about timing. SEO is a strong long-term channel. It is not a quick fix. If you need sales this week, paid ads bring enquiries faster, and we will say so. The best results come when you treat SEO as a steady investment. Each month adds a little more: a few strong pages, a few good links, a cleaner site. Over a year, that builds a channel that brings enquiries without paying for every click. We set the pace with you, based on your budget and how fast you want to grow.</p></div></div>
+</div></section>
+
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">13 · One system</span><h2>How the four services fit together</h2></div>
+  <div class="copy-grid"><div class="copy-card"><h3>One shared job</h3><p>SEO, AI search, paid ads and CRM share one job: more good enquiries, and more of them turning into sales. Most businesses do not need all four at once. The order matters as much as the services.</p></div><div class="copy-card"><h3>The right order for you</h3><p>A local firm often starts with SEO and local work, then adds paid ads when it wants enquiries fast. An ecommerce brand often starts with technical SEO and content, then adds AI search and links for authority. A firm that already gets enquiries but loses them often starts with CRM, so the leads it has are captured and followed up. We help you decide the order in the first review, based on your biggest gap today: getting found, converting, or follow-up.</p></div><div class="copy-card"><h3>The full picture</h3><p>Run together, the four let you see the full picture. What each channel costs. What it brings. Which pound to spend next. We add a service only when it will bring or convert more enquiries. That keeps the spend efficient, and every result clear.</p></div></div>
+  <aside class="definition-box"><span class="box-label">Definition</span><h3>SEO vs paid ads</h3><dl class="definitions"><dt>SEO</dt><dd>You earn your place in the free search results. It takes time, then keeps working after the spend.</dd><dt>Paid ads</dt><dd>You pay for the top spots. Enquiries come fast, and stop when the budget stops.</dd></dl></aside>
+</div></section>
+
+<!-- RESULTS (dark) + substance blocks -->
+<section class="section dark-v2"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">14 · Results</span><h2>Real client results</h2><p class="lede">We complete these with real client numbers, with permission. We never invent results. If a number is here, it happened.</p></div>
+  <div class="metric-cards">
+    <div class="mcard"><div class="big">300+</div><div class="lab">clients since 2018</div><span class="hi">Across AU, NZ and the UK</span></div>
+    <div class="mcard"><div class="big">92%</div><div class="lab">client retention rate</div><span class="hi">Clients who stay with us</span></div>
+    <div class="mcard"><div class="big">5.0★</div><div class="lab">from 102 Google reviews</div><span class="hi">Digital Movement Australia</span></div>
+  </div>
+  <div class="substance-grid" style="margin-top:22px">
+    <section class="cx-substance-block" data-substance-slot="misdiagnosis"><span class="slot">Misdiagnosis</span><h3>What the client thought the problem was</h3><div class="cx-substance-block__placeholder"><strong>Human insert — do not fill with AI</strong>A real client who thought they needed "a new website" or "more traffic" when the data showed a different gap. Name the assumption and what the evidence showed.</div></section>
+    <section class="cx-substance-block" data-substance-slot="methodology"><span class="slot">Methodology</span><h3>How we adapted the plan</h3><div class="cx-substance-block__placeholder"><strong>Human insert — do not fill with AI</strong>The specific order that worked for this client, and why it suited their market and budget.</div></section>
+    <section class="cx-substance-block" data-substance-slot="outcome"><span class="slot">Outcome</span><h3>The measured result</h3><div class="cx-substance-block__placeholder"><strong>Human insert — do not fill with AI</strong>The real, measured result with the client's permission. Use their figures.</div></section>
+    <section class="cx-substance-block" data-substance-slot="cost"><span class="slot">Cost &amp; timeline</span><h3>What a similar job costs</h3><div class="cx-substance-block__placeholder"><strong>Human insert — do not fill with AI</strong>The real budget and timeline for a similar job, so a buyer can self-qualify.</div></section>
+    <section class="cx-substance-block market" data-substance-slot="market"><span class="slot">The UK market</span><h3>UK-specific: what we advise on and against</h3><div class="cx-substance-block__placeholder"><strong>Human insert — do not fill with AI</strong>A UK-market point (a market or regulatory specific), distinct from the client stories above: how UK search and local behave, why we warn against guaranteed-ranking schemes and bought links, and how UK small-business SEO differs from enterprise.</div></section>
+  </div>
+</div></section>
+
+<!-- CASE STUDY: dentist London comparison -->
+<section class="section" id="case-study"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">15 · Case study · "dentist London"</span><h2>Two dentists. One search. Very different results.</h2><p class="lede">We checked who wins the Google search "dentist London". The gap between page 1 and page 6 is the gap between a full diary and an empty one.</p></div>
+  <div class="vs-grid">
+    <div class="vs-card lose">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><img src="assets/case-d3-hero.jpg" alt="Screenshot of the D3 Dental website homepage" width="1200" height="626" loading="lazy"></div>
+      <div class="vs-top"><span class="vs-badge red">Page 6 on Google</span><h3>D3 Dental</h3><p class="vs-sub">London dental clinic</p></div>
+      <ul class="vs-metrics"><li><b>14</b><span>authority score · average</span></li><li><b>0</b><span>AI search visibility</span></li><li><b>168</b><span>referring domains</span></li><li><b>Low</b><span>organic traffic to the site</span></li></ul>
+      <p class="vs-take">Patients choose from the first results. A clinic on page 6 stays out of sight, so those enquiries go to the practices ranked above it.</p>
+    </div>
+    <div class="vs-mid"><span>vs</span></div>
+    <div class="vs-card win">
+      <div class="shot"><div class="bar"><i></i><i></i><i></i></div><img src="assets/case-bupa-hero.jpg" alt="Screenshot of the Bupa healthcare website homepage" width="1200" height="537" loading="lazy"></div>
+      <div class="vs-top"><span class="vs-badge green">Top 3 on Google</span><h3>Bupa Dental</h3><p class="vs-sub">National dental brand</p></div>
+      <ul class="vs-metrics"><li><b>71</b><span>authority score · industry leader</span></li><li><b>81</b><span>AI search visibility</span></li><li><b>21.5K</b><span>referring domains</span></li><li><b>2.4M</b><span>organic visits a month</span></li></ul>
+      <p class="vs-take">Bupa holds top-3 spots across thousands of dental searches. That likely brings thousands of patient enquiries every month, from search alone.</p>
+    </div>
+  </div>
+  <div class="section-head" style="margin-top:28px;max-width:none"><h3 style="font-size:1.25rem;text-transform:none">Two very different traffic curves</h3></div>
+  <div class="semrush-compare">
+    <div class="semrush-proof"><div class="cap">D3 Dental <span>Semrush · authority 14 · flat traffic</span></div><img src="assets/case-d3-semrush.png" alt="Semrush domain overview for d3dental.com: authority 14, AI visibility 0, near-flat organic traffic" width="1600" height="1016" loading="lazy"></div>
+    <div class="semrush-proof"><div class="cap">Bupa <span>Semrush · authority 71 · 2.4M visits</span></div><img src="assets/case-bupa-semrush.png" alt="Semrush domain overview for bupa.co.uk: authority 71, 2.4M organic traffic, 414K organic keywords, AI visibility 81" width="1600" height="1180" loading="lazy"></div>
+  </div>
+    <div class="fcard"><img src="assets/founder-martey.jpg" alt="Martey Quaye, co-founder of Digital Movement" loading="lazy" width="300" height="300"><div class="fb"><div class="role">Co-founder · Strategy &amp; growth</div><h3>Martey Quaye</h3><p>Martey co-leads Digital Movement. He sets the growth strategy and keeps every account aimed at one thing: more good enquiries. He stays close to client work, so the plan always matches the goal and the next move is clear.</p></div></div>
+  </div>
+  <div class="report-note"><h3>How we report</h3><p>Each month you get a short report in clear words. It shows what we did, what changed on Google and in AI answers, and the enquiries the work brought. It ends with the next move, so you always know where you stand and what you are paying for.</p></div>
+</div></section>
+
+<!-- BENEFITS + REVIEWS -->
+<section class="section alt"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">17 · Why work with us</span><h2>What you can rely on</h2></div>
+  <div class="three-col">
+    <div class="card"><span class="mono card-kicker">01</span><h3>Senior work</h3><p>The founder plans and runs your campaign. No hand-off to a junior.</p></div>
+    <div class="card"><span class="mono card-kicker">02</span><h3>Clear reports</h3><p>Monthly updates in clear words, tied to enquiries. No jargon.</p></div>
+    <div class="card"><span class="mono card-kicker">03</span><h3>Stop any month</h3><p>You pay month to month. The work has to keep bringing results.</p></div>
+  </div>
+  <div class="section-head" style="margin-top:34px"><h3>What clients say</h3></div>
+  <div class="rev-agg"><span class="stars">★★★★★</span><span class="big">5.0</span><span class="meta">from <b>102</b> Google reviews · "Digital Movement Australia"</span><a href="https://www.google.com/search?q=Digital+Movement+Australia+reviews" target="_blank" rel="noopener">Read them on Google →</a></div>
+  <!--ugc--><div class="review-wall">
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Great quality service, proactive and positive, easy to deal with, and outcomes as promised. Highly recommend Stuart and the team, and grateful for their work so far.</p><div class="who"><span class="av">J</span><span><span class="nm">Jessica Purcell</span><br><span class="dt">4 months ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Stuart, Dean and the crew have been excellent in creating a complete redesign of a new website for my business and managing Google advertising and SEO work with great results quite…</p><div class="who"><span class="av">M</span><span><span class="nm">Matthew Kang</span><br><span class="dt">11 months ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Digital Movement have been amazing to work with. Dean and the team built me a great website and set up SEO and Google Ads and I started getting real leads not long after. The team is…</p><div class="who"><span class="av">B</span><span><span class="nm">Beth Sorensen</span><br><span class="dt">10 months ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Punctual organise efficient is just a few of the best quality. I have been dealing with this company for years now and I couldn’t recommend a better social media marketing agency. Not…</p><div class="who"><span class="av">F</span><span><span class="nm">Fabienne M</span><br><span class="dt">9 months ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Marty and the team have been absolutely awesome! They set up my website and are currently working on my Google Ads and SEO. They’re always quick to respond to any questions or concerns…</p><div class="who"><span class="av">R</span><span><span class="nm">Ricky Sharpe</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>We’ve used Digital Movement to over 10 now and we highly recommend, We noticed a great uptick from the start.</p><div class="who"><span class="av">D</span><span><span class="nm">Damian Talbot</span><br><span class="dt">a month ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>The team at Digital Movement has been absolutely fantastic in creating my shiny new website for Willow Branch Photography, and I couldn&#x27;t be happier with the redesign and development!…</p><div class="who"><span class="av">M</span><span><span class="nm">Malin Burnand</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Stuart is incredibly professional with attention to detail, clear communication and understanding of my goals. The creativity, copy and design technique of the ads are visually…</p><div class="who"><span class="av">M</span><span><span class="nm">mel sweeney</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>From our initial conversation with Stuart I knew this was the company for us. He was honest, passionate and thorough. Nothing was too much trouble and he stepped us through the process…</p><div class="who"><span class="av">C</span><span><span class="nm">Clarity Essential Wellness</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>I can’t recommend Digital Movement enough for their incredible SEO services! As the owner of a small online store, I was struggling to attract consistent traffic and generate sales.…</p><div class="who"><span class="av">A</span><span><span class="nm">Andrew Schultz</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>I can&#x27;t say enough about the website design services provided by Digital Movement. They took the time to understand my business needs and translated them into a beautiful website. The…</p><div class="who"><span class="av">B</span><span><span class="nm">Beatrice King</span><br><span class="dt">2 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Digital Movement has been an invaluable partner for our business. Their expertise in SEO and Google Ads has helped us to increase our online visibility and attract more customers. We…</p><div class="who"><span class="av">L</span><span><span class="nm">Lauren Robinson</span><br><span class="dt">3 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>So far I cannot fault this company at all. They have been absolutely fantastic to work with. I’ve been blessed with Martey and May who have done an amazing job. My website has been…</p><div class="who"><span class="av">J</span><span><span class="nm">Jess Arroyo (Weigh Less with Jess)</span><br><span class="dt">a year ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Digital Movement made updating out website so easy. They helped us to create our new website with no fuss. We even decided to completely change our wording after a draft was finished…</p><div class="who"><span class="av">J</span><span><span class="nm">Jay Gibson</span><br><span class="dt">5 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Digital Movement manages SEO and Google Ads for auswoodcare.com.au - our start-up e-commerce business which sells timber care and maintenance products in Australia. We&#x27;re very happy…</p><div class="who"><span class="av">L</span><span><span class="nm">Lindsay Stoneham</span><br><span class="dt">2 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Stuart and Dean have been very helpful in the launch of Horizon Australia Cleaning which is my new cleaning business. The leads generated so far have been good quality and I am already…</p><div class="who"><span class="av">S</span><span><span class="nm">Savoir Clean</span><br><span class="dt">2 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Digital Movement&#x27;s SEO services have made a huge difference for my business. They really know what they&#x27;re doing when it comes to improving my website&#x27;s visibility in search results.…</p><div class="who"><span class="av">P</span><span><span class="nm">Peggy</span><br><span class="dt">2 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>I would like to say that the whole team at digital movement have done an outstanding job from start to finish designing and developing the website for my new business. The…</p><div class="who"><span class="av">A</span><span><span class="nm">Aleksandra Thomas</span><br><span class="dt">4 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>We have recently used Digital movement to build our new website, switching from another provider. We have found Stuart has been more then helpful and made the process as easy/stress…</p><div class="who"><span class="av">K</span><span><span class="nm">Kurt Styles</span><br><span class="dt">4 years ago</span></span></div></div>
+    <div class="rbadge"><div class="rs">★★★★★</div><p>Martey at digital movement was outstanding. I couldn’t be more pleased with the service and content he developed with our website. Martey did his homework and totally understood my…</p><div class="who"><span class="av">S</span><span><span class="nm">sharon kennett</span><br><span class="dt">5 years ago</span></span></div></div>
+  </div><!--/ugc-->
+  <div class="rev-cta"><a class="btn btn-amber" href="https://www.google.com/search?q=Digital+Movement+Australia+reviews" target="_blank" rel="noopener">See all 102 reviews</a></div>
+</div></section>
+
+<!-- PRICING -->
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">18 · Pricing</span><h2>Simple monthly plans</h2><p class="lede">Clear deliverables, clear timelines, clear reports. Every plan includes AI search support. These tiers show the shape of the work at each level. The prices are set to fit your market and your goals.</p></div>
+  <div class="tiers">
+    <div class="tier"><h3>Starter SEO</h3><div class="price">from £<span class="ph">___</span></div><div class="per">per month · human insert</div><a class="btn btn-dark" href="#contact">Get started</a><ul><li><b>✓</b> Keyword and competitor research</li><li><b>✓</b> Core technical fixes</li><li><b>✓</b> A few SEO articles each month</li><li><b>✓</b> Local listings set up</li><li><b>✓</b> Monthly report</li></ul></div>
+    <div class="tier mid"><h3>Growth SEO</h3><div class="price">from £<span class="ph">___</span></div><div class="per">per month · human insert</div><a class="btn btn-amber" href="#contact">Grow your enquiries</a><ul><li><b>✓</b> Everything in Starter</li><li><b>✓</b> More content each month</li><li><b>✓</b> Link building and digital PR</li><li><b>✓</b> Google Business Profile management</li><li><b>✓</b> AI search work</li><li><b>✓</b> Conversion improvements</li></ul></div>
+    <div class="tier"><h3>Market Leader SEO</h3><div class="price">from £<span class="ph">___</span></div><div class="per">per month · human insert</div><a class="btn btn-dark" href="#contact">Lead your market</a><ul><li><b>✓</b> Everything in Growth</li><li><b>✓</b> The most content and links</li><li><b>✓</b> Ecommerce or multi-location SEO</li><li><b>✓</b> Competitor tracking</li><li><b>✓</b> Priority support</li></ul></div>
+  </div>
+</div></section>
+
+<!-- STAT / CTA BAND -->
+<section class="section alt"><div class="wrap reveal">
+  <div class="statband">
+    <span class="eyebrow" style="justify-content:center">Free SEO review</span>
+    <h2>See what to fix first, at no cost</h2>
+    <p class="lede" style="margin:10px auto 18px">Send us your site and the service you want to grow. We reply with the quickest useful moves and whether SEO, AI search, paid ads or local work should come first.</p>
+    <a class="btn btn-amber" href="#contact">Get my free SEO review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+
+<!-- BLOG -->
+<section class="section"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">19 · Insights</span><h2>From our blog</h2><p class="small">Human insert — link your latest articles here.</p></div>
+  <div class="blog-v2">
+    <div class="bcard"><div class="ph">Article image</div><div class="bd"><span class="tag">SEO vs PPC</span><h3>SEO vs paid ads: which brings cheaper enquiries?</h3></div></div>
+    <div class="bcard"><div class="ph">Article image</div><div class="bd"><span class="tag">AI search</span><h3>How to show up in ChatGPT and Google AI Overviews</h3></div></div>
+    <div class="bcard"><div class="ph">Article image</div><div class="bd"><span class="tag">Local SEO</span><h3>How to win the Google map pack in your town</h3></div></div>
+  </div>
+</div></section>
+
+<!-- FAQ -->
+<section class="section alt" id="faq"><div class="wrap reveal">
+  <div class="section-head"><span class="eyebrow">20 · Questions</span><h2>Common questions</h2><p class="lede">Short answers on fit, cost, timing, AI search, and how the services work together.</p></div>
+  <div class="faq">
+    <details><summary>What does an SEO agency do?</summary><p>An SEO agency helps people find your business when they search, then helps turn those visitors into enquiries. The work covers keyword research, technical fixes so Google and AI can read your site, content, local SEO for the map pack, links for authority, and AI search so tools like ChatGPT and Google AI Overviews can recommend you. A good agency shows the plan, does the work each month, and reports the enquiries it brought.</p></details>
+    <details><summary>How much does an SEO agency cost in the UK?</summary><p>It depends on how competitive your market is, how many pages need work, and how fast you want results. Small local campaigns cost less. National or ecommerce campaigns need more work, so they cost more. We scope the first phase around the work most likely to bring enquiries, keep it month to month, and show what each pound buys.</p></details>
+    <details><summary>How long does SEO take to bring enquiries?</summary><p>You often see early movement within a few weeks after technical fixes and local work. Stronger enquiry growth usually builds over three to six months. The hardest national terms take longer. The monthly report shows what is improving and what comes next, so you can see progress early.</p></details>
+    <details><summary>Can you help us show up in AI search like ChatGPT?</summary><p>Yes. AI search uses the same base as Google ranking: pages it can read, clear answers, matching business details, schema, real reviews, and trusted mentions. We strengthen those so ChatGPT, Gemini, Claude, Perplexity and Google AI Overviews can understand your business and name it when buyers ask.</p></details>
+    <details><summary>Do you only do SEO, or paid ads and CRM too?</summary><p>SEO is our core. It works best with three other services. AI search gets you found inside AI tools. Paid ads bring enquiries quickly while SEO builds. CRM makes sure every enquiry is captured and followed up. You can start with SEO and add the rest when they help.</p></details>
+    <details><summary>Is SEO worth it for a small business?</summary><p>SEO is worth it when buyers already search for what you sell and your site can turn visitors into enquiries. It is weaker when the offer is unproven or you need sales this week. We check the market first and suggest the smallest useful first step. We will say so if paid ads or local work would bring enquiries faster.</p></details>
+    <details><summary>How is local SEO different from regular SEO?</summary><p>Standard SEO wins listings across the whole country or a sector. Local SEO wins buyers near you. Google shows a map pack of three businesses above the normal results, and local SEO helps you appear there. It leans on your Google Business Profile, matching name, address and phone, reviews, local listings and location pages. Many businesses need both.</p></details>
+    <details><summary>Do I need new content every month?</summary><p>Often, yes, but only where it helps. New guides, service pages and comparison pages build depth on a topic, which Google and AI tools reward. We write the pages most likely to bring enquiries first. We would rather publish a few strong pages than many weak ones.</p></details>
+    <details><summary>What do you need from us to start?</summary><p>Only a few things. Access to your site, your analytics and Google Search Console. Your Google Business Profile if you serve a local area. A short chat about your best customers and the services you most want to grow. We handle the rest and keep you informed.</p></details>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="section dark" id="contact"><div class="wrap final-grid reveal">
+  <div>
+    <span class="eyebrow">21 · Next step</span><h2>See what to do first</h2>
+    <p class="lede">Send your site and the service you want to grow. We reply with the first useful moves and what should come first.</p>
+    <div class="contact-block"><p><strong>Digital Movement Marketing Ltd</strong><br>128 City Road, London, EC1V 2NX, United Kingdom</p><p>Email: <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a><br>Phone: <a href="tel:+442038157992">0203 815 7992</a></p><p class="small">Co-Founder: Raoul (Alex) Müller. Founded 2018 in Melbourne. We work across Australia, New Zealand and the UK. Registered in England, company no. 17110525.</p></div>
+  </div>
+  <form id="bottom-form" class="lead-form" action="mailto:office@digitalmovement.uk" method="post" enctype="text/plain">
+    <h3>Book a free SEO review</h3><p>Tell us what you sell and where you want better enquiries.</p>
+    <div class="form-grid">
+      <div class="form-field"><label for="b-name">Full name</label><input id="b-name" name="name" autocomplete="name" placeholder="Your name" required></div>
+      <div class="form-field"><label for="b-phone">Phone</label><input id="b-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44 or +49..." required></div>
+      <div class="form-field"><label for="b-email">Email</label><input id="b-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+      <div class="form-field"><label for="b-service">Main need</label><select id="b-service" name="service" required><option>SEO review</option><option>AI search</option><option>Local SEO</option><option>Paid ads</option><option>CRM</option></select></div>
+      <div class="form-field form-wide"><label for="b-msg">Enquiry</label><textarea id="b-msg" name="message" placeholder="What do you want more enquiries for?" required></textarea></div>
+    </div>
+    <label class="consent"><input type="checkbox" name="consent" required> <span>I agree that Digital Movement UK can use these details to reply to my enquiry. Privacy details are in the footer.</span></label>
+    <button class="btn btn-amber" type="submit">Book a free SEO review <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></button>
+  </form>
+</div></section>
+
+  </main>
+
+<footer class="site-footer"><div class="wrap footer-grid">
+  <div><a class="brand footer-brand" href="/"><img class="footer-logo" src="assets/dm-logo-real.png" alt="Digital Movement UK"></a><p class="small">SEO, AI search, CRM and paid ads for UK businesses that want to get found and win more customers. Updated 2026-06-19.</p><p class="footer-legal">Digital Movement Marketing Ltd · Registered in England &amp; Wales, company no. 17110525 · 128 City Road, London, EC1V 2NX · 0203 815 7992 · office@digitalmovement.uk</p></div>
+  <div class="footer-links"><a href="/">Home</a><a href="/seo-services/">SEO</a><a href="/ai-search-optimisation/">AI Search</a><a href="/crm/">CRM</a><a href="/paid-ads/">Paid Ads</a><a href="/privacy/">Privacy</a></div>
+</div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
