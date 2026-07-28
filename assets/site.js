@@ -134,16 +134,18 @@
   /* ---- Sticky contact bar (appears past the hero) ---- */
   var sticky = document.getElementById('stickyCta');
   var hero = document.querySelector('.hero');
-  if (sticky && hero) {
+  if (sticky) {
     var stickyTicking = false;
-    /* Cache hero height; reading offsetHeight per frame forces layout. */
-    var heroH = hero.offsetHeight;
+    /* Cache the trigger height; reading offsetHeight per frame forces layout.
+       Pages without a .hero (blog posts, resources, legal) fall back to one
+       viewport, which is what .hero{min-height:100svh} amounts to elsewhere. */
+    var heroH = hero ? hero.offsetHeight : window.innerHeight;
     var updateSticky = function () {
       sticky.classList.toggle('show', window.scrollY > heroH - 120);
       stickyTicking = false;
     };
     window.addEventListener('resize', function () {
-      heroH = hero.offsetHeight;
+      heroH = hero ? hero.offsetHeight : window.innerHeight;
       updateSticky();
     }, { passive: true });
     window.addEventListener('scroll', function () {

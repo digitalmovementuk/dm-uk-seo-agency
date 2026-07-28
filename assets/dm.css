@@ -734,8 +734,8 @@ tr:last-child td{border-bottom:0}
 /* ---------- Inline body links ----------
    Contrast checked: #FB7900 on --ink-950 = 7.3:1 (AAA).
    #B85400 on --paper = 4.6:1 (AA). --orange-600 fails AA on paper at 3.2:1. */
-.prose a, .lede a, .card p a, .callout p a, .annot a,
-.faq details p a, .acc details p a, .step p a, .founder p a{
+.prose a:not(.btn), .lede a:not(.btn), .card p a:not(.btn), .callout p a:not(.btn), .annot a:not(.btn),
+.faq details p a:not(.btn), .acc details p a:not(.btn), .step p a:not(.btn), .founder p a:not(.btn){
   color:var(--orange);
   text-decoration:underline;
   text-decoration-thickness:1px;
@@ -743,17 +743,17 @@ tr:last-child td{border-bottom:0}
   font-weight:600;
   transition:color .2s,text-decoration-thickness .2s;
 }
-.prose a:hover, .lede a:hover, .card p a:hover, .callout p a:hover, .annot a:hover,
-.faq details p a:hover, .acc details p a:hover, .step p a:hover, .founder p a:hover{
+.prose a:not(.btn):hover, .lede a:not(.btn):hover, .card p a:not(.btn):hover, .callout p a:not(.btn):hover, .annot a:not(.btn):hover,
+.faq details p a:not(.btn):hover, .acc details p a:not(.btn):hover, .step p a:not(.btn):hover, .founder p a:not(.btn):hover{
   color:#FFA24D;
   text-decoration-thickness:2px;
 }
-.on-paper .prose a, .on-paper .lede a, .on-paper .card p a, .on-paper .callout p a,
-.on-paper .annot a, .on-paper .faq details p a, .on-paper .acc details p a,
-.on-paper .step p a, .on-paper .founder p a{color:#B85400}
-.on-paper .prose a:hover, .on-paper .lede a:hover, .on-paper .card p a:hover,
-.on-paper .callout p a:hover, .on-paper .annot a:hover, .on-paper .faq details p a:hover,
-.on-paper .acc details p a:hover, .on-paper .step p a:hover, .on-paper .founder p a:hover{color:var(--orange)}
+.on-paper .prose a:not(.btn), .on-paper .lede a:not(.btn), .on-paper .card p a:not(.btn), .on-paper .callout p a:not(.btn),
+.on-paper .annot a:not(.btn), .on-paper .faq details p a:not(.btn), .on-paper .acc details p a:not(.btn),
+.on-paper .step p a:not(.btn), .on-paper .founder p a:not(.btn){color:#B85400}
+.on-paper .prose a:not(.btn):hover, .on-paper .lede a:not(.btn):hover, .on-paper .card p a:not(.btn):hover,
+.on-paper .callout p a:not(.btn):hover, .on-paper .annot a:not(.btn):hover, .on-paper .faq details p a:not(.btn):hover,
+.on-paper .acc details p a:not(.btn):hover, .on-paper .step p a:not(.btn):hover, .on-paper .founder p a:not(.btn):hover{color:var(--orange)}
 
 /* Orange as TEXT on light surfaces must use the ink variant (4.84:1),
    not --orange (2.53:1) or --orange-600 (3.21:1). */
@@ -811,3 +811,63 @@ tr:last-child td{border-bottom:0}
   .lead-form{text-align:left}
   .lead-form h2,.lead-form h3,.lead-form .form-intro{text-align:center}
 }
+
+/* ---------- Enquiry form states — errors, live status ----------
+   Reds/oranges reuse the .vs-badge pair rather than --pink/--orange:
+   --pink measures only 3.79:1 on the .lead-form surface over an
+   .on-dark-2 section and would fail AA. Measured worst case here is
+   6.06:1, which also absorbs the hero form's backdrop-filter variance. */
+:root{
+  --err:#FF8DA6;        /* red for TEXT on dark form surfaces */
+  --err-ink:#C4204A;    /* red for TEXT on paper form surfaces */
+  --ok:#FFB061;         /* orange for TEXT on dark form surfaces */
+}
+
+.form-error{margin:2px 0 0;font-size:.82rem;line-height:1.45;color:var(--err)}
+.on-paper .form-error{color:var(--err-ink)}
+.consent + .form-error{margin:-12px 0 var(--s4)}
+
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"]{border-color:var(--err)}
+.on-paper .form-field input[aria-invalid="true"],
+.on-paper .form-field select[aria-invalid="true"],
+.on-paper .form-field textarea[aria-invalid="true"]{border-color:var(--err-ink)}
+
+.form-status{margin:var(--s4) 0 0;font-size:.9rem;line-height:1.6;color:var(--on-dark)}
+.on-paper .form-status{color:var(--on-light)}
+/* Not display:none — a live region must stay rendered to be announced. */
+.form-status:empty{margin:0;padding:0;border:0}
+.form-status:focus{outline:none}
+.form-status:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:var(--r-sm)}
+.form-status a{color:var(--ok);font-weight:600;text-underline-offset:3px}
+.on-paper .form-status a{color:var(--orange-ink)}
+
+.form-status.is-pending{color:var(--on-dark-mute)}
+.on-paper .form-status.is-pending{color:var(--on-light-mute)}
+
+.form-status.is-success,.form-status.is-error{
+  padding:var(--s4);border-radius:var(--r-sm);border-left:3px solid;
+}
+.form-status.is-success{border-left-color:var(--orange);background:rgba(251,121,0,.1)}
+.form-status.is-error{border-left-color:var(--err);background:rgba(241,60,100,.1)}
+.on-paper .form-status.is-error{border-left-color:var(--err-ink)}
+
+.form-status strong{display:block;margin-bottom:4px}
+.form-status.is-success strong{color:var(--ok)}
+.on-paper .form-status.is-success strong{color:var(--orange-ink)}
+.form-status.is-error strong{color:var(--err)}
+.on-paper .form-status.is-error strong{color:var(--err-ink)}
+
+.lead-form.is-sent .form-grid,
+.lead-form.is-sent .consent,
+.lead-form.is-sent .btn,
+.lead-form.is-sent .form-note{display:none}
+
+.lead-form button[type="submit"][disabled]{opacity:.62;cursor:progress}
+.lead-form button[type="submit"][disabled]:hover{transform:none;background:var(--orange)}
+
+/* Card headings that are links — .card p a is styled, headings were not. */
+.card h3 a{color:inherit;text-decoration:none}
+.card h3 a:hover{color:var(--orange)}
+.on-paper .card h3 a:hover{color:var(--orange-ink)}

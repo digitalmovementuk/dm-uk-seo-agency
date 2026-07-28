@@ -10,7 +10,7 @@
   <link rel="apple-touch-icon" href="/assets/favicon-192.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" href="https://digitalmovement.uk/privacy/">
-  <meta name="description" content="How Digital Movement UK handles the details you send through an enquiry form on this website: what we collect, why, how long we keep it, and your rights under UK GDPR.">
+  <meta name="description" content="How Digital Movement UK collects, uses and protects the details you send through our enquiry forms, and how to exercise your rights.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Digital Movement UK">
   <meta property="og:title" content="Privacy Notice | Digital Movement UK">
@@ -22,6 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/dm.css">
+  <script src="/assets/consent.js"></script>
 </head>
 <body>
 
@@ -38,6 +39,13 @@
       <a href="/ai-search-optimisation/">AI Search</a>
       <a href="/crm/">CRM</a>
       <a href="/paid-ads/">Paid Ads</a>
+      <a href="/blog/">Blog</a>
+      <a href="/resources/">Resources</a>
+      <a href="/seo-agency-london/">SEO London</a>
+      <a href="/seo-agency-manchester/">SEO Manchester</a>
+      <a href="/seo-agency-birmingham/">SEO Birmingham</a>
+      <a href="/seo-agency-leeds/">SEO Leeds</a>
+      <a href="/seo-agency-bristol/">SEO Bristol</a>
       <a href="/#faq">FAQ</a>
     </nav>
     <a class="nav-cta" href="/#contact">Free review</a>
@@ -344,11 +352,14 @@
       <a href="/crm/">CRM</a>
       <a href="/paid-ads/">Paid Ads</a>
       <a href="/privacy/">Privacy</a>
+      <button type="button" class="footer-consent" data-dm-consent>Cookie settings</button>
     </nav>
   </div>
 </footer>
 
+<script src="/assets/forms.js" defer></script>
 <script src="/assets/site.js" defer></script>
+<script src="/assets/analytics.js" defer></script>
 
 <!--
 ================================================================================
@@ -402,7 +413,7 @@
       This page is live in the repo, is noindex, is not linked from the nav or
       the sitemap, and behaves unlike every other page:
         - its form posts to a THIRD-PARTY PROCESSOR: fetch() to
-          https://formsubmit.co/ajax/alex@digitalmovement.uk
+          https://formsubmit.co/ajax/office@digitalmovement.uk
         - it sends to alex@digitalmovement.uk, the OLD address, not office@
         - it writes the submitted lead (name, email, phone, timestamp) into the
           visitor's localStorage under the key `bupa_wp_lead`, plus an unlock
