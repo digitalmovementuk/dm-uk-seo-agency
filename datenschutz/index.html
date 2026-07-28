@@ -155,8 +155,19 @@
      not sufficient — that would need a real German Datenschutzerklärung and,
      for Germany, an Impressum under § 5 DDG. Legal input required, not mine.
   3. The English notice at /privacy/ carries its own list of unresolved items
-     (retention period, processor list, AU transfer safeguard, hosting logs).
+     (FormSubmit as processor — location, DPA and retention all unconfirmed;
+     retention period; processor list; AU transfer safeguard; hosting logs).
      Those apply here too, since this page points at that one.
+  4. Checked 28 July 2026 against the move to FormSubmit and the GA4 consent
+     gate: nothing on this page became untrue. It is a signpost and describes
+     no mechanism of its own, so it needed no rewrite. The page now loads
+     consent.js, forms.js and analytics.js like the rest of the site, and
+     carries the footer "Cookie settings" control. forms.js is a no-op here
+     because the page has no form, which is correct and harmless.
+  5. If a full German Datenschutzerklärung is ever written, it must cover
+     FormSubmit as an Auftragsverarbeiter and the Drittlandtransfer question
+     — under DSGVO that is a harder disclosure than under UK GDPR, and it is
+     the reason this page deliberately does not attempt one.
 ================================================================================
 -->
 </body>
