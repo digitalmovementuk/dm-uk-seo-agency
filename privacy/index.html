@@ -18,9 +18,8 @@
   <meta property="og:url" content="https://digitalmovement.uk/privacy/">
   <meta property="og:locale" content="en_GB">
   <meta property="og:image" content="https://digitalmovement.uk/assets/og-image.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-tight.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/plus-jakarta-sans.woff2" crossorigin>
   <link rel="stylesheet" href="/assets/dm.css">
   <script src="/assets/consent.js"></script>
 </head>
@@ -274,7 +273,7 @@
         <p>You will find a <b>Cookie settings</b> control in the footer of every page. It stays hidden while there is no analytics to configure, and appears by itself the moment any is switched on, so you can change your answer whenever you like. When that happens this section will be rewritten to describe exactly what runs, what it stores and where it goes. Until then, the accurate answer is: nothing.</p>
 
         <h3 class="mt-6">The fonts come from Google</h3>
-        <p>The pages use three typefaces served by Google Fonts, from fonts.googleapis.com and fonts.gstatic.com. Your browser fetches them directly from Google, which means Google receives your IP address and the fact that a page on this site was loaded. The Google Fonts web API does not set cookies, but that request still happens, and Google is a company based in the United States. We are reviewing whether to serve these font files from our own server so the request stops happening at all.</p>
+        <p>This site uses three typefaces — Inter Tight, Plus Jakarta Sans and JetBrains Mono. They are served from this website’s own server, not from Google. Earlier versions of this site loaded them from fonts.googleapis.com, which meant Google received your IP address on every page view before you had agreed to anything. That request no longer happens. The font files are licensed under the SIL Open Font License, which permits us to host them ourselves.</p>
 
         <h3 class="mt-6">One page stores something in your browser</h3>
         <p>One page on this site &mdash; the Bupa SEO teardown, at /resources/bupa-seo-teardown/ &mdash; works differently from the rest. Its download form goes through FormSubmit as the enquiry forms do, and it also saves two items in your browser's local storage: a flag recording that you unlocked the report, and a copy of the name, email address and phone number you entered. Local storage sits on your own device; you can clear it at any time through your browser settings, usually under "clear site data". That page is under review, and this notice will be updated when it changes.</p>
@@ -569,7 +568,8 @@
       "One page stores something in your browser" block in section 07.
 
   C2. GOOGLE FONTS — section 07.
-      Every page loads fonts from fonts.googleapis.com and fonts.gstatic.com,
+      RESOLVED 2026-07-28: fonts are now self-hosted from /assets/fonts/.
+      Previously loaded from fonts.googleapis.com and fonts.gstatic.com,
       so Google receives each visitor's IP. The Fonts API sets no cookies, so
       this is disclosed rather than consented. Self-hosting the three
       families would remove the last third-party request that happens without
@@ -629,7 +629,7 @@
                            choice is made, and no choice can be made while
                            GA4_ID is empty), plus the two bupa keys in C1
         gtag / GTM / pixels / heatmaps / session recording — none active
-      External hosts: fonts.googleapis.com and fonts.gstatic.com (fonts),
+      External hosts: NONE for fonts (self-hosted since 2026-07-28).
       formsubmit.co (forms), plus plain outbound links to google.com, wa.me
       and capedigital.com.au.
 
