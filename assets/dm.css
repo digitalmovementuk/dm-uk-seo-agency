@@ -85,6 +85,7 @@ html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:88p
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   margin:0;
+  padding-top:var(--header-h);
   background:var(--ink-950);
   color:var(--on-dark);
   font-family:var(--body);
@@ -133,10 +134,12 @@ ul,ol{margin:0;padding:0}
 
 /* ---------- Header ---------- */
 .site-header{
-  position:sticky;top:0;z-index:100;
-  /* Sticky + full-width, so the compositor re-blurs this region every scroll
-     frame. Kept light (8px) and paired with a more opaque base to hold
-     legibility — the visual cost is slight, the scroll cost is not. */
+  /* position:fixed, not sticky: sticky + backdrop-filter is a known WebKit bug
+     (Safari and Chrome-iOS both run on WKWebView) where the header detaches
+     or vanishes mid-scroll on iOS. Fixed removes the header from flow, so
+     body{padding-top:var(--header-h)} below replaces the space it used to
+     reserve — total offset above hero/content is unchanged. */
+  position:fixed;top:0;left:0;right:0;z-index:100;
   background:rgba(5,11,21,.92);
   backdrop-filter:saturate(140%) blur(8px);
   -webkit-backdrop-filter:saturate(140%) blur(8px);
@@ -718,12 +721,19 @@ tr:last-child td{border-bottom:0}
 
 /* ---------- Sticky mobile CTA ---------- */
 .sticky-cta{
-  position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);
+  position:fixed;left:50%;
+  /* max() with env(safe-area-inset-bottom) covers the home-indicator inset;
+     the JS visualViewport listener in site.js covers the separate iOS bug
+     where the address/tab bar collapsing changes the visual viewport without
+     moving the layout viewport that `bottom` is normally computed against —
+     env() alone doesn't fix that second part, hence the JS. */
+  bottom:max(18px, env(safe-area-inset-bottom));
+  transform:translate(-50%,140%);
   display:flex;gap:8px;z-index:110;
   background:rgba(5,11,21,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border:1px solid rgba(255,255,255,.16);border-radius:var(--r-pill);
   padding:7px;box-shadow:var(--sh-dark);
-  transition:transform .35s cubic-bezier(.22,1,.36,1);
+  transition:transform .35s cubic-bezier(.22,1,.36,1),bottom .1s linear;
 }
 .sticky-cta.show{transform:translate(-50%,0)}
 .sticky-cta a{

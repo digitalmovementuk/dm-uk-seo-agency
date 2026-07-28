@@ -152,5 +152,21 @@
       if (!stickyTicking) { window.requestAnimationFrame(updateSticky); stickyTicking = true; }
     }, { passive: true });
     updateSticky();
+
+    /* iOS pins `bottom:Npx` to the layout viewport, not the visual one, so
+       when the address/tab bar is expanded the bar can float above the true
+       bottom edge instead of sitting flush with it. Track visualViewport and
+       add whatever gap that leaves; CSS bottom is the fallback if unsupported. */
+    if (window.visualViewport) {
+      var vv = window.visualViewport;
+      var updateStickyBottom = function () {
+        var hiddenBelow = window.innerHeight - (vv.height + vv.offsetTop);
+        if (hiddenBelow < 0) { hiddenBelow = 0; }
+        sticky.style.bottom = 'calc(' + (18 + hiddenBelow) + 'px + env(safe-area-inset-bottom))';
+      };
+      vv.addEventListener('resize', updateStickyBottom, { passive: true });
+      vv.addEventListener('scroll', updateStickyBottom, { passive: true });
+      updateStickyBottom();
+    }
   }
 })();
