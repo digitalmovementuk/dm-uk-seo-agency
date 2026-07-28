@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Notice | Digital Movement UK</title>
   <meta name="robots" content="noindex,follow">
   <meta name="theme-color" content="#0B1F3A">
@@ -62,7 +62,7 @@
 
     <div class="prose-grid">
       <div class="prose">
-        <p class="lede">This notice explains what happens to your details when you contact Digital Movement UK through this website. It is written to be read by the people it affects rather than by lawyers, and it is deliberately specific about the parts most notices gloss over: which company handles your enquiry on the way to us, and what is recorded alongside what you typed.</p>
+        <p class="lede">This notice explains what happens to your details when you contact Digital Movement UK through this website. It is written to be read by the people it affects rather than by lawyers, and it is deliberately specific about the parts most notices gloss over: where your enquiry actually goes, that a copy of it is kept, and what is recorded alongside what you typed.</p>
         <p>It covers the enquiry forms on this website and the emails they produce. It does not cover what we do with client data once you engage us for work &mdash; that is set out in the agreement we would sign with you &mdash; and it does not cover other companies' websites that we link to.</p>
         <p>Digital Movement Marketing Ltd is subject to the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018. Our supervisory authority is the Information Commissioner's Office.</p>
       </div>
@@ -120,14 +120,13 @@
     <div class="prose-grid mt-6">
       <div class="prose">
         <h3>Recorded alongside your answers</h3>
-        <p>Four further items travel with a submission. None of them is something you type, so we would rather list them than let you find out later.</p>
+        <p>Three further items are saved with a submission. None of them is something you type, so we would rather list them than let you find out later. All of it is stored on our own server, which section 03 explains in full.</p>
         <ul class="checks mt-4">
           <li><b>&rarr;</b><span><b>A record of what you agreed to.</b> The exact wording printed next to the tick box on your screen, whether you ticked it, and the date and time you sent the form, to the second. The wording is read from the live page rather than typed in by us, so the record cannot drift from the words you actually saw.</span></li>
-          <li><b>&rarr;</b><span><b>The page you were on.</b> The web address and title of the page holding the form, so we know what you were reading when you got in touch.</span></li>
+          <li><b>&rarr;</b><span><b>The page you were on.</b> The web address of the page holding the form, so we know what you were reading when you got in touch. The page title is sent along with it but is not kept.</span></li>
           <li><b>&rarr;</b><span><b>Which form, and how long the page was open.</b> Whether you used the form at the top or the bottom of the page, and roughly how many seconds the page had been open before you sent it. The timing is a spam check &mdash; automated submissions arrive almost instantly.</span></li>
-          <li><b>&rarr;</b><span><b>Your IP address.</b> Not sent by us, but recorded by the service that receives the form, as any web server records the address a request came from. Section 03 explains who that is.</span></li>
         </ul>
-        <p class="mt-6">We deliberately do not send your browser's user-agent string, any device fingerprint, or any cookie or identifier. There is no lead scoring, and no profile is built from any of it.</p>
+        <p class="mt-6">Your IP address is <b>not</b> part of that record, and neither is your browser's user-agent string, any device fingerprint, or any cookie or identifier. There is no lead scoring, and no profile is built from any of it. (The server that delivers the pages may keep ordinary access logs at the infrastructure level, separately from this; section 07 covers that.)</p>
         <p>Each form also carries one field you cannot see, left empty and hidden from screen readers. Automated spam tools fill it in; people do not. If it arrives filled in, the submission is discarded and nothing is sent to anyone. Its contents are never transmitted either way.</p>
         <p>There are a few other hidden fields, and they are not about you: they tell the receiving service what to put in the subject line, how to lay the email out, and which page to send you to afterwards. They contain no personal data.</p>
 
@@ -147,30 +146,36 @@
       <span class="ghost-num" aria-hidden="true">03</span>
       <span class="ilabel">03 &mdash; The mechanism</span>
       <h2>How these forms actually work</h2>
-      <p class="lede">Your answers go to a third-party service, which turns them into an email to us. That company sits between you and our inbox, so you should know it is there and what it gets.</p>
+      <p class="lede">Your answers go to Digital Movement's own server, which saves them and then emails them to us. No form-handling company sits in between, and a copy is kept &mdash; both of those facts are explained below.</p>
     </div>
     <div class="prose-grid">
       <div class="prose">
-        <p>When you press the send button, the page checks your answers and then sends them to <b>FormSubmit</b> (formsubmit.co), a hosted service that converts a website form into an email. FormSubmit delivers that email to <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a>. You stay on the page, and a confirmation appears where the button was; you are not taken anywhere.</p>
+        <p>When you press the send button, the page checks your answers and sends them to leads.digitalmovement.uk, which is our own address on our own hosting account. That endpoint writes the enquiry to a file on the server, then sends a notification email to <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a>. You stay on the page, and a confirmation appears where the button was; you are not taken anywhere.</p>
 
-        <h3 class="mt-6">What FormSubmit receives</h3>
-        <p>Everything set out in section 02: the answers you typed, whether you ticked the consent box, the consent wording and the timestamp, the page address, which form you used and how long the page had been open &mdash; together with your IP address, which it records itself at the moment the submission arrives.</p>
+        <h3 class="mt-6">There is no form service in the middle</h3>
+        <p>Earlier versions of these forms went through a third-party form-to-email service. They no longer do. Nothing you type is handed to a company whose business is receiving other people's form submissions, so there is no such company holding a copy, and no question about what it might do with one. The endpoint accepts submissions only from digitalmovement.uk; a copy of our form placed on any other website is refused.</p>
+        <p>Two other companies are still involved further down the line, for ordinary reasons: the firm that hosts our server, and the provider that runs our mailbox. Section 06 says who does what.</p>
 
-        <h3 class="mt-6">FormSubmit is a processor, and here is what we have not yet confirmed</h3>
-        <p>FormSubmit is not us. It is a separate company that we do not own or control, acting as a processor: it handles your submission on our instructions, for the single purpose of delivering it to our inbox.</p>
-        <p>We are not going to imply that more of this is settled than actually is. At the time of writing we have <b>not</b> confirmed which country FormSubmit's servers are in, whether it keeps a copy of submissions after delivering them and for how long, or whether a written data processing agreement and an appropriate international transfer safeguard are in place between us. Those are being established, and this notice will be updated with the answers. We would rather tell you now than after the fact.</p>
-        <p>If you would prefer your details did not pass through a third-party service, you do not have to use the form. Email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a> or call <a href="tel:+442038157992">0203 815 7992</a> and you reach us directly, with nobody in between.</p>
+        <h3 class="mt-6">A copy is kept on our server</h3>
+        <p>This is new, and it is the part most worth reading. Before we changed this, nothing you typed was stored anywhere on this website. Now it is.</p>
+        <p><b>What is kept</b> is the record listed in section 02: your answers, the fact that you ticked the consent box, the wording you agreed to, the time you agreed, the address of the page you were on, which of the two forms you used, how long the page had been open, and the moment the enquiry arrived.</p>
+        <p><b>What is not kept</b> matters just as much. The record contains no IP address, no browser user-agent string and no fingerprint of any kind. There is nothing technical in it that could be used to recognise you elsewhere. The previous third-party service logged the IP address of everyone who submitted a form; this one does not.</p>
+        <p><b>Where it is kept</b> is a folder that sits outside the public part of the server, one file per month with one enquiry per line. It is not published, not linked, and there is no web address that reaches it &mdash; not for you, not for us, not for anyone who goes looking. Reaching it requires signing in to the hosting account itself.</p>
+        <p><b>Why it is kept</b> is worth being blunt about. An email can be accepted for delivery and still never arrive, and nobody is told when that happens. If the only copy of your enquiry were an email and that email failed quietly, your enquiry would simply vanish and neither of us would ever know. The stored file is the record; the email is the notification. It exists so that getting in touch with us actually works.</p>
+
+        <h3 class="mt-6">The consent box is checked on the server, not just in the page</h3>
+        <p>If a submission arrives without the consent box ticked, the server refuses it and returns an error. It is not quietly accepted and dealt with later. A page can be edited in a browser; this check cannot be got around that way.</p>
 
         <h3 class="mt-6">If the send fails</h3>
-        <p>Nothing is lost. Your answers stay in the form, and a message offers you our phone number and a link that opens a message in your own email program with your details already written into it. If you take that route your enquiry travels as ordinary email, and FormSubmit is not involved at all.</p>
+        <p>Your enquiry is treated as safe if it reaches either the file or the mailbox &mdash; it only counts as failed if both fail. If that does happen, nothing is lost: your answers stay in the form, and a message offers you our phone number and a link that opens a message in your own email program with your details already filled in.</p>
 
         <h3 class="mt-6">Older browsers, and no JavaScript</h3>
-        <p>If your browser cannot use the modern method the page prefers, it posts the form straight to FormSubmit itself and you land on our thank-you page at <a href="/thank-you/">/thank-you/</a>. If JavaScript is switched off altogether, the form falls back to its original behaviour: it opens a new message in your own email program, addressed to us, and nothing reaches anyone until you press send yourself.</p>
+        <p>If your browser cannot use the modern method the page prefers, it posts the form to the same endpoint directly, and the reply you see is a short machine-readable confirmation rather than a normal page. The enquiry reaches us in exactly the same way. If JavaScript is switched off altogether, the form falls back to opening a new message in your own email program, addressed to us &mdash; in that case nothing is stored on our server and nothing reaches anyone until you press send yourself.</p>
 
         <h3 class="mt-6">Please keep sensitive detail out of it</h3>
-        <p>An enquiry form, and the email it becomes, is not a secure channel, and it now passes through a third party as well. Please do not use one for anything sensitive &mdash; health details, financial details, or anything to do with a legal or criminal matter. Call us instead and we will find a better way to take it.</p>
+        <p>An enquiry form, and the email it becomes, is not a secure channel. Please do not use one for anything sensitive &mdash; health details, financial details, or anything to do with a legal or criminal matter. Call us instead and we will find a better way to take it.</p>
       </div>
-      <aside class="annot"><b>The path</b>Your answers &rarr; FormSubmit (processor) &rarr; our inbox.<br><br>FormSubmit sees your IP.<br><br>Consent wording and timestamp recorded.<br><br>Phoning or emailing us direct bypasses all of it.</aside>
+      <aside class="annot"><b>The path</b>Your answers &rarr; our own server &rarr; our own mailbox.<br><br>No form-handling company in between.<br><br>A copy is stored on our server, outside the public web folder.<br><br>No IP address in the record.</aside>
     </div>
   </div>
 </section>
@@ -216,10 +221,11 @@
       <h2>How long we keep it</h2>
     </div>
     <div class="prose">
-      <p>Your enquiry arrives as an email and lives in our business inbox, so it lasts as long as that email does. We keep it for as long as it is needed for the purpose it was sent for: answering you, and any conversation that comes out of that.</p>
+      <p>There are now two copies of your enquiry: the one stored on our server, and the notification email in our inbox. We keep both for as long as they are needed for the purpose the enquiry was sent for: answering you, and any conversation that comes out of that.</p>
+      <p>We can be exact about one thing and we should be. <b>The stored file has no automatic expiry.</b> Nothing deletes it on a timer; it stays on the server until a person removes it. That is the plain truth rather than a policy, and a retention period for it still has to be decided. When it is, this section will state it and we will apply it.</p>
       <p>If you go on to become a client, records connected to the work &mdash; agreements, invoices and correspondence about the engagement &mdash; are kept for as long as we need them to run the engagement and to meet our legal, tax and accounting obligations. Those periods are set by UK law rather than by us.</p>
       <p>We have not fixed a set number of months for enquiry correspondence that goes nowhere, and we would rather say that plainly than publish a figure we do not actually apply. If you would like your enquiry and our reply deleted, ask us and we will delete them, unless there is something we are legally required to keep &mdash; in which case we will tell you what, and why.</p>
-      <p>One honest gap: we do not yet know whether FormSubmit keeps its own copy of a submission after it has emailed it to us, or for how long. We are asking, and this section will say so once we have the answer. A deletion request to us covers our own records, and we will pass it on as well.</p>
+      <p>Because both copies are ours, a deletion request is straightforward: ask, and we remove the line from the stored file and the email from the mailbox. There is no third party we have to ask on your behalf.</p>
     </div>
   </div>
 </section>
@@ -236,8 +242,8 @@
       <div class="prose">
         <ul class="checks">
           <li><b>&rarr;</b><span><b>Our own team.</b> The people who need to read your enquiry in order to answer it.</span></li>
-          <li><b>&rarr;</b><span><b>FormSubmit.</b> The service that receives every website enquiry and emails it on to us, described in section 03. It is a processor, and the questions still open about it are set out there rather than buried here.</span></li>
-          <li><b>&rarr;</b><span><b>Your email provider, and ours.</b> The email FormSubmit produces passes through the provider that hosts our business email, and any reply we send passes through yours. Ours handles that mail on our instructions and not for its own purposes.</span></li>
+          <li><b>&rarr;</b><span><b>Our hosting provider.</b> Our website and the endpoint that receives enquiries run on hosting we rent, so the company providing it holds the server your enquiry is stored on. It acts as a processor: it does not use anything on that server for its own purposes, but it is the one other party with technical access, and it would be dishonest to describe our own server as though nobody else were near it.</span></li>
+          <li><b>&rarr;</b><span><b>Our mailbox provider, Google.</b> Email for digitalmovement.uk is delivered by Google, so the notification email containing your enquiry arrives in a Google-hosted mailbox and is stored there. Google acts as a processor for that mailbox. Any reply we send also passes through your own email provider, whoever that is.</span></li>
           <li><b>&rarr;</b><span><b>Suppliers who help us run the business.</b> If you become a client, your details will also sit in the ordinary tools any small company uses &mdash; email, file storage, invoicing and a CRM. Each of those providers processes data on our instructions under a contract. We are documenting the full list; if you want to know which providers hold your details, email us and ask, and we will tell you.</span></li>
           <li><b>&rarr;</b><span><b>Anyone the law requires.</b> We will disclose personal data where we are legally obliged to, for example to a regulator, a court or a law enforcement body acting within its powers.</span></li>
         </ul>
@@ -246,10 +252,10 @@
         <h3 class="mt-6">Outside the United Kingdom</h3>
         <p>Digital Movement works across the United Kingdom, Australia and New Zealand. Depending on who is best placed to help, an enquiry sent to office@digitalmovement.uk may be read by a colleague outside the UK.</p>
         <p>Under UK data protection law, New Zealand is covered by UK adequacy regulations: the UK Government recognises that it offers an equivalent standard of protection, so personal data can move there without additional safeguards. Australia is not covered by adequacy regulations. Personal data going there needs a specific safeguard &mdash; such as the UK's International Data Transfer Agreement, or the UK Addendum to the standard contractual clauses &mdash; or must be necessary for a contract with you or for steps you asked us to take before entering one.</p>
-        <p>The same question applies to FormSubmit, and we have not answered it yet: we do not know which country processes the submissions, so we cannot yet tell you whether a transfer safeguard is needed or which one would apply. Section 03 says what we are doing about that.</p>
-        <p>We are confirming all of this, and this notice will state it plainly once it is settled. If you would like to know before you send us anything, email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a> and ask.</p>
+        <p>Sending an enquiry no longer moves your details to another company's systems. The submission goes to our own hosting and is stored there; the only thing that leaves is the notification email, which goes to our Google-hosted mailbox. Google is a United States company operating a global network, so that mailbox copy may be processed outside the United Kingdom under Google's own transfer safeguards. We are confirming which country our hosting account's servers are in, and this section will say so.</p>
+        <p>We are settling the remaining questions, and this notice will state the answers plainly. If you would like to know before you send us anything, email <a href="mailto:office@digitalmovement.uk">office@digitalmovement.uk</a> and ask.</p>
       </div>
-      <aside class="annot"><b>Transfers</b>New Zealand &mdash; UK adequacy<br>Australia &mdash; no adequacy; safeguard required<br>FormSubmit &mdash; location not yet confirmed<br><br>We do not sell data.</aside>
+      <aside class="annot"><b>Transfers</b>Enquiry stored on our own hosting<br>Notification email &rarr; Google mailbox<br><br>New Zealand &mdash; UK adequacy<br>Australia &mdash; no adequacy; safeguard required<br><br>We do not sell data.</aside>
     </div>
   </div>
 </section>
@@ -272,11 +278,11 @@
         <p>Google Analytics has been built into the site and then deliberately left inactive: the measurement ID is empty, so Google's script is never requested, no cookie is created and nothing is sent. If that changes, it will not change quietly. Before any analytics can run you will be asked, in a banner, whether you agree &mdash; and the code is arranged so that Google's script cannot load until you say yes, rather than loading first and asking afterwards. Refusing will be exactly as easy as agreeing, and if you refuse or simply close the question, nothing is stored and nothing is sent.</p>
         <p>You will find a <b>Cookie settings</b> control in the footer of every page. It stays hidden while there is no analytics to configure, and appears by itself the moment any is switched on, so you can change your answer whenever you like. When that happens this section will be rewritten to describe exactly what runs, what it stores and where it goes. Until then, the accurate answer is: nothing.</p>
 
-        <h3 class="mt-6">The fonts come from Google</h3>
+        <h3 class="mt-6">The fonts are served from our own server</h3>
         <p>This site uses three typefaces — Inter Tight, Plus Jakarta Sans and JetBrains Mono. They are served from this website’s own server, not from Google. Earlier versions of this site loaded them from fonts.googleapis.com, which meant Google received your IP address on every page view before you had agreed to anything. That request no longer happens. The font files are licensed under the SIL Open Font License, which permits us to host them ourselves.</p>
 
-        <h3 class="mt-6">One page stores something in your browser</h3>
-        <p>One page on this site &mdash; the Bupa SEO teardown, at /resources/bupa-seo-teardown/ &mdash; works differently from the rest. Its download form goes through FormSubmit as the enquiry forms do, and it also saves two items in your browser's local storage: a flag recording that you unlocked the report, and a copy of the name, email address and phone number you entered. Local storage sits on your own device; you can clear it at any time through your browser settings, usually under "clear site data". That page is under review, and this notice will be updated when it changes.</p>
+        <h3 class="mt-6">One page remembers that you unlocked it</h3>
+        <p>The Bupa SEO teardown, at /resources/bupa-seo-teardown/, is a gated report: you give your details once and the full report opens. So that it does not ask you again on your next visit, that page saves a single marker in your browser's local storage recording that it has been unlocked. It is a yes-or-no flag and holds none of your details. Local storage sits on your own device and is not sent to us; you can clear it at any time through your browser settings, usually under "clear site data". An earlier version of that page also kept a copy of the name, email address and phone number you had typed. It no longer does.</p>
 
         <h3 class="mt-6">The server keeps ordinary logs</h3>
         <p>Like any website, the server that delivers these pages may keep standard access logs &mdash; the technical record of an IP address, a browser type and which file was requested. Those are created by our hosting provider as part of running and securing the service, not by us, and we do not use them to identify or follow individual visitors. We are confirming what our host retains and for how long, and this notice will say so.</p>
@@ -284,7 +290,7 @@
         <h3 class="mt-6">Links to other sites</h3>
         <p>The site links out to Google, to WhatsApp and to a small number of other sites. Those links do nothing at all until you click one. Once you do, you are on somebody else's site, under their privacy policy rather than ours.</p>
       </div>
-      <aside class="annot"><b>Today</b>0 cookies set<br>0 analytics hits sent<br>0 advertising pixels<br><br>GA4 present but inactive<br>1 external font host (Google)</aside>
+      <aside class="annot"><b>Today</b>0 cookies set<br>0 analytics hits sent<br>0 advertising pixels<br>0 third-party requests<br><br>GA4 present but inactive<br>Fonts served from our own server</aside>
     </div>
 
 <!--
@@ -407,7 +413,7 @@
       <p>You also have the right to complain to the UK's data protection regulator, the Information Commissioner's Office, and you can do that whether or not you have raised it with us. Coming to us first does not reduce that right in any way. The ICO can be reached through <a href="https://ico.org.uk/" rel="noopener">ico.org.uk</a>; complaints can be made at ico.org.uk/make-a-complaint or on the helpline, 0303 123 1113.</p>
 
       <h3 class="mt-6">Changes to this notice</h3>
-      <p>If what we do with personal data changes &mdash; a different form service, analytics switched on, a new tool holding client records &mdash; we will update this page before that change goes live, and change the date below. The most likely next change is analytics, and section 07 sets out what will happen when it comes.</p>
+      <p>If what we do with personal data changes &mdash; where enquiries are sent or stored, analytics switched on, a new tool holding client records &mdash; we will update this page before that change goes live, and change the date below. The most likely next change is analytics, and section 07 sets out what will happen when it comes.</p>
 
       <div class="callout">
         <span class="box-label">Contact</span>
@@ -462,195 +468,207 @@
 <!--
 ================================================================================
   PRIVACY NOTICE — OPEN ITEMS FOR RAOUL
-  Revised 28 July 2026, after the move from mailto: to FormSubmit and the
-  arrival of the GA4 + consent-gate work. Nothing below was assumed or
-  invented: every point is either something nobody has stated, or something
-  the code contradicts.
+  Revised 28 July 2026, after enquiries moved from FormSubmit to the
+  first-party endpoint at leads.digitalmovement.uk. Nothing below was assumed
+  or invented: every point is either something nobody has stated, or something
+  the code shows.
 ================================================================================
+
+  CLOSED SINCE THE LAST REVISION — kept so nobody reopens them.
+
+  * A1 (was the biggest risk): FORMSUBMIT IS GONE. All 21 forms now post to
+    https://leads.digitalmovement.uk/, Digital Movement's own endpoint on its
+    own hosting. There is no form-handling company in the chain, so the
+    Article 28 questions that could not be answered — server country, DPA,
+    whether it kept its own copy — no longer arise. Section 03 was rewritten
+    around the real mechanism. Verified against the source at
+    scratchpad/leads-endpoint/index.php.
+  * FONTS: now self-hosted from /assets/fonts/ under the SIL Open Font
+    Licence. Google no longer receives a visitor IP on page load. Section 07
+    updated; the site now makes NO third-party requests at all on page view.
+  * BUPA PAGE: now posts to the same first-party endpoint, has gained a proper
+    consent tick box with the same wording as every other form, and NO LONGER
+    writes the submitted lead to localStorage. Only the `bupa_wp_unlocked`
+    yes/no flag remains, which is strictly necessary for the gating the
+    visitor asked for. The old alex@ address is gone from that page. Section
+    07 rewritten accordingly.
 
   A. BLOCKERS — each needs a real answer before this notice can be relied on.
 
-  A1. FORMSUBMIT — THE BIG ONE. Sections 03, 05, 06.
-      Every website enquiry, including the free-text box, now passes through
-      formsubmit.co. Stated on the page as unknown rather than papered over:
-        - which country FormSubmit's servers are in, and therefore whether a
-          UK transfer safeguard (IDTA / UK Addendum) is required;
-        - whether a written data processing agreement exists with them;
-        - whether it retains its own copy of submissions after emailing them
-          on, and for how long.
-      This is the largest open question in the notice. Until it is answered,
-      section 03 tells readers plainly that it is unanswered and offers them
-      a direct email/phone route that bypasses FormSubmit entirely.
+  A1. RETENTION OF THE STORED ENQUIRIES — section 05. NOW THE BIGGEST ITEM.
+      The endpoint writes every enquiry to
+        /domains/digitalmovement.uk/leads-store/enquiries-YYYY-MM.jsonl
+      and NOTHING EVER DELETES IT. There is no expiry, no rotation, no cron.
+      The file grows for as long as the site runs. Section 05 says this
+      plainly rather than inventing a period, but a real retention decision is
+      now overdue in a way it was not before, because previously the site
+      stored nothing at all.
+      Decide: how long an enquiry that goes nowhere is kept, who deletes it,
+      and how. Then write it into section 05 and actually do it. A monthly
+      file makes this easy — deleting a whole month is one command.
 
-      Also operational rather than privacy, but it will lose enquiries:
-      FormSubmit requires ACTIVATION. Per the comments in forms.js, the first
-      submission triggers an activation email to office@digitalmovement.uk
-      and submissions are HELD until that link is clicked. Someone must send
-      a test enquiry and click the link, or nothing arrives and nobody knows.
+  A2. WHO CAN REACH THE STORED FILE, AND IS IT BACKED UP — sections 03, 05.
+      The store is outside public_html and files are written 0600 inside a
+      0700 directory, which is right. Unconfirmed: who holds hosting-panel
+      and SFTP credentials, whether those accounts have 2FA, and whether the
+      store is included in any backup (and if so, where that backup lives and
+      how long it is kept — a backup is another copy of the same personal
+      data, with its own retention answer). Section 03 says only what is
+      verifiable: it is outside the public folder and reaching it requires
+      signing in to the hosting account.
 
-      Worth weighing: forms.js itself documents Formspree (EU data region
-      available) or a self-hosted Cloudflare Worker as drop-in swaps. Either
-      would make this section far easier to stand behind, because the
-      transfer question largely disappears.
+  A3. HOSTING PROVIDER — sections 06, 07.
+      Named in section 06 as a processor, correctly: a host with access to the
+      server is a processor even when the server is "ours". Unconfirmed:
+      which country the hosting account's servers are in (so whether any
+      transfer question arises at all), and whether a written processor
+      agreement / DPA is in place with them. This is a much smaller version
+      of the old A1, but it is not zero, and section 06 does not pretend it is.
 
-  A2. RETENTION PERIOD — section 05.
-      Still no retention period set. The page describes retention by purpose
-      and says plainly that no fixed period exists. If you want a number,
-      decide it, apply it, and replace the third paragraph. Do not publish a
-      figure that is not actually applied.
+  A4. PROCESSOR / SUPPLIER LIST — section 06.
+      Hosting provider and Google (mailbox) are now named. Still unknown:
+      which CRM, file storage, invoicing and project tools hold client data
+      once someone becomes a client. Supply the list.
 
-  A3. PROCESSOR / SUPPLIER LIST — section 06.
-      Unknown: which email provider hosts office@digitalmovement.uk, and
-      which CRM, file storage, invoicing and project tools hold client data.
-      FormSubmit is now named; the rest are not. Supply the list.
-
-  A4. INTERNATIONAL TRANSFERS TO AUSTRALIA — section 06.
+  A5. INTERNATIONAL TRANSFERS TO AUSTRALIA — section 06.
       NZ holds UK adequacy; Australia does not. Unknown whether an IDTA / UK
       Addendum or a contract-necessity route is in place for AU access, and
       whether AU/NZ colleagues in fact read office@ mail.
 
-  A5. HOSTING PROVIDER AND SERVER LOGS — section 07.
-      Unknown: who hosts the site, what the access logs contain, how long
-      they are kept. Hedged language used ("may keep standard access logs").
+  A6. SERVER ACCESS LOGS — section 07.
+      The enquiry record itself contains no IP address (verified: the $record
+      array in index.php has no IP or user-agent field). But the web server
+      almost certainly keeps ordinary access logs at the infrastructure
+      level. Unknown: what they contain and how long the host keeps them.
+      Section 07 uses hedged language and says this is being confirmed.
 
-  A6. DATA PROTECTION CONTACT — sections 01 and 09.
+  A7. DATA PROTECTION CONTACT — sections 01 and 09.
       Unknown whether a named data protection contact or DPO exists. The page
       does NOT claim one either way; it routes privacy questions to office@.
 
-  B. ANALYTICS — WIRED, OFF, AND DOCUMENTED.
+  B. ANALYTICS — WIRED, OFF, AND DOCUMENTED. UNCHANGED THIS REVISION.
 
-  B1. GA4 is present but inactive: GA4_ID is '' in /assets/analytics.js, so
-      that file returns immediately, registers nothing with the consent gate,
-      and no banner can appear. consent.js loads synchronously in the <head>
-      of every page and sets Consent Mode v2 defaults to denied, but with no
-      measurement ID it never loads gtag.js and never writes to localStorage.
-      So TODAY "this website sets no cookies and runs no analytics" is TRUE,
-      and section 07 says exactly that.
+  B1. GA4_ID is still '' in /assets/analytics.js, so that file returns
+      immediately, registers nothing with the consent gate, and no banner can
+      appear. consent.js loads synchronously in the <head> of every page and
+      sets Consent Mode v2 defaults to denied, but with no measurement ID it
+      never loads gtag.js and never writes to localStorage.
+      Verified in a browser on this page, not just read from the source:
+      document.cookie empty, localStorage empty, no banner in the DOM, no
+      googletagmanager script, footer "Cookie settings" button computed to
+      display:none. So section 07 is TRUE as published.
 
-  B2. THE SWAP-IN BLOCK IS ALREADY WRITTEN. It sits as an HTML comment inside
-      section 07 of this file, marked "SWAP-IN BLOCK — USE WHEN THE GA4
-      MEASUREMENT ID IS PASTED IN". It holds the exact replacement lede and
-      six replacement blocks covering GA4 itself, Consent Mode v2, what
-      happens on yes and on no, Google as processor, international transfers,
-      how to change your mind, and where the choice is stored.
-      PASTE IT IN THE SAME COMMIT THAT SETS GA4_ID — not afterwards. The
-      moment that ID is non-empty, the current section 07 is factually wrong.
+  B2. THE SWAP-IN BLOCK IS STILL THERE AND STILL CURRENT. It sits as an HTML
+      comment inside section 07, marked "SWAP-IN BLOCK — USE WHEN THE GA4
+      MEASUREMENT ID IS PASTED IN", with a replacement lede and BLOCK A–F.
+      PASTE IT IN THE SAME COMMIT THAT SETS GA4_ID. The moment that ID is
+      non-empty, the current section 07 is factually wrong.
       It leaves ONE value blank on purpose: the GA4 data retention period,
-      because that is a setting the business chooses in the GA4 property
-      (standard properties offer 2 or 14 months). Set it in GA4 first.
-
-  B3. Footer "Cookie settings" control: NOW PRESENT on every page except
-      /resources/bupa-seo-teardown/ (see C1). consent.js keeps it hidden
-      until a measurement ID is registered, which is correct — it would be
-      odd to offer settings for cookies that do not exist. Section 07
-      describes it exactly that way.
+      which is a setting chosen in the GA4 property (2 or 14 months on a
+      standard property). Set it in GA4 first, then write it in.
 
   C. THINGS THE CODE SHOWS THAT NEED A DECISION.
 
-  C1. /resources/bupa-seo-teardown/ — described in section 07.
-      Address now FIXED: both its form action and its fetch call use
-      office@digitalmovement.uk. Still outstanding:
-        - it writes the submitted lead (name, email, phone, timestamp) to the
-          visitor's localStorage under `bupa_wp_lead`, plus an unlock flag
-          `bupa_wp_unlocked`. Storing a copy of the lead is not strictly
-          necessary for the service the visitor asked for, so under PECR it
-          remains the one thing on this site that arguably needs consent.
-        - it is the ONLY page that loads none of consent.js / forms.js /
-          analytics.js and has no footer "Cookie settings" control, so a
-          visitor who lands there directly cannot reach the control this
-          notice points them at.
-        - its form has NO consent tick box — only a sentence of prose. Every
-          other form on the site has one, and forms.js records the wording.
-        - line 695 still shows a mailto: link to alex@digitalmovement.uk in
-          its contact block. Missed in the address sweep.
-      Either bring that page onto the shared scripts and drop the
-      `bupa_wp_lead` write, or retire it — and if it is retired, DELETE the
-      "One page stores something in your browser" block in section 07.
+  C1. NO-JS SUBMISSION SHOWS RAW JSON — a UX bug, not a privacy one, but it
+      will look broken. forms.js rewrites each form's action to the endpoint
+      and adds a hidden `_next` pointing at /thank-you/. FormSubmit understood
+      `_next` and redirected. THE NEW ENDPOINT DOES NOT — it always replies
+      with JSON ({"ok":true}). So if fetch/FormData is unavailable, the
+      browser posts natively and the visitor lands on a page showing
+      {"ok":true} instead of the thank-you page.
+      Fix in the endpoint: if `_next` is present and the request is not an
+      AJAX/JSON one, send a 303 to it instead of printing JSON.
+      Section 03 does NOT claim a thank-you page for that path — it says the
+      reply is "a short machine-readable confirmation" — so the notice is
+      accurate either way, but it should be fixed.
+      Related: /thank-you/ currently has nothing that reaches it. Once the
+      redirect works it becomes reachable again.
 
-  C2. GOOGLE FONTS — section 07.
-      RESOLVED 2026-07-28: fonts are now self-hosted from /assets/fonts/.
-      Previously loaded from fonts.googleapis.com and fonts.gstatic.com,
-      so Google receives each visitor's IP. The Fonts API sets no cookies, so
-      this is disclosed rather than consented. Self-hosting the three
-      families would remove the last third-party request that happens without
-      the visitor doing anything. Recommended; a build decision, not mine.
+  C2. HEALTH-CHECK TOKEN IS HARDCODED IN THE SOURCE. index.php exposes
+      GET /?health=<token> returning counts only — stored_total,
+      last_received, file count, writability. No names, addresses or message
+      content, so a leak is low severity. But the token sits in plain text in
+      the source file, and that file lives in a scratchpad that may end up in
+      a repo. If the site's source is ever public, rotate it and read it from
+      an environment variable instead.
 
   C3. "WE DO NOT SELL YOUR PERSONAL DATA" — section 06. A commitment, not
       something verifiable from code. Confirm it is one DM UK will make.
 
   D. VERIFIED 28 JULY 2026 — recorded so nobody re-checks.
 
-  D1. TWENTY-ONE forms exist site-wide. Twenty are enquiry forms, two on each
-      of: / · /seo-services/ · /ai-search-optimisation/ · /crm/ · /paid-ads/ ·
+  D1. TWENTY-ONE forms site-wide. Twenty are enquiry forms, two on each of:
+      / · /seo-services/ · /ai-search-optimisation/ · /crm/ · /paid-ads/ ·
       /seo-agency-london/ · /seo-agency-manchester/ · /seo-agency-birmingham/
       · /seo-agency-leeds/ · /seo-agency-bristol/. The twenty-first is the
-      gated download on /resources/bupa-seo-teardown/ (see C1).
+      gated download on /resources/bupa-seo-teardown/.
       Across the twenty enquiry forms:
         name, phone, email, consent  — all 20
         website                      — 19 of 20 (absent from the lower form on /)
         service or sector            — 19 of 20 (absent from the lower form on
                                        /seo-services/, which has the message box)
         message                      — 2 of 20 (lower forms on / and /seo-services/)
-        _honey (honeypot)            — all 20, never transmitted
+        _honey (honeypot)            — all 20, never stored or emailed
       Section 02 states these counts. IF MORE CITY OR SERVICE PAGES ARE
-      ADDED, THE COUNTS IN SECTION 02 MUST BE UPDATED. That is the most
-      likely way this notice quietly goes stale.
+      ADDED, THE COUNTS IN SECTION 02 MUST BE UPDATED. Still the most likely
+      way this notice quietly goes stale.
 
   D2. The markup action on all twenty enquiry forms is still
-      action="mailto:office@digitalmovement.uk" method="post"
-      enctype="text/plain". This is CORRECT and intentional: forms.js
-      rewrites the action to the FormSubmit endpoint at load time, so the
-      mailto: value only ever applies when JavaScript is off entirely.
-      Section 03 describes both paths.
+      action="mailto:office@digitalmovement.uk". This is CORRECT and
+      intentional: forms.js rewrites it to the endpoint at load time, so the
+      mailto: value only applies when JavaScript is off entirely. Section 03
+      describes all three paths (fetch, native POST, JS-off mailto:).
 
-  D3. Sent in addition to the visible fields, per buildBody() in forms.js:
-        consent_text        — the exact consent wording read from the page
-        consent_timestamp   — ISO 8601, to the second
-        page_url, page_title
-        form_id, form_location (hero|bottom), form_open_seconds
-        _next, _subject, _template, _captcha  — routing/formatting only
-      NOT sent: user agent, any fingerprint, any cookie or identifier, and
-      not the honeypot. The IP is not sent by us but is recorded by the
-      endpoint. All disclosed in section 02.
+  D3. STORED RECORD — exactly the $record array in index.php:
+        received (ISO 8601 UTC), name, email, phone, website, service,
+        message, consent (true), consent_text, consent_timestamp, page_url,
+        form_id, form_location, form_open_seconds
+      NOT stored: IP address, user agent, fingerprint, cookies. Also NOT
+      stored: page_title and _next — the browser sends both and the endpoint
+      ignores them. Section 02 says the page title is sent but not kept,
+      which is precisely right.
+      Written to disk BEFORE the email is attempted; the request only fails
+      if BOTH the write and the mail fail. Section 03 says this.
 
-  D4. Consent wording is IDENTICAL on all twenty enquiry forms: "I agree that
-      Digital Movement UK may use these details to reply to my enquiry. See
-      our privacy notice." — with "privacy notice" linked to /privacy/. Good:
-      a single consent_text value, and the link sits at the point of
-      collection as Article 13 expects. A weaker variant ("Privacy details
-      are available in the footer") survives ONLY in index-v1-archived.html,
-      which is not published. If that file is ever revived, fix it first.
+  D4. SERVER-SIDE CONSENT ENFORCEMENT is real: index.php rejects a submission
+      whose consent value is empty or one of 0/false/off/no, with a 400 and
+      an error message. Not cosmetic, and worth the sentence section 03 gives
+      it. Consent wording is IDENTICAL across all 21 forms and links to
+      /privacy/ at the point of collection, so consent_text is a single clean
+      value. (A weaker variant survives only in the unpublished
+      index-v1-archived.html.)
 
-  D5. Cookies and storage, verified by grep across every .html/.js excluding
-      index-v1-archived.html:
+  D5. CORS: the endpoint sets Access-Control-Allow-Origin only for
+      https://digitalmovement.uk and https://www.digitalmovement.uk, and
+      rejects a POST carrying any other Origin with 403. Note a same-origin
+      or tool-issued request with NO Origin header is still accepted — that
+      is normal and not a data-protection problem, but it does mean "only our
+      website can submit" is true of browsers rather than of everything.
+      Section 03 says "a copy of our form placed on any other website is
+      refused", which is the accurate claim.
+
+  D6. Cookies and storage, verified by grep and in a browser:
         document.cookie  — only in consent.js, and only to DELETE Google
                            Analytics cookies when consent is withdrawn
         localStorage     — consent.js key `dm-consent` (written only when a
                            choice is made, and no choice can be made while
-                           GA4_ID is empty), plus the two bupa keys in C1
+                           GA4_ID is empty), plus `bupa_wp_unlocked`
         gtag / GTM / pixels / heatmaps / session recording — none active
-      External hosts: NONE for fonts (self-hosted since 2026-07-28).
-      formsubmit.co (forms), plus plain outbound links to google.com, wa.me
-      and capedigital.com.au.
-
-  D6. dm.css now carries .form-error and .form-status styling, and every
-      enquiry form has both the honeypot wrapper ([data-hp]) and the live
-      region ([data-form-status]) in its markup. Earlier gaps are closed.
-
-  D7. /thank-you/ exists, is noindex,follow, and is correctly absent from
-      sitemap.xml. It is the _next target FormSubmit redirects to on the
-      no-fetch path. Its copy says "Your answers have gone to our inbox" —
-      accurate under either mechanism.
+      Third-party requests on page view: NONE. Fonts are self-hosted; the
+      only outbound connection a visitor makes is to our own endpoint, and
+      only when they submit a form. Plain outbound links to google.com,
+      wa.me and capedigital.com.au do nothing until clicked.
 
   E. HOUSEKEEPING.
 
   E1. ICO helpline (0303 123 1113) and the ico.org.uk/make-a-complaint path
       in section 09 are from public record. Worth a check before go-live.
   E2. The main pages' Organization JSON-LD still carries
-      email "alex@digitalmovement.uk" and telephone "+49 176 82360647"
+      email "alex@digitalmovement.uk" and telephone "+49 176 23296439"
       (see /crm/). Those contradict office@digitalmovement.uk and
-      0203 815 7992, used throughout this notice and in every footer. Not
-      this file's to fix, but a privacy notice and a schema block giving
+      0203 815 7992, used throughout this notice and in every footer. Now the
+      LAST place the old address survives — the Bupa page was cleaned up.
+      Not this file's to fix, but a privacy notice and a schema block giving
       different controller contact details is a bad look.
   E3. /privacy/ and /datenschutz/ are both noindex,follow and correctly
       absent from sitemap.xml. No hreflang between them, deliberately: they

@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Datenschutz | Digital Movement UK</title>
   <meta name="robots" content="noindex,follow">
   <meta name="theme-color" content="#0B1F3A">
@@ -154,19 +154,25 @@
      not sufficient — that would need a real German Datenschutzerklärung and,
      for Germany, an Impressum under § 5 DDG. Legal input required, not mine.
   3. The English notice at /privacy/ carries its own list of unresolved items
-     (FormSubmit as processor — location, DPA and retention all unconfirmed;
-     retention period; processor list; AU transfer safeguard; hosting logs).
-     Those apply here too, since this page points at that one.
-  4. Checked 28 July 2026 against the move to FormSubmit and the GA4 consent
-     gate: nothing on this page became untrue. It is a signpost and describes
-     no mechanism of its own, so it needed no rewrite. The page now loads
-     consent.js, forms.js and analytics.js like the rest of the site, and
-     carries the footer "Cookie settings" control. forms.js is a no-op here
-     because the page has no form, which is correct and harmless.
-  5. If a full German Datenschutzerklärung is ever written, it must cover
-     FormSubmit as an Auftragsverarbeiter and the Drittlandtransfer question
-     — under DSGVO that is a harder disclosure than under UK GDPR, and it is
-     the reason this page deliberately does not attempt one.
+     (retention of the stored enquiries; who can reach the store and whether
+     it is backed up; hosting provider country and DPA; processor list for
+     client data; AU transfer safeguard; server access logs). Those apply
+     here too, since this page points at that one.
+  4. Re-checked 28 July 2026, twice: first against the move to FormSubmit,
+     then again after FormSubmit was replaced by the first-party endpoint at
+     leads.digitalmovement.uk. Nothing on this page became untrue either
+     time. It is a signpost and describes no mechanism of its own, which is
+     exactly why it survives changes like these without a rewrite. The page
+     loads consent.js, forms.js and analytics.js like the rest of the site
+     and carries the footer "Cookie settings" control; forms.js is a no-op
+     here because the page has no form, which is correct and harmless.
+  5. If a full German Datenschutzerklärung is ever written, the mechanism is
+     now much easier to describe than it was: enquiries go to Digital
+     Movement's own server, are stored there, and are emailed on to a
+     Google-hosted mailbox. It would still need to name the hosting provider
+     and Google as Auftragsverarbeiter, state the Speicherdauer for the
+     stored file (undecided — see A1 in the English notice), and address the
+     Drittlandtransfer for the mailbox. Legal input required, not mine.
 ================================================================================
 -->
 </body>
