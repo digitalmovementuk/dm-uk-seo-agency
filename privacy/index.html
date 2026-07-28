@@ -221,10 +221,11 @@
       <h2>How long we keep it</h2>
     </div>
     <div class="prose">
-      <p>There are now two copies of your enquiry: the one stored on our server, and the notification email in our inbox. We keep both for as long as they are needed for the purpose the enquiry was sent for: answering you, and any conversation that comes out of that.</p>
-      <p>We can be exact about one thing and we should be. <b>The stored file has no automatic expiry.</b> Nothing deletes it on a timer; it stays on the server until a person removes it. That is the plain truth rather than a policy, and a retention period for it still has to be decided. When it is, this section will state it and we will apply it.</p>
+      <p>There are two copies of your enquiry: the one stored on our server, and the notification email in our inbox. We keep both for as long as they are needed for the purpose the enquiry was sent for: answering you, and any conversation that comes out of that &mdash; and beyond that, on the fixed schedule below.</p>
+      <p><b>The stored file is deleted automatically after 12 months.</b> Enquiries are written one calendar month to a file; an automated job on our own server checks every month and deletes any monthly file once it is more than 12 months old. Nothing is kept indefinitely by default, and no person needs to remember to delete it.</p>
+      <p>The notification email is not on that automatic schedule. It sits in our ordinary mailbox, and is deleted the same way as any other email we no longer need &mdash; there is no fixed number of months for it yet, and we would rather say that plainly than publish a figure we do not actually apply.</p>
       <p>If you go on to become a client, records connected to the work &mdash; agreements, invoices and correspondence about the engagement &mdash; are kept for as long as we need them to run the engagement and to meet our legal, tax and accounting obligations. Those periods are set by UK law rather than by us.</p>
-      <p>We have not fixed a set number of months for enquiry correspondence that goes nowhere, and we would rather say that plainly than publish a figure we do not actually apply. If you would like your enquiry and our reply deleted, ask us and we will delete them, unless there is something we are legally required to keep &mdash; in which case we will tell you what, and why.</p>
+      <p>You do not have to wait 12 months. If you would like your enquiry and our reply deleted sooner, ask us and we will delete them, unless there is something we are legally required to keep &mdash; in which case we will tell you what, and why.</p>
       <p>Because both copies are ours, a deletion request is straightforward: ask, and we remove the line from the stored file and the email from the mailbox. There is no third party we have to ask on your behalf.</p>
     </div>
   </div>
@@ -447,20 +448,21 @@
     a same-site-only 303 to `_next` for the non-AJAX path, so a no-JS visitor
     lands on /thank-you/ instead of raw JSON. Verified against the deployed
     source at leads-endpoint-source/index.php.
+  * RETENTION IS DECIDED AND AUTOMATED (was A1, the biggest remaining item).
+    12 months. A new script, cleanup-old-enquiries.php, sits alongside
+    index.php in the same deployed directory, refuses anything but a CLI
+    invocation (checked in code AND denied over HTTP in .htaccess), and is
+    run by an account-level cron job monthly (1st, 03:00 UTC — uid nRF4RkEFG7
+    on u299236820) that deletes any enquiries-YYYY-MM.jsonl file more than
+    12 months old. Verified live: deployed, health check still returns the
+    same stored_total as before the redeploy (the store directory sits
+    outside the deployed folder, so redeploying the endpoint does not touch
+    it), and the cleanup script itself returns 403 over HTTP. Section 05
+    rewritten to describe the real mechanism, and to flag the one thing this
+    does NOT cover: the notification email copy in the inbox has no automatic
+    schedule yet, only the stored file does.
 
   A. BLOCKERS — each needs a real answer before this notice can be relied on.
-
-  A1. RETENTION OF THE STORED ENQUIRIES — section 05. NOW THE BIGGEST ITEM.
-      The endpoint writes every enquiry to
-        /domains/digitalmovement.uk/leads-store/enquiries-YYYY-MM.jsonl
-      and NOTHING EVER DELETES IT. There is no expiry, no rotation, no cron.
-      The file grows for as long as the site runs. Section 05 says this
-      plainly rather than inventing a period, but a real retention decision is
-      now overdue in a way it was not before, because previously the site
-      stored nothing at all.
-      Decide: how long an enquiry that goes nowhere is kept, who deletes it,
-      and how. Then write it into section 05 and actually do it. A monthly
-      file makes this easy — deleting a whole month is one command.
 
   A2. WHO CAN REACH THE STORED FILE, AND IS IT BACKED UP — sections 03, 05.
       The store is outside public_html and files are written 0600 inside a
