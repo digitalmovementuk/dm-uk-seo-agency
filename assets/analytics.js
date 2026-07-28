@@ -32,7 +32,7 @@
      no cookie banner, no gtag.js, no network request, no cookies,
      no event listeners. One console warning, then silence.
      ==================================================================== */
-  var GA4_ID = '';
+  var GA4_ID = 'G-3WSHWP27M6';
 
   /* ------------------------------------------------------------------ */
 

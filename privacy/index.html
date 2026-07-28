@@ -267,16 +267,29 @@
       <span class="ghost-num" aria-hidden="true">07</span>
       <span class="ilabel">07 &mdash; Cookies</span>
       <h2>Cookies, analytics and what this site stores</h2>
-      <p class="lede">As this notice is published, this website sets no cookies and runs no analytics. We checked the code rather than assuming it.</p>
+      <p class="lede">This website uses Google Analytics to count visits and see which pages lead to enquiries. It runs only if you agree to it. Until you do, no analytics cookie is set and nothing is sent to Google.</p>
     </div>
     <div class="prose-grid">
       <div class="prose">
-        <p>There is no Google Analytics running on this site, no Google Tag Manager, no Meta or LinkedIn pixel, no advertising tag, no session-recording or heatmap tool and no A/B testing script. No measurement request is sent anywhere, and no cookie is placed in your browser.</p>
-        <p>That is why you have not been shown a cookie banner. There is nothing on these pages to consent to, and we are not going to ask you to agree to something that is not happening.</p>
+        <h3 class="mt-6">What you are asked, and when</h3>
+        <p>The first time you arrive you are asked one question: whether we may use Google Analytics. Both answers take one click, and the two buttons are deliberately the same size, shape and weight, because refusing should not be made harder than agreeing. If you close the question without answering, that counts as no &mdash; nothing is stored, and you will be asked again next time rather than quietly opted in.</p>
 
-        <h3 class="mt-6">Analytics is prepared, but switched off</h3>
-        <p>Google Analytics has been built into the site and then deliberately left inactive: the measurement ID is empty, so Google's script is never requested, no cookie is created and nothing is sent. If that changes, it will not change quietly. Before any analytics can run you will be asked, in a banner, whether you agree &mdash; and the code is arranged so that Google's script cannot load until you say yes, rather than loading first and asking afterwards. Refusing will be exactly as easy as agreeing, and if you refuse or simply close the question, nothing is stored and nothing is sent.</p>
-        <p>You will find a <b>Cookie settings</b> control in the footer of every page. It stays hidden while there is no analytics to configure, and appears by itself the moment any is switched on, so you can change your answer whenever you like. When that happens this section will be rewritten to describe exactly what runs, what it stores and where it goes. Until then, the accurate answer is: nothing.</p>
+        <h3 class="mt-6">If you say no, or say nothing</h3>
+        <p>Google's script is never requested. No cookie is set, no measurement is sent, and nothing about your visit leaves your browser. The site behaves in exactly the same way. This is enforced through Google Consent Mode v2, which is set to deny analytics, advertising, personalisation and functionality storage before any tag is able to run. The only category granted by default is security storage, which covers fraud prevention rather than measurement.</p>
+
+        <h3 class="mt-6">If you say yes</h3>
+        <p>Google Analytics 4 loads and places cookies in your browser, normally named _ga and one beginning _ga_, which tell one browser apart from another so that a second visit is not counted as a new person. It records the pages you look at, roughly where in the world you are, how you arrived at the site, and a small number of actions we have chosen to measure: starting an enquiry form, sending one, clicking a phone or WhatsApp link, opening an FAQ, and reaching the pricing section. Advertising and personalisation storage stay denied even after you agree, because this site runs no advertising tags at all &mdash; there is nothing there to ask you about.</p>
+
+        <h3 class="mt-6">Google's role, and where the data goes</h3>
+        <p>For analytics, Google acts as our processor: it handles the data on our instructions under Google's data processing terms, and we remain responsible for it. Google is a United States company operating a global network, so analytics data may be processed outside the United Kingdom. Google states that Google Analytics 4 does not log or store IP addresses &mdash; the address is used in transit to work out an approximate location and is then discarded. Transfers outside the UK are covered by Google's own transfer safeguards, set out in its published privacy and data processing documentation.</p>
+        <p>Our lawful basis for analytics is your consent, under Article 6(1)(a) UK GDPR, together with the consent required by the Privacy and Electronic Communications Regulations before anything is stored on your device. Analytics is the one part of this site that genuinely runs on consent, which is why it is the one part with a banner.</p>
+
+        <h3 class="mt-6">Changing your mind</h3>
+        <p>Use the <b>Cookie settings</b> control in the footer of any page. Switching from yes to no takes effect at once and does three things: it stops any further measurement, it turns on Google's own kill switch for this site, and it deletes the Google Analytics cookies already sitting in your browser. You do not have to tell us why, and nothing else about the site changes.</p>
+
+        <h3 class="mt-6">Where your answer is kept, and for how long</h3>
+        <p>Your choice is stored in your browser's local storage under the name dm-consent, with the date you made it. It is not a cookie, so it is never transmitted with a request to us or to anyone else. Keeping a record of a preference you asked us to remember is strictly necessary in order to provide it, so that record does not itself need consent. Clearing your browser's site data removes it, and you will simply be asked again.</p>
+        <p>The analytics data itself is held by Google for 14 months, after which the event-level records are deleted; aggregated totals in reports are not affected.</p>
 
         <h3 class="mt-6">The fonts are served from our own server</h3>
         <p>This site uses three typefaces — Inter Tight, Plus Jakarta Sans and JetBrains Mono. They are served from this website’s own server, not from Google. Earlier versions of this site loaded them from fonts.googleapis.com, which meant Google received your IP address on every page view before you had agreed to anything. That request no longer happens. The font files are licensed under the SIL Open Font License, which permits us to host them ourselves.</p>
@@ -290,76 +303,8 @@
         <h3 class="mt-6">Links to other sites</h3>
         <p>The site links out to Google, to WhatsApp and to a small number of other sites. Those links do nothing at all until you click one. Once you do, you are on somebody else's site, under their privacy policy rather than ours.</p>
       </div>
-      <aside class="annot"><b>Today</b>0 cookies set<br>0 analytics hits sent<br>0 advertising pixels<br>0 third-party requests<br><br>GA4 present but inactive<br>Fonts served from our own server</aside>
-    </div>
-
-<!--
-================================================================================
-  SWAP-IN BLOCK — USE WHEN THE GA4 MEASUREMENT ID IS PASTED IN
-
-  Trigger: the moment a real G-XXXXXXXXXX value is set for GA4_ID in
-  /assets/analytics.js. At that instant the three paragraphs under the heading
-  "Analytics is prepared, but switched off" above become FALSE, and the lede
-  of section 07 ("this website sets no cookies and runs no analytics") becomes
-  FALSE for anyone who accepts.
-
-  HOW TO SWAP:
-    1. Replace the section 07 lede with LEDE below.
-    2. Delete the two paragraphs immediately after it (the "There is no Google
-       Analytics running..." paragraph and the "That is why you have not been
-       shown a cookie banner..." paragraph). They are superseded.
-    3. Replace the whole "Analytics is prepared, but switched off" block
-       (heading + both paragraphs) with BLOCK A through BLOCK F below.
-    4. Replace the <aside class="annot"> with the ANNOT version below.
-    5. Update "Last updated" in the intro aside and in the section 09 contact
-       callout to the date of the change.
-
-  The footer "Cookie settings" control (<button class="footer-consent"
-  data-dm-consent>) is already present on every page, so BLOCK E is safe to
-  publish as written. consent.js keeps it hidden until a measurement ID is
-  registered, which is why section 07 currently describes it as hidden.
-
-  Everything below is written to match /assets/consent.js and
-  /assets/analytics.js as they stand. If those files change, re-check it.
-  ONE FIGURE IS DELIBERATELY LEFT BLANK: the GA4 data retention period. That
-  is a setting the business chooses in the Google Analytics property (a
-  standard property offers 2 or 14 months). Set it there first, then write it
-  in. Do not publish a number that is not actually configured.
-
---- LEDE -----------------------------------------------------------------
-      <p class="lede">This website uses Google Analytics to count visits and see which pages lead to enquiries. It runs only if you agree to it. Until you do, no analytics cookie is set and nothing is sent to Google.</p>
-
---- BLOCK A --------------------------------------------------------------
-        <h3 class="mt-6">What you are asked, and when</h3>
-        <p>The first time you arrive you are asked one question: whether we may use Google Analytics. Both answers take one click, and the two buttons are deliberately the same size, shape and weight, because refusing should not be made harder than agreeing. If you close the question without answering, that counts as no &mdash; nothing is stored, and you will be asked again next time rather than quietly opted in.</p>
-
---- BLOCK B --------------------------------------------------------------
-        <h3 class="mt-6">If you say no, or say nothing</h3>
-        <p>Google's script is never requested. No cookie is set, no measurement is sent, and nothing about your visit leaves your browser. The site behaves in exactly the same way. This is enforced through Google Consent Mode v2, which is set to deny analytics, advertising, personalisation and functionality storage before any tag is able to run. The only category granted by default is security storage, which covers fraud prevention rather than measurement.</p>
-
---- BLOCK C --------------------------------------------------------------
-        <h3 class="mt-6">If you say yes</h3>
-        <p>Google Analytics 4 loads and places cookies in your browser, normally named _ga and one beginning _ga_, which tell one browser apart from another so that a second visit is not counted as a new person. It records the pages you look at, roughly where in the world you are, how you arrived at the site, and a small number of actions we have chosen to measure: starting an enquiry form, sending one, clicking a phone or WhatsApp link, opening an FAQ, and reaching the pricing section. Advertising and personalisation storage stay denied even after you agree, because this site runs no advertising tags at all &mdash; there is nothing there to ask you about.</p>
-
---- BLOCK D --------------------------------------------------------------
-        <h3 class="mt-6">Google's role, and where the data goes</h3>
-        <p>For analytics, Google acts as our processor: it handles the data on our instructions under Google's data processing terms, and we remain responsible for it. Google is a United States company operating a global network, so analytics data may be processed outside the United Kingdom. Google states that Google Analytics 4 does not log or store IP addresses &mdash; the address is used in transit to work out an approximate location and is then discarded. Transfers outside the UK are covered by Google's own transfer safeguards, set out in its published privacy and data processing documentation.</p>
-        <p>Our lawful basis for analytics is your consent, under Article 6(1)(a) UK GDPR, together with the consent required by the Privacy and Electronic Communications Regulations before anything is stored on your device. Analytics is the one part of this site that genuinely runs on consent, which is why it is the one part with a banner.</p>
-
---- BLOCK E --------------------------------------------------------------
-        <h3 class="mt-6">Changing your mind</h3>
-        <p>Use the <b>Cookie settings</b> control in the footer of any page. Switching from yes to no takes effect at once and does three things: it stops any further measurement, it turns on Google's own kill switch for this site, and it deletes the Google Analytics cookies already sitting in your browser. You do not have to tell us why, and nothing else about the site changes.</p>
-
---- BLOCK F --------------------------------------------------------------
-        <h3 class="mt-6">Where your answer is kept, and for how long</h3>
-        <p>Your choice is stored in your browser's local storage under the name dm-consent, with the date you made it. It is not a cookie, so it is never transmitted with a request to us or to anyone else. Keeping a record of a preference you asked us to remember is strictly necessary in order to provide it, so that record does not itself need consent. Clearing your browser's site data removes it, and you will simply be asked again.</p>
-        <p>The analytics data itself is held by Google for a period we set in the Google Analytics property, after which the event-level records are deleted; aggregated totals in reports are not affected. [SET THIS: state the retention period actually configured in the GA4 property. Do not publish a figure until it is set.]</p>
-
---- ANNOT ----------------------------------------------------------------
       <aside class="annot"><b>Analytics</b>Google Analytics 4<br>Consent Mode v2, default denied<br>Loads only on acceptance<br><br>Advertising storage: always denied<br>Choice stored in localStorage</aside>
-================================================================================
--->
-
+    </div>
   </div>
 </section>
 
@@ -492,6 +437,16 @@
     yes/no flag remains, which is strictly necessary for the gating the
     visitor asked for. The old alex@ address is gone from that page. Section
     07 rewritten accordingly.
+  * GA4 IS LIVE. GA4_ID is set in /assets/analytics.js (was B1/B2). Section 07
+    rewritten from "no analytics" to "analytics behind a consent banner" —
+    lede, the whole cookie/consent explanation, and the annot strip all
+    replaced. Event data retention is set to 14 months in the GA4 property;
+    that figure in section 07 is a real, confirmed setting, not a guess.
+  * NO-JS SUBMISSION REDIRECT IS FIXED (was C1). index.php now detects
+    AJAX vs. plain-POST via Accept/X-Requested-With/Sec-Fetch-Mode and issues
+    a same-site-only 303 to `_next` for the non-AJAX path, so a no-JS visitor
+    lands on /thank-you/ instead of raw JSON. Verified against the deployed
+    source at leads-endpoint-source/index.php.
 
   A. BLOCKERS — each needs a real answer before this notice can be relied on.
 
@@ -546,43 +501,9 @@
       Unknown whether a named data protection contact or DPO exists. The page
       does NOT claim one either way; it routes privacy questions to office@.
 
-  B. ANALYTICS — WIRED, OFF, AND DOCUMENTED. UNCHANGED THIS REVISION.
-
-  B1. GA4_ID is still '' in /assets/analytics.js, so that file returns
-      immediately, registers nothing with the consent gate, and no banner can
-      appear. consent.js loads synchronously in the <head> of every page and
-      sets Consent Mode v2 defaults to denied, but with no measurement ID it
-      never loads gtag.js and never writes to localStorage.
-      Verified in a browser on this page, not just read from the source:
-      document.cookie empty, localStorage empty, no banner in the DOM, no
-      googletagmanager script, footer "Cookie settings" button computed to
-      display:none. So section 07 is TRUE as published.
-
-  B2. THE SWAP-IN BLOCK IS STILL THERE AND STILL CURRENT. It sits as an HTML
-      comment inside section 07, marked "SWAP-IN BLOCK — USE WHEN THE GA4
-      MEASUREMENT ID IS PASTED IN", with a replacement lede and BLOCK A–F.
-      PASTE IT IN THE SAME COMMIT THAT SETS GA4_ID. The moment that ID is
-      non-empty, the current section 07 is factually wrong.
-      It leaves ONE value blank on purpose: the GA4 data retention period,
-      which is a setting chosen in the GA4 property (2 or 14 months on a
-      standard property). Set it in GA4 first, then write it in.
+  B. ANALYTICS — LIVE. See "GA4 IS LIVE" above.
 
   C. THINGS THE CODE SHOWS THAT NEED A DECISION.
-
-  C1. NO-JS SUBMISSION SHOWS RAW JSON — a UX bug, not a privacy one, but it
-      will look broken. forms.js rewrites each form's action to the endpoint
-      and adds a hidden `_next` pointing at /thank-you/. FormSubmit understood
-      `_next` and redirected. THE NEW ENDPOINT DOES NOT — it always replies
-      with JSON ({"ok":true}). So if fetch/FormData is unavailable, the
-      browser posts natively and the visitor lands on a page showing
-      {"ok":true} instead of the thank-you page.
-      Fix in the endpoint: if `_next` is present and the request is not an
-      AJAX/JSON one, send a 303 to it instead of printing JSON.
-      Section 03 does NOT claim a thank-you page for that path — it says the
-      reply is "a short machine-readable confirmation" — so the notice is
-      accurate either way, but it should be fixed.
-      Related: /thank-you/ currently has nothing that reaches it. Once the
-      redirect works it becomes reachable again.
 
   C2. HEALTH-CHECK TOKEN IS HARDCODED IN THE SOURCE. index.php exposes
       GET /?health=<token> returning counts only — stored_total,
@@ -650,26 +571,30 @@
   D6. Cookies and storage, verified by grep and in a browser:
         document.cookie  — only in consent.js, and only to DELETE Google
                            Analytics cookies when consent is withdrawn
-        localStorage     — consent.js key `dm-consent` (written only when a
-                           choice is made, and no choice can be made while
-                           GA4_ID is empty), plus `bupa_wp_unlocked`
-        gtag / GTM / pixels / heatmaps / session recording — none active
-      Third-party requests on page view: NONE. Fonts are self-hosted; the
-      only outbound connection a visitor makes is to our own endpoint, and
-      only when they submit a form. Plain outbound links to google.com,
-      wa.me and capedigital.com.au do nothing until clicked.
+        localStorage     — consent.js key `dm-consent` (written once a
+                           choice is made — GA4_ID is now set, so the banner
+                           actually appears), plus `bupa_wp_unlocked`
+        gtag / GTM / pixels / heatmaps / session recording — GA4 only, and
+                           only after consent is given
+      Third-party requests on page view: NONE before consent; GA4 only after
+      a visitor agrees. Fonts are self-hosted; the only outbound connection a
+      visitor makes without consenting is to our own endpoint, and only when
+      they submit a form. Plain outbound links to google.com, wa.me and
+      capedigital.com.au do nothing until clicked.
 
   E. HOUSEKEEPING.
 
   E1. ICO helpline (0303 123 1113) and the ico.org.uk/make-a-complaint path
       in section 09 are from public record. Worth a check before go-live.
-  E2. The main pages' Organization JSON-LD still carries
-      email "alex@digitalmovement.uk" and telephone "+49 176 23296439"
-      (see /crm/). Those contradict office@digitalmovement.uk and
-      0203 815 7992, used throughout this notice and in every footer. Now the
-      LAST place the old address survives — the Bupa page was cleaned up.
-      Not this file's to fix, but a privacy notice and a schema block giving
-      different controller contact details is a bad look.
+  E2. CLOSED — CHECKED, NOT ACTUALLY A PROBLEM. An earlier review claimed the
+      main pages' Organization JSON-LD still carried "alex@digitalmovement.uk"
+      and a German phone number. Re-checked directly against the source
+      (index.html's @graph): email is "office@digitalmovement.uk", telephone
+      is "+44 20 3815 7992". No trace of the old address anywhere in the
+      JSON-LD. The earlier claim was wrong; nothing here needed fixing.
+      (Same check also confirms the "Melbourne, Australia" founding location
+      and the AU/NZ awards on the homepage trust strip are real company
+      history, not stray content — areaServed is GB/AU/NZ throughout.)
   E3. /privacy/ and /datenschutz/ are both noindex,follow and correctly
       absent from sitemap.xml. No hreflang between them, deliberately: they
       are not equivalent translations.
