@@ -35,26 +35,20 @@
      Leave it as '' and every form falls back to the mailto: behaviour
      that is live today.
      ======================================================================= */
-  /* FormSubmit needs no account, which is why it is set here: the forms work
-     as soon as the first submission is confirmed. On the very first send,
-     FormSubmit emails office@digitalmovement.uk an activation link — click it
-     once and every form on the site is live. Until then submissions are held.
-
-     Note for the privacy notice: FormSubmit is a third-party processor
-     outside the UK. If that is not acceptable, swap this line for Formspree
-     (EU data region available) or a Cloudflare Worker you control. */
-  var ENDPOINT = 'https://formsubmit.co/ajax/office@digitalmovement.uk';
+  /* First-party endpoint on Digital Movement's own Hostinger hosting.
+     Chosen over Formspree/FormSubmit deliberately: with no third party in the
+     chain there is no processor to contract with, so UK GDPR Article 28 simply
+     does not arise. It writes every enquiry to disk OUTSIDE the web root before
+     emailing, so a silent mail failure cannot lose a lead.
+     Source: scratchpad/leads-endpoint/index.php */
+  var ENDPOINT = 'https://leads.digitalmovement.uk/';
 
   /* Provider-specific extras sent with every submission. Leave the object
      empty for Formspree, Basin and a custom Worker — none of them need it.
        Web3Forms   access_key: 'your-access-key'
        FormSubmit  _subject / _template / _captcha as below
      Anything you put here is sent verbatim as a form field. */
-  var EXTRA_FIELDS = {
-    _subject: 'New enquiry — digitalmovement.uk',
-    _template: 'table',
-    _captcha: 'false'
-  };
+  var EXTRA_FIELDS = {};   /* first-party endpoint needs no provider extras */
 
   /* Where a non-JS submission lands after the endpoint redirects.
      Sent as _next, which Formspree, Basin and FormSubmit all understand. */
