@@ -1,5 +1,118 @@
+# robots.txt — Digital Movement UK
+# https://digitalmovement.uk
+# Last updated: 2026-07-28
+#
+# Policy: this site wants to be crawled — by search engines and by AI
+# answer engines alike. Visibility in AI search is part of what we sell,
+# so we do not block the assistants that read and cite sources.
+#
+# Note on precedence: a crawler obeys only the single most specific
+# user-agent group that matches its name, and ignores every other group
+# — including "*". Each named group below therefore repeats the
+# archived-page rule. If you add a rule, add it to every group.
+
+# ---------------------------------------------------------------------
+# Default — everything not named below
+# ---------------------------------------------------------------------
 User-agent: *
 Allow: /
 Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
 
+# ---------------------------------------------------------------------
+# Search engines
+# No Crawl-delay is set anywhere in this file. Googlebot ignores the
+# directive entirely, and we have no reason to slow anyone else down.
+# ---------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+User-agent: Bingbot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# ---------------------------------------------------------------------
+# AI and answer-engine crawlers — explicitly welcome
+# ---------------------------------------------------------------------
+
+# OpenAI — crawler, search index, and user-triggered fetches
+User-agent: GPTBot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# Anthropic — crawler and user-triggered fetches
+User-agent: ClaudeBot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+User-agent: Claude-User
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# Google Gemini and AI grounding. This is a robots.txt token rather than
+# a crawler: it governs how content Googlebot already fetched may be used.
+User-agent: Google-Extended
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# Apple Intelligence. Likewise a token: it governs AI use of what
+# Applebot fetches.
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /index-v1-archived.html
+Disallow: /index.md
+Disallow: /seo-services/index.md
+Disallow: /ai-search-optimisation/index.md
+
+# ---------------------------------------------------------------------
 Sitemap: https://digitalmovement.uk/sitemap.xml

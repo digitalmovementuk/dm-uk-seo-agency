@@ -1,16 +1,28 @@
 {
+  "id": "/",
   "name": "Digital Movement UK",
   "short_name": "Digital Movement",
+  "description": "SEO, AI search, CRM and paid ads for UK businesses that want more enquiries from Google and AI search.",
+  "lang": "en-GB",
+  "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#fb7900",
+  "orientation": "portrait-primary",
+  "theme_color": "#0B1F3A",
+  "background_color": "#050B15",
   "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
     {
       "src": "/assets/favicon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }

@@ -1,33 +1,119 @@
-# Digital Movement UK — production server config
+# =====================================================================
+# Digital Movement UK — Apache server config
+#
+# The live site is hosted on GitHub Pages, which ignores this file
+# entirely. It is kept as a fallback so the site behaves correctly if it
+# is ever served from Apache. Every block is wrapped in <IfModule> so a
+# missing module cannot take the site down with a 500.
+#
+# Canonical host: https://digitalmovement.uk (apex, no www)
+# Last updated: 2026-07-28
+# =====================================================================
+
 Options -Indexes
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 
-RewriteEngine On
-# Force HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-# Strip www
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+# ---------------------------------------------------------------------
+# Canonical host and scheme
+# www is redirected straight to https on the apex, so http://www... is a
+# single hop rather than two. The X-Forwarded-Proto check keeps the
+# https rule from looping behind a TLS-terminating proxy or CDN.
+# ---------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
 
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml
+  # www → apex (and https in the same redirect)
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+  # http → https
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
+
+# ---------------------------------------------------------------------
+# MIME types
+# Apache does not always know .webmanifest; some browsers reject the
+# manifest if it arrives as text/plain.
+# ---------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+  AddType image/svg+xml           .svg
+  AddType font/woff2              .woff2
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Compression
+# ---------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript
+  AddOutputFilterByType DEFLATE application/json application/manifest+json
+  AddOutputFilterByType DEFLATE application/xml image/svg+xml
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Cache-control
+# Images and fonts are immutable in practice, so a year is safe. CSS and
+# JS filenames are NOT fingerprinted (/assets/dm.css, /assets/site.js),
+# so they get a week — a year would strand visitors on a stale design
+# after the next deploy. HTML always revalidates.
+# ---------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/html                  "access plus 0 seconds"
+  ExpiresByType text/css                   "access plus 1 week"
+  ExpiresByType application/javascript     "access plus 1 week"
+  ExpiresByType text/javascript            "access plus 1 week"
+  ExpiresByType application/manifest+json  "access plus 1 day"
+  ExpiresByType image/jpeg                 "access plus 1 year"
+  ExpiresByType image/png                  "access plus 1 year"
+  ExpiresByType image/gif                  "access plus 1 year"
+  ExpiresByType image/webp                 "access plus 1 year"
+  ExpiresByType image/avif                 "access plus 1 year"
+  ExpiresByType image/svg+xml              "access plus 1 year"
+  ExpiresByType image/x-icon               "access plus 1 year"
+  ExpiresByType font/woff2                 "access plus 1 year"
 </IfModule>
+
+# ---------------------------------------------------------------------
+# Security headers
+# "always" so the headers are sent on error responses too (404, 500).
+# HSTS is sent only over https, without includeSubDomains or preload —
+# neither is safe to commit to until every subdomain is on TLS.
+# No Content-Security-Policy here: the pages load Google Fonts and inline
+# JSON-LD, so a policy written blind would break the site. Add one only
+# after testing it in Report-Only.
+# ---------------------------------------------------------------------
 <IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
-  Header unset X-Powered-By
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+  Header always unset X-Powered-By
+
+  # Mirrors the mod_expires values above, for hosts without mod_expires.
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ---------------------------------------------------------------------
+# Keep dotfiles and version-control leftovers private.
+# mod_authz_core exists only in Apache 2.4, which is what gates the 2.4
+# "Require" syntax below.
+# ---------------------------------------------------------------------
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\.(htaccess|htpasswd|DS_Store|git.*)$">
+    Require all denied
+  </FilesMatch>
 </IfModule>
