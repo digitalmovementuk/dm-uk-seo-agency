@@ -16,10 +16,6 @@
 # ---------------------------------------------------------------------
 User-agent: *
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # ---------------------------------------------------------------------
 # Search engines
@@ -28,24 +24,12 @@ Disallow: /ai-search-optimisation/index.md
 # ---------------------------------------------------------------------
 User-agent: Googlebot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 User-agent: Googlebot-Image
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 User-agent: Bingbot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # ---------------------------------------------------------------------
 # AI and answer-engine crawlers — explicitly welcome
@@ -54,65 +38,33 @@ Disallow: /ai-search-optimisation/index.md
 # OpenAI — crawler, search index, and user-triggered fetches
 User-agent: GPTBot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 User-agent: OAI-SearchBot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 User-agent: ChatGPT-User
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # Anthropic — crawler and user-triggered fetches
 User-agent: ClaudeBot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 User-agent: Claude-User
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # Perplexity
 User-agent: PerplexityBot
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # Google Gemini and AI grounding. This is a robots.txt token rather than
 # a crawler: it governs how content Googlebot already fetched may be used.
 User-agent: Google-Extended
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # Apple Intelligence. Likewise a token: it governs AI use of what
 # Applebot fetches.
 User-agent: Applebot-Extended
 Allow: /
-Disallow: /index-v1-archived.html
-Disallow: /index.md
-Disallow: /seo-services/index.md
-Disallow: /ai-search-optimisation/index.md
 
 # ---------------------------------------------------------------------
 Sitemap: https://digitalmovement.uk/sitemap.xml
