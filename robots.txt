@@ -16,6 +16,8 @@
 # ---------------------------------------------------------------------
 User-agent: *
 Allow: /
+# /_og/ holds the share-card and icon renderers, not pages for readers.
+Disallow: /_og/
 
 # ---------------------------------------------------------------------
 # Search engines

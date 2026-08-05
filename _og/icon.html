@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Digital Movement UK — icon renderer</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:512px;height:512px;overflow:hidden;background:transparent}
+  /* White tile so the mark reads on light AND dark browser chrome, and so the
+     share card's tile and the real browser-tab icon are the same object. */
+  .tile{width:512px;height:512px;border-radius:112px;background:#fff;
+        display:grid;place-items:center}
+  .tile img{width:344px;height:auto;display:block}   /* ~33% breathing room */
+  /* ?tight — the 16px frame only: less padding, because at that size the
+     margin costs more legibility than it buys. */
+  body.tight .tile img{width:430px}
+  body.tight .tile{border-radius:96px}
+</style>
+</head>
+<body>
+  <div class="tile"><img src="/assets/favicon.svg" alt=""></div>
+  <script>
+    if (location.search.includes('tight')) document.body.classList.add('tight');
+  </script>
+</body>
+</html>

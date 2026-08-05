@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Digital Movement UK — OG card renderer</title>
+<style>
+  /* The site's own faces, so the card matches the page it links to. */
+  @font-face{font-family:'Inter Tight';font-style:normal;font-weight:400 700;font-display:block;
+    src:url('/assets/fonts/inter-tight.woff2') format('woff2');}
+  @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700 800;font-display:block;
+    src:url('/assets/fonts/plus-jakarta-sans.woff2') format('woff2');}
+  @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:500 700;font-display:block;
+    src:url('/assets/fonts/jetbrains-mono.woff2') format('woff2');}
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden;background:#050B15}
+  body{font-family:'Inter Tight',-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+
+  .card{position:relative;width:1200px;height:630px;overflow:hidden;isolation:isolate;
+    background:
+      radial-gradient(1100px 620px at 88% 50%, rgba(251,121,0,.13), transparent 62%),
+      radial-gradient(760px 520px at 6% 0%, rgba(241,60,100,.10), transparent 60%),
+      linear-gradient(158deg,#102A4C 0%,#0B1F3A 46%,#050B15 100%);
+  }
+
+  /* The faint vertical rules the site uses on its dark sections */
+  .grid{position:absolute;inset:0;
+    background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.045) 0 1px,transparent 1px 150px);
+    mask-image:linear-gradient(180deg,transparent,#000 18%,#000 82%,transparent);}
+
+  /* Brand rule across the top — the same orange→pink the site uses */
+  .topbar{position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,#F5C542 0%,#FB7900 34%,#F13C64 72%,#D332FF 100%);}
+
+  .inner{position:absolute;inset:0;z-index:2;padding:74px 72px 64px;
+    display:flex;flex-direction:column;justify-content:space-between}
+
+  .top{display:flex;align-items:center;justify-content:space-between}
+  .logo{height:46px;width:auto;display:block}
+  .place{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;
+    letter-spacing:.18em;text-transform:uppercase;color:#94AAC7}
+
+  .body{display:flex;align-items:center;gap:56px}
+  .copy{flex:1;min-width:0}
+
+  .kicker{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;
+    letter-spacing:.2em;text-transform:uppercase;color:#FB7900;margin-bottom:20px}
+  h1{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:64px;line-height:1.06;
+    letter-spacing:-.028em;color:#fff;margin-bottom:20px}
+  h1 em{font-style:normal;color:#FFB061}
+  .sub{font-size:25px;line-height:1.4;color:#B9CADF;max-width:620px}
+
+  /* The favicon, at the only size where a share preview can show it */
+  .fav{flex:none;width:216px;height:216px;border-radius:46px;background:#fff;
+    display:grid;place-items:center;
+    box-shadow:0 26px 60px rgba(0,0,0,.42), 0 0 0 1px rgba(255,255,255,.14);}
+  .fav img{width:152px;height:auto;display:block}
+
+  .bottom{display:flex;align-items:flex-end;justify-content:space-between}
+  .chips{display:flex;gap:10px}
+  .chip{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;
+    letter-spacing:.13em;text-transform:uppercase;color:#EAF1FA;
+    border:1px solid rgba(255,255,255,.20);background:rgba(255,255,255,.055);
+    border-radius:999px;padding:10px 18px}
+  .url{display:flex;align-items:center;gap:14px;
+    font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:26px;
+    letter-spacing:-.01em;color:#fff}
+  .url i{display:block;width:46px;height:4px;border-radius:2px;
+    background:linear-gradient(90deg,#FB7900,#F13C64)}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="grid"></div>
+    <div class="topbar"></div>
+
+    <div class="inner">
+      <div class="top">
+        <img class="logo" src="/assets/dm-logo-light.svg" alt="Digital Movement">
+        <div class="place">London · United Kingdom</div>
+      </div>
+
+      <div class="body">
+        <div class="copy">
+          <div class="kicker">SEO Agency UK</div>
+          <h1>More enquiries from<br>Google and <em>AI search</em></h1>
+          <div class="sub">From £495 a month, month to month, with no lock-in.</div>
+        </div>
+        <div class="fav">
+          <img src="/assets/favicon.svg" alt="">
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="chips">
+          <span class="chip">SEO</span>
+          <span class="chip">AI Search</span>
+          <span class="chip">Paid Ads</span>
+          <span class="chip">CRM</span>
+        </div>
+        <div class="url"><i></i>digitalmovement.uk</div>
+      </div>
+    </div>
+  </div>
+<script>
+  /* ?2x renders at 2400×1260 so the JPEG can be supersampled back down to
+     1200×630 — text edges survive the downscale far better than a 1:1 render. */
+  if (location.search.includes('2x')) {
+    document.documentElement.style.cssText = 'width:2400px;height:1260px;overflow:hidden';
+    document.body.style.cssText = 'width:2400px;height:1260px;overflow:hidden;zoom:2';
+  }
+</script>
+</body>
+</html>
