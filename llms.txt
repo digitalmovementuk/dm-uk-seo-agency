@@ -26,7 +26,7 @@ The agency sells four connected services — SEO, AI search optimisation (GEO), 
 - [Home — SEO agency UK](https://digitalmovement.uk/): Who Digital Movement UK is, how the four services fit together, pricing, the five-step method, a Semrush case comparison, and 102 client reviews.
 - [SEO services](https://digitalmovement.uk/seo-services/): The six workstreams of a complete SEO programme — keyword research, technical SEO, on-page and content, local SEO, link building and digital PR, AI search optimisation — with cost, timing and how results are measured.
 - [AI search optimisation (GEO)](https://digitalmovement.uk/ai-search-optimisation/): What AI search optimisation is, the three levers (entity clarity, answer depth, proof across the web), what works and what wastes time, and how visibility in Google AI Overviews, Google AI Mode, ChatGPT, Gemini, Claude and Perplexity is measured monthly.
-- [Paid ads and PPC](https://digitalmovement.uk/paid-ads/): Google Ads, Microsoft Ads, Meta and Google Shopping managed to a cost per qualified enquiry, with conversion tracking, landing pages and plain-English reporting.
+- [Paid ads and PPC](https://digitalmovement.uk/ppc-agency/): Google Ads, Microsoft Ads, Meta and Google Shopping managed to a cost per qualified enquiry, with conversion tracking, landing pages and plain-English reporting.
 - [CRM services](https://digitalmovement.uk/crm/): Setting up and running HubSpot, Salesforce, Pipedrive or GoHighLevel so every enquiry is captured, followed up automatically and traced back to the marketing that created it.
 
 ## Common questions this site answers
