@@ -343,6 +343,21 @@ ul,ol{margin:0;padding:0}
 }
 .hstat span{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark-mute)}
 
+/* Desktop only. Once the enquiry form takes its column the copy pillar is about
+   635px wide, and the flex row fitted the review pill (408px) plus the first
+   stat and orphaned the second stat onto a line of its own. Grid instead: the
+   pill owns the top line, and both stats always share the line beneath it.
+   1040px is the breakpoint where .hero-grid splits into two columns; below it
+   the pillar is full width and the flex row already fits. */
+@media (min-width:1040px){
+  .hero-proof{
+    display:grid;grid-template-columns:repeat(2,max-content);
+    justify-content:start;align-items:center;
+    column-gap:var(--s6);row-gap:var(--s5);
+  }
+  .hero-proof>.gwidget{grid-column:1 / -1;justify-self:start}
+}
+
 /* ---------- Lead form ---------- */
 .lead-form{
   background:rgba(255,255,255,.055);
