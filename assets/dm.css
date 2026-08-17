@@ -157,6 +157,28 @@ ul,ol{margin:0;padding:0}
   transition:color .2s,background .2s;
 }
 .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--on-dark);background:rgba(255,255,255,.07)}
+@media (min-width:961px){
+  .nav-links>a[href="/resources/"],
+  .nav-links>a[href="#faq"],
+  .nav-links>a[href="/#faq"]{display:none}
+}
+.nav-socials{display:flex;align-items:center;gap:4px;margin-left:6px;padding-left:10px;border-left:1px solid rgba(255,255,255,.14)}
+.nav-links .nav-social{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;padding:0;border-radius:50%;
+}
+.nav-social::before{
+  content:"";width:16px;height:16px;background:currentColor;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-size:contain;mask-size:contain;
+}
+.nav-social-x::before{-webkit-mask-image:url('/assets/logos/x.svg');mask-image:url('/assets/logos/x.svg')}
+.nav-social-tiktok::before{-webkit-mask-image:url('/assets/logos/tiktok.svg');mask-image:url('/assets/logos/tiktok.svg')}
+.nav-social-facebook::before{-webkit-mask-image:url('/assets/logos/facebook.svg');mask-image:url('/assets/logos/facebook.svg')}
+.nav-social-linkedin::before{-webkit-mask-image:url('/assets/logos/linkedin.svg');mask-image:url('/assets/logos/linkedin.svg')}
+.nav-social-instagram::before{-webkit-mask-image:url('/assets/logos/instagram.svg');mask-image:url('/assets/logos/instagram.svg')}
+.nav-social-youtube::before{-webkit-mask-image:url('/assets/logos/youtube.svg');mask-image:url('/assets/logos/youtube.svg')}
 .nav-cta{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--orange);color:#2A1300;text-decoration:none;
@@ -198,6 +220,9 @@ ul,ol{margin:0;padding:0}
   .nav-links{order:4}
   .nav-links.open{display:flex}
   .nav-links a{padding:14px 12px;font-size:.78rem;border-radius:10px}
+  .nav-socials{justify-content:center;gap:10px;margin:8px 0 0;padding:12px 0 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .nav-links .nav-social{width:44px;height:44px;padding:0;border-radius:50%}
+  .nav-social::before{width:18px;height:18px}
 }
 @media (max-width:400px){
   .nav-cta{padding:9px 12px;font-size:.74rem}
