@@ -174,7 +174,6 @@ ul,ol{margin:0;padding:0}
   -webkit-mask-size:contain;mask-size:contain;
 }
 .nav-social-x::before{-webkit-mask-image:url('/assets/logos/x.svg');mask-image:url('/assets/logos/x.svg')}
-.nav-social-tiktok::before{-webkit-mask-image:url('/assets/logos/tiktok.svg');mask-image:url('/assets/logos/tiktok.svg')}
 .nav-social-facebook::before{-webkit-mask-image:url('/assets/logos/facebook.svg');mask-image:url('/assets/logos/facebook.svg')}
 .nav-social-linkedin::before{-webkit-mask-image:url('/assets/logos/linkedin.svg');mask-image:url('/assets/logos/linkedin.svg')}
 .nav-social-instagram::before{-webkit-mask-image:url('/assets/logos/instagram.svg');mask-image:url('/assets/logos/instagram.svg')}
